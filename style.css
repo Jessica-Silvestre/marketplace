@@ -1,0 +1,567 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================
+   ADMIN
+/* =========================
+   RESET
+========================= */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================
+   BODY
+========================= */
+
+.pagina-admin{
+  background-color: #F8F9FA;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1e293b;
+}
+
+/* =========================
+   NAVBAR SUPERIOR
+========================= */
+
+.barra-navegacao-admin{
+  background-color: #4fd1c5;
+  padding: 12px 24px;
+}
+
+/* LOGO */
+
+.navbar-brand{
+  padding: 0;
+  margin: 0;
+}
+
+.logo-admin{
+  height: 72px;
+  width: auto;
+  display: block;
+}
+
+/* LINKS MENU SUPERIOR */
+
+.navbar-nav{
+  gap: 20px;
+}
+
+.nav-link{
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  transition: .3s;
+}
+
+.nav-link:hover{
+  color: white;
+  opacity: .7;
+}
+
+.nav-link.active{
+  color: white;
+}
+
+/* BOTÃO MOBILE */
+
+.navbar-toggler{
+  border: none;
+  padding: 0;
+  box-shadow: none;
+}
+
+.navbar-toggler:focus{
+  box-shadow: none;
+}
+
+/* BOTÃO SAIR */
+
+.botao-sair-admin{
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  text-decoration: none;
+
+  color: white;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  transition: .3s;
+}
+
+.botao-sair-admin:hover{
+  color: white;
+  opacity: .7;
+}
+
+.botao-sair-admin svg{
+  width: 16px;
+  height: 16px;
+}
+
+/* =========================
+   CONTEÚDO
+========================= */
+
+.conteudo-admin{
+  min-height: calc(100vh - 99px);
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar-admin{
+  width: 270px;
+  min-height: 100%;
+
+  background-color: #f3f4f6;
+
+  padding: 24px 18px;
+
+  border-right: 1px solid #e5e7eb;
+}
+
+/* MENU */
+
+.lista-menu-admin{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* ITEM MENU */
+
+.menu-item-admin{
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  width: 100%;
+
+  padding: 13px 14px;
+  margin-bottom: 10px;
+
+  border-radius: 16px;
+
+  text-decoration: none;
+
+  color: #94a3b8;
+
+  transition: .3s;
+}
+
+/* HOVER */
+
+.menu-item-admin:hover{
+  background-color: white;
+  color: #4fd1c5;
+
+  transform: translateX(3px);
+}
+
+
+/* ÍCONE */
+
+.icone-menu-admin{
+  width: 36px;
+  height: 36px;
+
+  border-radius: 12px;
+
+  background-color: #f8fafc;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+}
+
+.icone-menu-admin svg{
+  width: 16px;
+  height: 16px;
+}
+
+/* TEXTO MENU */
+
+.menu-item-admin span:last-child{
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* =========================
+   PROFILE
+========================= */
+
+.profile-admin{
+  background-color: #4fd1c5;
+
+  border-radius: 22px;
+
+  padding: 18px;
+
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  color: white;
+}
+
+/* ÍCONE PROFILE */
+
+.profile-icone{
+  width: 46px;
+  height: 46px;
+
+  border-radius: 50%;
+
+  background-color: rgba(255,255,255,.2);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+}
+
+.profile-icone svg{
+  width: 22px;
+  height: 22px;
+}
+
+/* INFORMAÇÕES PROFILE */
+
+.profile-info{
+  display: flex;
+  flex-direction: column;
+}
+
+/* NOME */
+
+.nome-admin{
+  margin: 0;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* EMAIL */
+
+.email-admin{
+  font-size: 12px;
+  opacity: .9;
+}
+
+/* =========================
+   ÁREA PRINCIPAL
+========================= */
+
+main section{
+  background-color: #F8F9FA;
+}
+
+/* =========================
+   ÁREA PRINCIPAL
+========================= */
+
+.area-dashboard-admin{
+  width: 100%;
+}
+
+/* =========================
+   CARDS DASHBOARD
+========================= */
+
+.card-admin-info{
+  background-color: #ffffff;
+
+  border-radius: 22px;
+
+  padding: 24px;
+
+  min-height: 150px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 18px;
+
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.04);
+}
+
+/* =========================
+   CONTEÚDO CARD
+========================= */
+
+.card-admin-info header{
+  display: flex;
+  flex-direction: column;
+}
+
+/* TÍTULO */
+
+.titulo-card-admin{
+  margin-bottom: 10px;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  color: #94a3b8;
+}
+
+/* NÚMERO */
+
+.numero-card-admin{
+  margin-bottom: 10px;
+
+  font-size: 34px;
+  font-weight: 800;
+
+  line-height: 1;
+
+  color: #0f172a;
+}
+
+/* CRESCIMENTO */
+
+.crescimento-card-admin{
+  font-size: 14px;
+  font-weight: 700;
+
+  color: #22c55e;
+}
+
+/* =========================
+   ÍCONE CARD
+========================= */
+
+.icone-card-admin{
+  width: 78px;
+  height: 78px;
+
+  border-radius: 22px;
+
+  background-color: #4fd1c5;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+}
+
+/* SVG */
+
+.icone-card-admin svg{
+  width: 34px;
+  height: 34px;
+
+  color: #ffffff;
+}
+
+/* =========================
+   TABELA AGÊNCIAS
+========================= */
+
+.tabela-agencias {
+  background-color: #ffffff;
+  border-radius: 22px;
+  padding: 24px;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.04);
+}
+
+.tabela-agencias h2 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 20px;
+}
+
+/* CABEÇALHO */
+
+.tabela-agencias thead th {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #94a3b8;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 12px;
+}
+
+/* CÉLULAS */
+
+.tabela-agencias tbody td {
+  font-size: 14px;
+  color: #1e293b;
+  padding: 16px 12px;
+  border-bottom: 1px solid #f1f5f9;
+  vertical-align: middle;
+}
+
+.tabela-agencias tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* NOME DA AGÊNCIA */
+
+.tabela-agencias .nome-agencia {
+  font-weight: 700;
+  color: #0f172a;
+}
+
+/* =========================
+   BADGE STATUS
+========================= */
+
+.badge-online {
+  background-color: #4fd1c5;
+  color: #085041;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 999px;
+}
+
+.badge-offline {
+  background-color: #e5e7eb;
+  color: #33363a;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 999px;
+}
+
+/* =========================
+   BOTÕES DE AÇÃO
+========================= */
+
+.btn-acao-agencia {
+  background-color: #4fd1c5;
+  color: #085041;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.tabela-agencias .badge-online,
+.tabela-agencias .badge-offline{
+  color: #fff;
+} 
+
+.tabela-agencias .btn-acao-agencia{
+  color: #fff;
+}
+
+.tabela-agencias .btn-acao-agencia:hover{
+      opacity: 0.8;
+
+  color: #fff;
+}
+
+/* ===== SEÇÃO EXTRA DO DASHBOARD ===== */
+.dashboard-extra {
+  margin-top: 1.5rem;
+}
+
+/* ===== CARD BASE (GRÁFICO E LATERAL) ===== */
+.card-chart,
+.card-activity {
+  background-color: #ffffff;
+  border-radius: 22px;
+  padding: 24px;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.04);
+  border: none;
+  height: 100%;
+}
+
+/* ===== TÍTULO DAS SEÇÕES ===== */
+.card-chart h3,
+.card-activity h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #1f2937;
+}
+
+/* ===== BLOCO DO GRÁFICO (ÁREA RESERVADA) ===== */
+.chart-placeholder {
+  width: 100%;
+  height: 260px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f3f4f6;
+  font-size: 0.9rem;
+}
+
+/* ===== LISTA DE ATIVIDADES ===== */
+.activity-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* ITEM INDIVIDUAL */
+.activity-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0.9rem;
+  border-radius: 10px;
+  background: #f9fafb;
+  transition: background 0.2s ease;
+}
+
+.activity-item:hover {
+  background: #f3f4f6;
+}
+
+/* TEXTO DA ATIVIDADE */
+.activity-text {
+  font-size: 0.875rem;
+  color: #374151;
+}
+
+/* ===== STATUS (ONLINE / OFFLINE) ===== */
+.status-online,
+.status-offline {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  color: #ffffff;
+}
+
+.status-online {
+  background: #16a34a;
+}
+
+.status-offline {
+  background: #dc2626;
+}
+
+.card,
+.card-chart,
+.card-activity,
+.tabela-agencias {
+  border: none;
+}
