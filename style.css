@@ -214,3 +214,37 @@ main,
   color: #fff;
 }
 
+.activity-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+
+  padding: 12px;
+  border-radius: 14px;
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.activity-icon {
+  color: #9ca3af;
+
+  transition: color 0.2s ease;
+
+  flex-shrink: 0;
+}
+
+.chart-legend {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+} 
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
