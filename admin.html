@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Admin</title>
+
+</head>
+
+<body class="pagina-admin">
+
+<header>
+    <nav class="navbar navbar-expand-lg py-3">
+
+        <div class="container-fluid px-4 align-items-center">
+
+            <!-- LOGO -->
+            <a class="navbar-brand me-0" href="#">
+                <img
+                    src="./img/logo.png"
+                    alt="Logo Roque Garages"
+                    class="img-fluid logo-navbar"
+                >
+            </a>
+
+            <!-- BOTÃO MOBILE -->
+            <button
+                class="navbar-toggler border-0 shadow-none d-lg-none"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#menuMobile"
+                aria-controls="menuMobile"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- MENU DESKTOP -->
+            <div class="d-none d-lg-flex flex-grow-1 justify-content-center">
+
+                <ul class="navbar-nav gap-5">
+
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold text-white" href="#">
+                            Dashboard
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold text-white" href="#">
+                            Agências
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold text-white" href="#">
+                            Planos
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold text-white" href="#">
+                            Relatórios
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <!-- SAIR DESKTOP -->
+            <div class="d-none d-lg-flex">
+
+                <a
+                    href="#"
+                    class="d-flex align-items-center gap-2 text-decoration-none text-white fw-semibold"
+                >
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M6 3a2 2 0 0 0-2 2v1h1V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-1H4v1a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H6z"/>
+                        <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"/>
+                    </svg>
+
+                    <span>Sair</span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <!-- OFFCANVAS MOBILE -->
+    <div
+        class="offcanvas offcanvas-end"
+        tabindex="-1"
+        id="menuMobile"
+    >
+
+        <div class="offcanvas-header">
+
+            <h5 class="offcanvas-title">
+                Menu
+            </h5>
+
+            <button
+                type="button"
+                class="btn-close shadow-none"
+                data-bs-dismiss="offcanvas"
+                aria-label="Fechar"
+            ></button>
+
+        </div>
+
+        <div class="offcanvas-body">
+
+            <ul class="navbar-nav gap-3">
+
+                <li class="nav-item">
+                    <a class="nav-link fw-semibold" href="#">
+                        Dashboard
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link fw-semibold" href="#">
+                        Agências
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link fw-semibold" href="#">
+                        Planos
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link fw-semibold" href="#">
+                        Relatórios
+                    </a>
+                </li>
+
+                <li class="nav-item mt-3">
+
+                    <a
+                        href="#"
+                        class="d-flex align-items-center gap-2 text-decoration-none fw-semibold"
+                    >
+
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M6 3a2 2 0 0 0-2 2v1h1V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-1H4v1a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H6z"/>
+                            <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"/>
+                        </svg>
+
+                        <span>Sair</span>
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+</header>
+<aside class="sidebar-admin d-none d-lg-flex flex-column">
+
+    <nav class="sidebar-menu">
+
+        <a href="#" class="menu-item">
+            <i class="bi bi-grid"></i>
+            <span>Visão geral</span>
+        </a>
+
+        <a href="#" class="menu-item">
+            <i class="bi bi-buildings"></i>
+            <span>Agências</span>
+        </a>
+
+        <a href="#" class="menu-item">
+            <i class="bi bi-car-front"></i>
+            <span>Veículos</span>
+        </a>
+
+        <a href="#" class="menu-item">
+            <i class="bi bi-chat-left-text"></i>
+            <span>Leads</span>
+        </a>
+
+        <a href="#" class="menu-item">
+            <i class="bi bi-box-seam"></i>
+            <span>Planos</span>
+        </a>
+
+        <a href="#" class="menu-item">
+            <i class="bi bi-file-earmark-bar-graph"></i>
+            <span>Relatórios</span>
+        </a>
+
+        <a href="#" class="menu-item">
+            <i class="bi bi-people"></i>
+            <span>Usuários</span>
+        </a>
+
+        <a href="#" class="menu-item">
+            <i class="bi bi-gear"></i>
+            <span>Configurações</span>
+        </a>
+
+        <a href="#" class="menu-item">
+            <i class="bi bi-clipboard-data"></i>
+            <span>Audit Log</span>
+        </a>
+
+    </nav>
+
+    <!-- USER -->
+    <div class="user-box">
+
+        <div class="user-avatar">
+            <i class="bi bi-person-fill"></i>
+        </div>
+
+        <div class="user-info">
+            <strong>Alan Turing</strong>
+            <small>Administrador</small>
+        </div>
+
+    </div>
+
+</aside>
+
+<main class="admin-content">
+
+    <section class="container-fluid">
+
+        <section class="row g-4">
+
+            <!-- CARD 1 -->
+            <article class="col-12 col-md-6 col-xl-3">
+
+                <section class="dashboard-card">
+
+                    <div>
+
+                        <p class="card-label">
+                            Agências ativas
+                        </p>
+
+                        <h2 class="card-value">
+                            1.248
+                        </h2>
+
+                        <p class="card-growth">
+                            +51% vs mês anterior
+                        </p>
+
+                    </div>
+
+                    <div class="card-icon">
+
+                        <i class="bi bi-buildings"></i>
+
+                    </div>
+
+                </section>
+
+            </article>
+
+            <!-- CARD 2 -->
+            <article class="col-12 col-md-6 col-xl-3">
+
+                <section class="dashboard-card">
+
+                    <div>
+
+                        <p class="card-label">
+                            Veículos totais
+                        </p>
+
+                        <h2 class="card-value">
+                            24.789
+                        </h2>
+
+                        <p class="card-growth">
+                            +42,6% vs mês anterior
+                        </p>
+
+                    </div>
+
+                    <div class="card-icon">
+
+                        <i class="bi bi-car-front-fill"></i>
+
+                    </div>
+
+                </section>
+
+            </article>
+
+            <!-- CARD 3 -->
+            <article class="col-12 col-md-6 col-xl-3">
+
+                <section class="dashboard-card">
+
+                    <div>
+
+                        <p class="card-label">
+                            Leads
+                        </p>
+
+                        <h2 class="card-value">
+                            3.562
+                        </h2>
+
+                        <p class="card-growth">
+                            +16,3% vs mês anterior
+                        </p>
+
+                    </div>
+
+                    <div class="card-icon">
+
+                        <i class="bi bi-chat-left-text-fill"></i>
+
+                    </div>
+
+                </section>
+
+            </article>
+
+            <!-- CARD 4 -->
+            <article class="col-12 col-md-6 col-xl-3">
+
+                <section class="dashboard-card">
+
+                    <div>
+
+                        <p class="card-label">
+                            Receita mensal
+                        </p>
+
+                        <h2 class="card-value">
+                            R$1.248,91
+                        </h2>
+
+                        <p class="card-growth">
+                            +18,7% vs mês anterior
+                        </p>
+
+                    </div>
+
+                    <div class="card-icon">
+
+                        <i class="bi bi-currency-dollar"></i>
+
+                    </div>
+
+                </section>
+
+            </article>
+
+        </section>
+
+    </section>
+
+    <section class="container-fluid mt-4">
+
+  <div class="card border-0 shadow-sm rounded-4">
+
+    <div class="card-body p-4">
+
+      <h5 class="mb-3 fw-semibold">
+        Agências ativas
+      </h5>
+
+      <div class="table-responsive">
+
+        <table class="table align-middle">
+
+          <thead class="table-light">
+
+            <tr>
+              <th>Agência</th>
+              <th>Localização</th>
+              <th>Plano</th>
+              <th>Data de cadastro</th>
+              <th>Status</th>
+              <th class="text-center">Ações</th>
+            </tr>
+
+          </thead>
+
+          <tbody>
+
+            <!-- LINHA 1 -->
+            <tr>
+              <td>Soma São Roque</td>
+              <td>São Roque, SP</td>
+              <td>Pro</td>
+              <td>01/07/2021</td>
+              <td>
+                <span class="badge bg-success">Online</span>
+              </td>
+              <td class="text-end">
+                <button class="btn btn-success btn-sm">Ativar</button>
+                <button class="btn btn-outline-primary btn-sm">Ver cadastro</button>
+                <button class="btn btn-outline-danger btn-sm">Desativar</button>
+              </td>
+            </tr>
+
+            <!-- LINHA 2 -->
+            <tr>
+              <td>Chevrolet Rocque</td>
+              <td>São Roque, SP</td>
+              <td>Básico</td>
+              <td>18/09/2023</td>
+              <td>
+                <span class="badge bg-secondary">Offline</span>
+              </td>
+              <td class="text-end">
+                <button class="btn btn-success btn-sm">Ativar</button>
+                <button class="btn btn-outline-primary btn-sm">Ver cadastro</button>
+                <button class="btn btn-outline-danger btn-sm">Desativar</button>
+              </td>
+            </tr>
+
+            <!-- LINHA 3 -->
+            <tr>
+              <td>São Roque Veículos</td>
+              <td>São Roque, SP</td>
+              <td>Profissional</td>
+              <td>06/12/2025</td>
+              <td>
+                <span class="badge bg-success">Online</span>
+              </td>
+              <td class="text-end">
+                <button class="btn btn-success btn-sm">Ativar</button>
+                <button class="btn btn-outline-primary btn-sm">Ver cadastro</button>
+                <button class="btn btn-outline-danger btn-sm">Desativar</button>
+              </td>
+            </tr>
+
+            <!-- LINHA 4 -->
+            <tr>
+              <td>Shark motos</td>
+              <td>São Roque, SP</td>
+              <td>Básico</td>
+              <td>28/02/2025</td>
+              <td>
+                <span class="badge bg-secondary">Offline</span>
+              </td>
+              <td class="text-end">
+                <button class="btn btn-success btn-sm">Ativar</button>
+                <button class="btn btn-outline-primary btn-sm">Ver cadastro</button>
+                <button class="btn btn-outline-danger btn-sm">Desativar</button>
+              </td>
+            </tr>
+
+            <!-- LINHA 5 -->
+            <tr>
+              <td>Rodcar 7 Veículos</td>
+              <td>São Roque, SP</td>
+              <td>Profissional</td>
+              <td>12/10/2026</td>
+              <td>
+                <span class="badge bg-success">Online</span>
+              </td>
+              <td class="text-end">
+                <button class="btn btn-success btn-sm">Ativar</button>
+                <button class="btn btn-outline-primary btn-sm">Ver cadastro</button>
+                <button class="btn btn-outline-danger btn-sm">Desativar</button>
+              </td>
+            </tr>
+
+          </tbody>
+
+        </table>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- DASHBOARD SECTION -->
+<section class="container-fluid mt-4" aria-label="Painel de métricas e atividades">
+
+    <div class="row g-4">
+
+        <!-- GRÁFICO -->
+        <article class="col-12 col-xl-7">
+
+            <section class="dashboard-panel h-100" aria-labelledby="grafico-title">
+
+                <header class="d-flex justify-content-between align-items-center mb-4">
+
+                    <h2 id="grafico-title" class="panel-title mb-0">
+                        Crescimento de agências e veículos
+                    </h2>
+
+                    <div class="d-flex gap-3 small" aria-label="Legenda do gráfico">
+
+                        <div class="d-flex align-items-center gap-2">
+                            <span class="legend-dot bg-purple" aria-hidden="true"></span>
+                            <span>Agências ativas</span>
+                        </div>
+
+                        <div class="d-flex align-items-center gap-2">
+                            <span class="legend-dot bg-green" aria-hidden="true"></span>
+                            <span>Veículos publicados</span>
+                        </div>
+
+                    </div>
+
+                </header>
+
+                <div class="chart-wrapper" role="img" aria-label="Gráfico de crescimento de agências e veículos">
+                    <canvas id="graficoCrescimento"></canvas>
+                </div>
+
+            </section>
+
+        </article>
+
+        <!-- ATIVIDADES -->
+        <article class="col-12 col-xl-5">
+
+            <section class="dashboard-panel h-100" aria-labelledby="atividades-title">
+
+                <header>
+                    <h2 id="atividades-title" class="panel-title mb-4">
+                        Atividades recentes
+                    </h2>
+                </header>
+
+                <ul class="activities-list" aria-label="Lista de atividades recentes">
+
+                    <li class="activity-item">
+                        <span class="activity-icon" aria-hidden="true">
+                            <i class="bi bi-clock-history"></i>
+                        </span>
+                        <span class="activity-content">
+                            Nova agência cadastrada: AutoSul Motors
+                        </span>
+                    </li>
+
+                    <li class="activity-item">
+                        <span class="activity-icon" aria-hidden="true">
+                            <i class="bi bi-clock-history"></i>
+                        </span>
+                        <span class="activity-content">
+                            Soma São Roque atualizou seu plano para Prime
+                        </span>
+                    </li>
+
+                    <li class="activity-item">
+                        <span class="activity-icon" aria-hidden="true">
+                            <i class="bi bi-clock-history"></i>
+                        </span>
+                        <span class="activity-content">
+                            Shark Motos publicou um novo veículo
+                        </span>
+                    </li>
+
+                    <li class="activity-item">
+                        <span class="activity-icon" aria-hidden="true">
+                            <i class="bi bi-clock-history"></i>
+                        </span>
+                        <span class="activity-content">
+                            Pagamento aprovado: Soma São Roque
+                        </span>
+                    </li>
+
+                    <li class="activity-item border-0 pb-0">
+                        <span class="activity-icon" aria-hidden="true">
+                            <i class="bi bi-clock-history"></i>
+                        </span>
+                        <span class="activity-content">
+                            Chevrolet Roque foi desativado por inatividade
+                        </span>
+                    </li>
+
+                </ul>
+
+            </section>
+
+        </article>
+
+    </div>
+
+</section>
+
+</main>
+
+</body>
+
+</html>
