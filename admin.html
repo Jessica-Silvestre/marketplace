@@ -4,23 +4,11 @@
 <head>
 
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
-
-  <!-- BOOTSTRAP -->
-  <link
-    rel="stylesheet"
-    href="dist/css/bootstrap.min.css"
-  >
-
-  <!-- CSS -->
-  <link
-    rel="stylesheet"
-    href="style.css"
-  >
+  <link rel="stylesheet" href="dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="style.css">
 
   <title>Admin</title>
 
@@ -28,483 +16,593 @@
 
 <body class="pagina-admin">
 
-  <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg barra-navegacao-admin">
+<header>
+    <nav class="navbar navbar-expand-lg py-3">
 
-    <div class="container-fluid">
+        <div class="container-fluid px-4 align-items-center">
 
-      <!-- LOGO -->
-      
-        <img
-          src="img/logo.png"
-          alt="Logo da plataforma"
-          class="logo-admin"
-        >
+            <!-- LOGO -->
+            <a class="navbar-brand me-0" href="#">
+                <img
+                    src="./img/logo.png"
+                    alt="Logo Roque Garages"
+                    class="img-fluid logo-navbar"
+                >
+            </a>
 
-      </a>
+            <!-- BOTÃO MOBILE -->
+            <button
+                class="navbar-toggler border-0 shadow-none d-lg-none"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#menuMobile"
+                aria-controls="menuMobile"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-      <!-- BOTÃO MOBILE -->
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#menu-admin"
-        aria-controls="menu-admin"
-        aria-expanded="false"
-        aria-label="Abrir menu"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
+            <!-- MENU DESKTOP -->
+            <div class="d-none d-lg-flex flex-grow-1 justify-content-center">
 
-      <!-- MENU NAVBAR -->
-      <div
-        class="collapse navbar-collapse justify-content-center"
-        id="menu-admin"
-      >
+                <ul class="navbar-nav gap-5">
 
-        <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold text-white" href="#">
+                            Dashboard
+                        </a>
+                    </li>
 
-          <li class="nav-item">
-            <a href="#" class="nav-link">Dashboard</a>
-          </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold text-white" href="#">
+                            Agências
+                        </a>
+                    </li>
 
-          <li class="nav-item">
-            <a href="#" class="nav-link">Agências</a>
-          </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold text-white" href="#">
+                            Planos
+                        </a>
+                    </li>
 
-          <li class="nav-item">
-            <a href="#" class="nav-link">Planos</a>
-          </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold text-white" href="#">
+                            Relatórios
+                        </a>
+                    </li>
 
-          <li class="nav-item">
-            <a href="#" class="nav-link">Relatórios</a>
-          </li>
+                </ul>
 
-        </ul>
+            </div>
 
-      </div>
+            <!-- SAIR DESKTOP -->
+            <div class="d-none d-lg-flex">
 
-      <!-- BOTÃO SAIR -->
-      <a href="#" class="botao-sair-admin">
+                <a
+                    href="#"
+                    class="d-flex align-items-center gap-2 text-decoration-none text-white fw-semibold"
+                >
 
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="currentColor"
-          class="bi bi-box-arrow-right"
-          viewBox="0 0 16 16"
-        >
-          <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0z"/>
-          <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z"/>
-        </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M6 3a2 2 0 0 0-2 2v1h1V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-1H4v1a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H6z"/>
+                        <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"/>
+                    </svg>
 
-        <span>Sair</span>
+                    <span>Sair</span>
 
-      </a>
+                </a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <!-- OFFCANVAS MOBILE -->
+    <div
+        class="offcanvas offcanvas-end"
+        tabindex="-1"
+        id="menuMobile"
+    >
+
+        <div class="offcanvas-header">
+
+            <h5 class="offcanvas-title">
+                Menu
+            </h5>
+
+            <button
+                type="button"
+                class="btn-close shadow-none"
+                data-bs-dismiss="offcanvas"
+                aria-label="Fechar"
+            ></button>
+
+        </div>
+
+        <div class="offcanvas-body">
+
+            <ul class="navbar-nav gap-3">
+
+                <li class="nav-item">
+                    <a class="nav-link fw-semibold" href="#">
+                        Dashboard
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link fw-semibold" href="#">
+                        Agências
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link fw-semibold" href="#">
+                        Planos
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link fw-semibold" href="#">
+                        Relatórios
+                    </a>
+                </li>
+
+                <li class="nav-item mt-3">
+
+                    <a
+                        href="#"
+                        class="d-flex align-items-center gap-2 text-decoration-none fw-semibold"
+                    >
+
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M6 3a2 2 0 0 0-2 2v1h1V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-1H4v1a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H6z"/>
+                            <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"/>
+                        </svg>
+
+                        <span>Sair</span>
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+</header>
+<aside class="sidebar-admin d-none d-lg-flex flex-column">
+
+    <nav class="sidebar-menu">
+
+        <a href="#" class="menu-item">
+            <i class="bi bi-grid"></i>
+            <span>Visão geral</span>
+        </a>
+
+        <a href="#" class="menu-item">
+            <i class="bi bi-buildings"></i>
+            <span>Agências</span>
+        </a>
+
+        <a href="#" class="menu-item">
+            <i class="bi bi-car-front"></i>
+            <span>Veículos</span>
+        </a>
+
+        <a href="#" class="menu-item">
+            <i class="bi bi-chat-left-text"></i>
+            <span>Leads</span>
+        </a>
+
+        <a href="#" class="menu-item">
+            <i class="bi bi-box-seam"></i>
+            <span>Planos</span>
+        </a>
+
+        <a href="#" class="menu-item">
+            <i class="bi bi-file-earmark-bar-graph"></i>
+            <span>Relatórios</span>
+        </a>
+
+        <a href="#" class="menu-item">
+            <i class="bi bi-people"></i>
+            <span>Usuários</span>
+        </a>
+
+        <a href="#" class="menu-item">
+            <i class="bi bi-gear"></i>
+            <span>Configurações</span>
+        </a>
+
+        <a href="#" class="menu-item">
+            <i class="bi bi-clipboard-data"></i>
+            <span>Audit Log</span>
+        </a>
+
+    </nav>
+
+    <!-- USER -->
+    <div class="user-box">
+
+        <div class="user-avatar">
+            <i class="bi bi-person-fill"></i>
+        </div>
+
+        <div class="user-info">
+            <strong>Alan Turing</strong>
+            <small>Administrador</small>
+        </div>
 
     </div>
 
-  </nav>
+</aside>
 
-  <!-- CONTEÚDO -->
-  <main class="conteudo-admin d-flex">
+<main class="admin-content">
 
-    <!-- SIDEBAR -->
-    <aside class="sidebar-admin d-flex flex-column justify-content-between">
+    <section class="container-fluid">
 
-      <!-- MENU -->
-      <nav class="menu-admin" aria-label="Menu administrativo">
-
-        <ul class="lista-menu-admin">
-
-          <li>
-            <a href="#" class="menu-item-admin">
-              <span class="icone-menu-admin">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
-                  <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5"/>
-                </svg>
-              </span>
-              <span>Visão geral</span>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" class="menu-item-admin">
-              <span class="icone-menu-admin">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-shop" viewBox="0 0 16 16">
-                  <path d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.37 2.37 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0M1.5 8.5A.5.5 0 0 1 2 9v6h1v-5a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v5h6V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5M4 15h3v-5H4zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1zm3 0h-2v3h2z"/>
-                </svg>
-              </span>
-              <span>Agências</span>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" class="menu-item-admin">
-              <span class="icone-menu-admin">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-car-front-fill" viewBox="0 0 16 16">
-                  <path d="M2.52 3.515A2.5 2.5 0 0 1 4.82 2h6.362c1 0 1.904.596 2.298 1.515l.792 1.848c.075.175.21.319.38.404.5.25.855.715.965 1.262l.335 1.679q.05.242.049.49v.413c0 .814-.39 1.543-1 1.997V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.338c-1.292.048-2.745.088-4 .088s-2.708-.04-4-.088V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.892c-.61-.454-1-1.183-1-1.997v-.413a2.5 2.5 0 0 1 .049-.49l.335-1.68c.11-.546.465-1.012.964-1.261a.8.8 0 0 0 .381-.404l.792-1.848ZM3 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2m10 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2M6 8a1 1 0 0 0 0 2h4a1 1 0 1 0 0-2zM2.906 5.189a.51.51 0 0 0 .497.731c.91-.073 3.35-.17 4.597-.17s3.688.097 4.597.17a.51.51 0 0 0 .497-.731l-.956-1.913A.5.5 0 0 0 11.691 3H4.309a.5.5 0 0 0-.447.276L2.906 5.19Z"/>
-                </svg>
-              </span>
-              <span>Veículos</span>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" class="menu-item-admin">
-              <span class="icone-menu-admin">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-dots-fill" viewBox="0 0 16 16">
-                  <path d="M16 8c0 3.866-3.582 7-8 7a9 9 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7M5 8a1 1 0 1 0-2 0 1 1 0 0 0 2 0m4 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0m3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/>
-                </svg>
-              </span>
-              <span>Leads / Mensagens</span>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" class="menu-item-admin">
-              <span class="icone-menu-admin">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-fill" viewBox="0 0 16 16">
-                  <path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"/>
-                </svg>
-              </span>
-              <span>Planos</span>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" class="menu-item-admin">
-              <span class="icone-menu-admin">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-data-fill" viewBox="0 0 16 16">
-                  <path d="M6.5 0A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0zm3 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5z"/>
-                  <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1A2.5 2.5 0 0 1 9.5 5h-3A2.5 2.5 0 0 1 4 2.5zM10 8a1 1 0 1 1 2 0v5a1 1 0 1 1-2 0zm-6 4a1 1 0 1 1 2 0v1a1 1 0 1 1-2 0zm4-3a1 1 0 0 1 1 1v3a1 1 0 1 1-2 0v-3a1 1 0 0 1 1-1"/>
-                </svg>
-              </span>
-              <span>Relatórios</span>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" class="menu-item-admin">
-              <span class="icone-menu-admin">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
-                  <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"/>
-                </svg>
-              </span>
-              <span>Usuários</span>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" class="menu-item-admin">
-              <span class="icone-menu-admin">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear-fill" viewBox="0 0 16 16">
-                  <path d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"/>
-                </svg>
-              </span>
-              <span>Configurações</span>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" class="menu-item-admin">
-              <span class="icone-menu-admin">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-shield-lock-fill" viewBox="0 0 16 16">
-                  <path fill-rule="evenodd" d="M8 0c-.69 0-1.843.265-2.928.56-1.11.3-2.229.655-2.887.87a1.54 1.54 0 0 0-1.044 1.262c-.596 4.477.787 7.795 2.465 9.99a11.8 11.8 0 0 0 2.517 2.453c.386.273.744.482 1.048.625.28.132.581.24.829.24s.548-.108.829-.24a7 7 0 0 0 1.048-.625 11.8 11.8 0 0 0 2.517-2.453c1.678-2.195 3.061-5.513 2.465-9.99a1.54 1.54 0 0 0-1.044-1.263 63 63 0 0 0-2.887-.87C9.843.266 8.69 0 8 0m0 5a1.5 1.5 0 0 1 .5 2.915l.385 1.99a.5.5 0 0 1-.491.595h-.788a.5.5 0 0 1-.49-.595l.384-1.99A1.5 1.5 0 0 1 8 5"/>
-                </svg>
-              </span>
-              <span>Audit Log</span>
-            </a>
-          </li>
-
-        </ul>
-
-      </nav>
-
-      <!-- PROFILE -->
-      <div class="profile-admin">
-
-        <span class="profile-icone">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
-            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
-          </svg>
-        </span>
-
-        <div class="profile-info">
-          <p class="nome-admin">Alan Turing</p>
-          <small class="email-admin">alan.turing@gmail.com</small>
-        </div>
-
-      </div>
-
-    </aside>
-
-    <!-- ÁREA PRINCIPAL -->
-    <section class="flex-grow-1 p-4">
-
-      <div class="container-fluid">
-
-        <!-- GRID CARDS -->
         <section class="row g-4">
 
-          <!-- AGÊNCIAS ATIVAS -->
-          <div class="col-12 col-sm-6 col-xl-3">
-            <article class="card-admin-info">
-              <header>
-                <p class="titulo-card-admin">Agências ativas</p>
-                <h2 class="numero-card-admin">1.248</h2>
-                <span class="crescimento-card-admin">+55% vs mês anterior</span>
-              </header>
-              <aside class="icone-card-admin" aria-hidden="true">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-shop" viewBox="0 0 16 16">
-                  <path d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.37 2.37 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0M1.5 8.5A.5.5 0 0 1 2 9v6h1v-5a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v5h6V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5M4 15h3v-5H4zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1zm3 0h-2v3h2z"/>
-                </svg>
-              </aside>
-            </article>
-          </div>
+            <!-- CARD 1 -->
+            <article class="col-12 col-md-6 col-xl-3">
 
-          <!-- VEÍCULOS -->
-          <div class="col-12 col-sm-6 col-xl-3">
-            <article class="card-admin-info">
-              <header>
-                <p class="titulo-card-admin">Veículos totais</p>
-                <h2 class="numero-card-admin">24.789</h2>
-                <span class="crescimento-card-admin">+12,6% vs mês anterior</span>
-              </header>
-              <aside class="icone-card-admin" aria-hidden="true">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-car-front-fill" viewBox="0 0 16 16">
-                  <path d="M2.52 3.515A2.5 2.5 0 0 1 4.82 2h6.362c1 0 1.904.596 2.298 1.515l.792 1.848c.075.175.21.319.38.404.5.25.855.715.965 1.262l.335 1.679q.05.242.049.49v.413c0 .814-.39 1.543-1 1.997V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.338c-1.292.048-2.745.088-4 .088s-2.708-.04-4-.088V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.892c-.61-.454-1-1.183-1-1.997v-.413a2.5 2.5 0 0 1 .049-.49l.335-1.68c.11-.546.465-1.012.964-1.261a.8.8 0 0 0 .381-.404l.792-1.848ZM3 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2m10 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2M6 8a1 1 0 0 0 0 2h4a1 1 0 1 0 0-2zM2.906 5.189a.51.51 0 0 0 .497.731c.91-.073 3.35-.17 4.597-.17s3.688.097 4.597.17a.51.51 0 0 0 .497-.731l-.956-1.913A.5.5 0 0 0 11.691 3H4.309a.5.5 0 0 0-.447.276L2.906 5.19Z"/>
-                </svg>
-              </aside>
-            </article>
-          </div>
+                <section class="dashboard-card">
 
-          <!-- LEADS -->
-          <div class="col-12 col-sm-6 col-xl-3">
-            <article class="card-admin-info">
-              <header>
-                <p class="titulo-card-admin">Leads</p>
-                <h2 class="numero-card-admin">3.562</h2>
-                <span class="crescimento-card-admin">+15,3% vs mês anterior</span>
-              </header>
-              <aside class="icone-card-admin" aria-hidden="true">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-funnel-fill" viewBox="0 0 16 16">
-                  <path d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5z"/>
-                </svg>
-              </aside>
-            </article>
-          </div>
+                    <div>
 
-          <!-- RECEITA -->
-          <div class="col-12 col-sm-6 col-xl-3">
-            <article class="card-admin-info">
-              <header>
-                <p class="titulo-card-admin">Receita mensal</p>
-                <h2 class="numero-card-admin">R$1.248.912</h2>
-                <span class="crescimento-card-admin">+18,7% vs mês anterior</span>
-              </header>
-              <aside class="icone-card-admin" aria-hidden="true">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-coin" viewBox="0 0 16 16">
-                  <path d="M5.5 9.511c.076.954.83 1.697 2.182 1.785V12h.6v-.709c1.4-.098 2.218-.846 2.218-1.932 0-.987-.626-1.496-1.745-1.76l-.473-.112V5.57c.6.068.982.396 1.074.85h1.052c-.076-.919-.864-1.638-2.126-1.716V4h-.6v.719c-1.195.117-2.01.836-2.01 1.853 0 .9.606 1.472 1.613 1.707l.397.098v2.034c-.615-.093-1.022-.43-1.114-.9zm2.177-2.166c-.59-.137-.91-.416-.91-.836 0-.47.345-.822.915-.925v1.76h-.005zm.692 1.193c.717.166 1.048.435 1.048.91 0 .542-.412.914-1.135.982V8.518z"/>
-                  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
-                  <path d="M8 13.5a5.5 5.5 0 1 1 0-11 5.5 5.5 0 0 1 0 11m0 .5A6 6 0 1 0 8 2a6 6 0 0 0 0 12"/>
-                </svg>
-              </aside>
+                        <p class="card-label">
+                            Agências ativas
+                        </p>
+
+                        <h2 class="card-value">
+                            1.248
+                        </h2>
+
+                        <p class="card-growth">
+                            +51% vs mês anterior
+                        </p>
+
+                    </div>
+
+                    <div class="card-icon">
+
+                        <i class="bi bi-buildings"></i>
+
+                    </div>
+
+                </section>
+
             </article>
-          </div>
+
+            <!-- CARD 2 -->
+            <article class="col-12 col-md-6 col-xl-3">
+
+                <section class="dashboard-card">
+
+                    <div>
+
+                        <p class="card-label">
+                            Veículos totais
+                        </p>
+
+                        <h2 class="card-value">
+                            24.789
+                        </h2>
+
+                        <p class="card-growth">
+                            +42,6% vs mês anterior
+                        </p>
+
+                    </div>
+
+                    <div class="card-icon">
+
+                        <i class="bi bi-car-front-fill"></i>
+
+                    </div>
+
+                </section>
+
+            </article>
+
+            <!-- CARD 3 -->
+            <article class="col-12 col-md-6 col-xl-3">
+
+                <section class="dashboard-card">
+
+                    <div>
+
+                        <p class="card-label">
+                            Leads
+                        </p>
+
+                        <h2 class="card-value">
+                            3.562
+                        </h2>
+
+                        <p class="card-growth">
+                            +16,3% vs mês anterior
+                        </p>
+
+                    </div>
+
+                    <div class="card-icon">
+
+                        <i class="bi bi-chat-left-text-fill"></i>
+
+                    </div>
+
+                </section>
+
+            </article>
+
+            <!-- CARD 4 -->
+            <article class="col-12 col-md-6 col-xl-3">
+
+                <section class="dashboard-card">
+
+                    <div>
+
+                        <p class="card-label">
+                            Receita mensal
+                        </p>
+
+                        <h2 class="card-value">
+                            R$1.248,91
+                        </h2>
+
+                        <p class="card-growth">
+                            +18,7% vs mês anterior
+                        </p>
+
+                    </div>
+
+                    <div class="card-icon">
+
+                        <i class="bi bi-currency-dollar"></i>
+
+                    </div>
+
+                </section>
+
+            </article>
 
         </section>
 
-        
-
-        <!-- TABELA AGÊNCIAS -->
-        <section class="tabela-agencias mt-4">
-
-          <h2>Agências ativas</h2>
-
-          <div class="table-responsive">
-            <table class="table table-borderless align-middle mb-0">
-
-              <thead>
-                <tr>
-                  <th scope="col">Agência</th>
-                  <th scope="col">Localização</th>
-                  <th scope="col">Plano</th>
-                  <th scope="col">Data de cadastro</th>
-                  <th scope="col">Status</th>
-                  <th scope="col" class="text-center">Ações</th>
-                </tr>
-              </thead>
-
-              <tbody>
-
-                <tr>
-                  <td class="nome-agencia">Soma São Roque</td>
-                  <td class="text-secondary">São Roque, SP</td>
-                  <td class="text-secondary">Prime</td>
-                  <td class="text-secondary">01/07/2021</td>
-                  <td><span class="badge-online" aria-label="Status: Online">Online</span></td>
-                  <td>
-                   <div class="d-flex justify-content-center gap-2" role="group" aria-label="Ações para Soma São Roque">
-                      <button type="button" class="btn-acao-agencia">Aprovar</button>
-                      <button type="button" class="btn-acao-agencia">Ver cadastro</button>
-                      <button type="button" class="btn-acao-agencia">Desativar</button>
-                    </div>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td class="nome-agencia">Chevrolet Roqueville</td>
-                  <td class="text-secondary">São Roque, SP</td>
-                  <td class="text-secondary">Básico</td>
-                  <td class="text-secondary">16/09/2023</td>
-                  <td><span class="badge-offline" aria-label="Status: Offline">Offline</span></td>
-                  <td>
-                    <div class="d-flex justify-content-center gap-2" role="group" aria-label="Ações para Chevrolet Roqueville">
-                      <button type="button" class="btn-acao-agencia">Aprovar</button>
-                      <button type="button" class="btn-acao-agencia">Ver cadastro</button>
-                      <button type="button" class="btn-acao-agencia">Desativar</button>
-                    </div>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td class="nome-agencia">São Roque Veículos</td>
-                  <td class="text-secondary">São Roque, SP</td>
-                  <td class="text-secondary">Profissional</td>
-                  <td class="text-secondary">06/12/2025</td>
-                  <td><span class="badge-online" aria-label="Status: Online">Online</span></td>
-                  <td>
-                    <div class="d-flex justify-content-center gap-2" role="group" aria-label="Ações para São Roque Veículos">
-                      <button type="button" class="btn-acao-agencia">Aprovar</button>
-                      <button type="button" class="btn-acao-agencia">Ver cadastro</button>
-                      <button type="button" class="btn-acao-agencia">Desativar</button>
-                    </div>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td class="nome-agencia">Shark Motos</td>
-                  <td class="text-secondary">São Roque, SP</td>
-                  <td class="text-secondary">Básico</td>
-                  <td class="text-secondary">28/02/2025</td>
-                  <td><span class="badge-offline" aria-label="Status: Offline">Offline</span></td>
-                  <td>
-                    <div class="d-flex justify-content-center gap-2" role="group" aria-label="Ações para Shark Motos">
-                      <button type="button" class="btn-acao-agencia">Aprovar</button>
-                      <button type="button" class="btn-acao-agencia">Ver cadastro</button>
-                      <button type="button" class="btn-acao-agencia">Desativar</button>
-                    </div>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td class="nome-agencia">Rodcar 7 Veículos</td>
-                  <td class="text-secondary">São Roque, SP</td>
-                  <td class="text-secondary">Profissional</td>
-                  <td class="text-secondary">12/10/2026</td>
-                  <td><span class="badge-online" aria-label="Status: Online">Online</span></td>
-                  <td>
-                    <div class="d-flex justify-content-center gap-2" role="group" aria-label="Ações para Rodcar 7 Veículos">
-                      <button type="button" class="btn-acao-agencia">Aprovar</button>
-                      <button type="button" class="btn-acao-agencia">Ver cadastro</button>
-                      <button type="button" class="btn-acao-agencia">Desativar</button>
-                    </div>
-                  </td>
-                </tr>
-
-              </tbody>
-
-            </table>
-          </div>
-
-        </section>
-
-      </div>
-
-      <main class="container-fluid mt-4">
-
-  <section class="row g-4">
-
-    <!-- GRÁFICO -->
-    <article class="col-12 col-xl-8">
-      <div class="card p-4 h-100">
-
-        <header class="d-flex justify-content-between align-items-center mb-3">
-          <h2 class="h5 mb-0">Crescimento de agências e veículos</h2>
-
-          <div class="d-flex gap-3 small text-muted">
-            <span class="d-flex align-items-center gap-2">
-              <span class="badge-dot bg-purple"></span>
-              🟪 Agências ativas
-            </span>
-
-            <span class="d-flex align-items-center gap-2">
-              <span class="badge-dot bg-teal"></span>
-              🟩 Veículos publicados
-            </span>
-          </div>
-        </header>
-
-        <div class="grafico-container">
-          <canvas id="graficoCrescimento"></canvas>
-        </div>
-
-      </div>
-    </article>
-
-    <!-- ATIVIDADES -->
-    <article class="col-12 col-xl-4">
-      <div class="card p-4 h-100">
-
-        <header>
-          <h2 class="h5 mb-3">Atividades recentes</h2>
-        </header>
-
-        <ul class="list-group list-group-flush">
-
-          <li class="list-group-item d-flex gap-2">
-            <span>🟢</span>
-            Nova agência cadastrada: AutoSul Motors
-          </li>
-
-          <li class="list-group-item d-flex gap-2">
-            <span>🟢</span>
-            Soma São Roque atualizou seu plano para Prime
-          </li>
-
-          <li class="list-group-item d-flex gap-2">
-            <span>🟢</span>
-            Shark Motos publicou um novo veículo
-          </li>
-
-          <li class="list-group-item d-flex gap-2">
-            <span>🟢</span>
-            Pagamento aprovado: Soma São Roque
-          </li>
-
-          <li class="list-group-item d-flex gap-2">
-            <span>🔴</span>
-            Chevrolet Roqueville foi desativado por inatividade
-          </li>
-
-        </ul>
-
-      </div>
-    </article>
-
-  </section>
-
-</main>
     </section>
 
-    
+    <section class="container-fluid mt-4">
 
-  </main>
+  <div class="card border-0 shadow-sm rounded-4">
 
-  <!-- BOOTSTRAP JS -->
-  <script src="dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="javascript/admin.js" defer></script>
+    <div class="card-body p-4">
+
+      <h5 class="mb-3 fw-semibold">
+        Agências ativas
+      </h5>
+
+      <div class="table-responsive">
+
+        <table class="table align-middle">
+
+          <thead class="table-light">
+
+            <tr>
+              <th>Agência</th>
+              <th>Localização</th>
+              <th>Plano</th>
+              <th>Data de cadastro</th>
+              <th>Status</th>
+              <th class="text-center">Ações</th>
+            </tr>
+
+          </thead>
+
+          <tbody>
+
+            <!-- LINHA 1 -->
+            <tr>
+              <td>Soma São Roque</td>
+              <td>São Roque, SP</td>
+              <td>Pro</td>
+              <td>01/07/2021</td>
+              <td>
+                <span class="badge bg-success">Online</span>
+              </td>
+              <td class="text-end">
+                <button class="btn btn-success btn-sm">Ativar</button>
+                <button class="btn btn-outline-primary btn-sm">Ver cadastro</button>
+                <button class="btn btn-outline-danger btn-sm">Desativar</button>
+              </td>
+            </tr>
+
+            <!-- LINHA 2 -->
+            <tr>
+              <td>Chevrolet Rocque</td>
+              <td>São Roque, SP</td>
+              <td>Básico</td>
+              <td>18/09/2023</td>
+              <td>
+                <span class="badge bg-secondary">Offline</span>
+              </td>
+              <td class="text-end">
+                <button class="btn btn-success btn-sm">Ativar</button>
+                <button class="btn btn-outline-primary btn-sm">Ver cadastro</button>
+                <button class="btn btn-outline-danger btn-sm">Desativar</button>
+              </td>
+            </tr>
+
+            <!-- LINHA 3 -->
+            <tr>
+              <td>São Roque Veículos</td>
+              <td>São Roque, SP</td>
+              <td>Profissional</td>
+              <td>06/12/2025</td>
+              <td>
+                <span class="badge bg-success">Online</span>
+              </td>
+              <td class="text-end">
+                <button class="btn btn-success btn-sm">Ativar</button>
+                <button class="btn btn-outline-primary btn-sm">Ver cadastro</button>
+                <button class="btn btn-outline-danger btn-sm">Desativar</button>
+              </td>
+            </tr>
+
+            <!-- LINHA 4 -->
+            <tr>
+              <td>Shark motos</td>
+              <td>São Roque, SP</td>
+              <td>Básico</td>
+              <td>28/02/2025</td>
+              <td>
+                <span class="badge bg-secondary">Offline</span>
+              </td>
+              <td class="text-end">
+                <button class="btn btn-success btn-sm">Ativar</button>
+                <button class="btn btn-outline-primary btn-sm">Ver cadastro</button>
+                <button class="btn btn-outline-danger btn-sm">Desativar</button>
+              </td>
+            </tr>
+
+            <!-- LINHA 5 -->
+            <tr>
+              <td>Rodcar 7 Veículos</td>
+              <td>São Roque, SP</td>
+              <td>Profissional</td>
+              <td>12/10/2026</td>
+              <td>
+                <span class="badge bg-success">Online</span>
+              </td>
+              <td class="text-end">
+                <button class="btn btn-success btn-sm">Ativar</button>
+                <button class="btn btn-outline-primary btn-sm">Ver cadastro</button>
+                <button class="btn btn-outline-danger btn-sm">Desativar</button>
+              </td>
+            </tr>
+
+          </tbody>
+
+        </table>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- DASHBOARD SECTION -->
+<section class="container-fluid mt-4" aria-label="Painel de métricas e atividades">
+
+    <div class="row g-4">
+
+        <!-- GRÁFICO -->
+        <article class="col-12 col-xl-7">
+
+            <section class="dashboard-panel h-100" aria-labelledby="grafico-title">
+
+                <header class="d-flex justify-content-between align-items-center mb-4">
+
+                    <h2 id="grafico-title" class="panel-title mb-0">
+                        Crescimento de agências e veículos
+                    </h2>
+
+                    <div class="d-flex gap-3 small" aria-label="Legenda do gráfico">
+
+                        <div class="d-flex align-items-center gap-2">
+                            <span class="legend-dot bg-purple" aria-hidden="true"></span>
+                            <span>Agências ativas</span>
+                        </div>
+
+                        <div class="d-flex align-items-center gap-2">
+                            <span class="legend-dot bg-green" aria-hidden="true"></span>
+                            <span>Veículos publicados</span>
+                        </div>
+
+                    </div>
+
+                </header>
+
+                <div class="chart-wrapper" role="img" aria-label="Gráfico de crescimento de agências e veículos">
+                    <canvas id="graficoCrescimento"></canvas>
+                </div>
+
+            </section>
+
+        </article>
+
+        <!-- ATIVIDADES -->
+        <article class="col-12 col-xl-5">
+
+            <section class="dashboard-panel h-100" aria-labelledby="atividades-title">
+
+                <header>
+                    <h2 id="atividades-title" class="panel-title mb-4">
+                        Atividades recentes
+                    </h2>
+                </header>
+
+                <ul class="activities-list" aria-label="Lista de atividades recentes">
+
+                    <li class="activity-item">
+                        <span class="activity-icon" aria-hidden="true">
+                            <i class="bi bi-clock-history"></i>
+                        </span>
+                        <span class="activity-content">
+                            Nova agência cadastrada: AutoSul Motors
+                        </span>
+                    </li>
+
+                    <li class="activity-item">
+                        <span class="activity-icon" aria-hidden="true">
+                            <i class="bi bi-clock-history"></i>
+                        </span>
+                        <span class="activity-content">
+                            Soma São Roque atualizou seu plano para Prime
+                        </span>
+                    </li>
+
+                    <li class="activity-item">
+                        <span class="activity-icon" aria-hidden="true">
+                            <i class="bi bi-clock-history"></i>
+                        </span>
+                        <span class="activity-content">
+                            Shark Motos publicou um novo veículo
+                        </span>
+                    </li>
+
+                    <li class="activity-item">
+                        <span class="activity-icon" aria-hidden="true">
+                            <i class="bi bi-clock-history"></i>
+                        </span>
+                        <span class="activity-content">
+                            Pagamento aprovado: Soma São Roque
+                        </span>
+                    </li>
+
+                    <li class="activity-item border-0 pb-0">
+                        <span class="activity-icon" aria-hidden="true">
+                            <i class="bi bi-clock-history"></i>
+                        </span>
+                        <span class="activity-content">
+                            Chevrolet Roque foi desativado por inatividade
+                        </span>
+                    </li>
+
+                </ul>
+
+            </section>
+
+        </article>
+
+    </div>
+
+</section>
+
+</main>
 
 </body>
 

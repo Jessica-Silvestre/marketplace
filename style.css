@@ -1,567 +1,216 @@
-*{
-  margin: 0;
-  padding: 0;
+/* PÁGINA ADMIN */ 
+
+
+:root {
+  --cor-primaria: #5fd3cf;
+  --cor-fundo: #f8f9fa;
+  --cor-sidebar: #f8f9fa;
+  --cor-borda: #dee2e6;
+  --cor-texto: #111827;
+  --cor-texto-secundario: #6c757d;
+
+  --header-height: 88px;
+}
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
-/* =========================
-   ADMIN
-/* =========================
-   RESET
-========================= */
-
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+html {
+  font-size: 16px;
 }
 
-/* =========================
-   BODY
-========================= */
-
-.pagina-admin{
-  background-color: #F8F9FA;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #1e293b;
-}
-
-/* =========================
-   NAVBAR SUPERIOR
-========================= */
-
-.barra-navegacao-admin{
-  background-color: #4fd1c5;
-  padding: 12px 24px;
-}
-
-/* LOGO */
-
-.navbar-brand{
-  padding: 0;
-  margin: 0;
-}
-
-.logo-admin{
-  height: 72px;
-  width: auto;
-  display: block;
-}
-
-/* LINKS MENU SUPERIOR */
-
-.navbar-nav{
-  gap: 20px;
-}
-
-.nav-link{
-  color: white;
+body {
   font-size: 14px;
-  font-weight: 500;
-  transition: .3s;
+  margin: 0;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
 }
 
-.nav-link:hover{
-  color: white;
-  opacity: .7;
+header {
+  background-color: var(--cor-primaria);
+  position: sticky;
+  top: 0;
+  z-index: 1040;
+  height: var(--header-height);
 }
 
-.nav-link.active{
-  color: white;
+.logo-navbar {
+  max-width: 110px;
 }
 
-/* BOTÃO MOBILE */
+.nav-link:hover {
+  opacity: 0.8;
+}
 
-.navbar-toggler{
-  border: none;
-  padding: 0;
+.offcanvas {
+  max-width: 280px;
+}
+
+.navbar-toggler:focus,
+.btn-close:focus {
   box-shadow: none;
 }
 
-.navbar-toggler:focus{
-  box-shadow: none;
-}
+.sidebar-admin {
+  position: fixed;
+  top: var(--header-height);
+  left: 0;
+  bottom: 0;
 
-/* BOTÃO SAIR */
+  width: 240px;
 
-.botao-sair-admin{
+  background-color: var(--cor-sidebar);
+  border-right: 1px solid var(--cor-borda);
+
+  padding: 20px 16px;
+
   display: flex;
-  align-items: center;
-  gap: 6px;
+  flex-direction: column;
 
-  text-decoration: none;
-
-  color: white;
-
-  font-size: 14px;
-  font-weight: 500;
-
-  transition: .3s;
+  overflow-y: auto;
 }
 
-.botao-sair-admin:hover{
-  color: white;
-  opacity: .7;
-}
-
-.botao-sair-admin svg{
-  width: 16px;
-  height: 16px;
-}
-
-/* =========================
-   CONTEÚDO
-========================= */
-
-.conteudo-admin{
-  min-height: calc(100vh - 99px);
-}
-
-/* =========================
-   SIDEBAR
-========================= */
-
-.sidebar-admin{
-  width: 270px;
-  min-height: 100%;
-
-  background-color: #f3f4f6;
-
-  padding: 24px 18px;
-
-  border-right: 1px solid #e5e7eb;
-}
-
-/* MENU */
-
-.lista-menu-admin{
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-/* ITEM MENU */
-
-.menu-item-admin{
+.sidebar-menu {
   display: flex;
-  align-items: center;
-  gap: 14px;
+  flex-direction: column;
+  gap: 8px;
+}
 
+.menu-item {
   width: 100%;
+  height: 52px;
 
-  padding: 13px 14px;
-  margin-bottom: 10px;
-
-  border-radius: 16px;
-
-  text-decoration: none;
-
-  color: #94a3b8;
-
-  transition: .3s;
-}
-
-/* HOVER */
-
-.menu-item-admin:hover{
-  background-color: white;
-  color: #4fd1c5;
-
-  transform: translateX(3px);
-}
-
-
-/* ÍCONE */
-
-.icone-menu-admin{
-  width: 36px;
-  height: 36px;
-
-  border-radius: 12px;
-
-  background-color: #f8fafc;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  flex-shrink: 0;
-}
-
-.icone-menu-admin svg{
-  width: 16px;
-  height: 16px;
-}
-
-/* TEXTO MENU */
-
-.menu-item-admin span:last-child{
-  font-size: 14px;
-  font-weight: 600;
-}
-
-/* =========================
-   PROFILE
-========================= */
-
-.profile-admin{
-  background-color: #4fd1c5;
-
-  border-radius: 22px;
-
-  padding: 18px;
+  border-radius: 14px;
+  padding: 0 16px;
 
   display: flex;
   align-items: center;
   gap: 14px;
 
-  color: white;
+  text-decoration: none;
+  color: var(--cor-texto-secundario);
+
+  transition: 0.2s;
 }
 
-/* ÍCONE PROFILE */
+.menu-item i {
+  font-size: 1.1rem;
+}
 
-.profile-icone{
-  width: 46px;
-  height: 46px;
+.menu-item span {
+  font-size: 14px;
+  font-weight: 500;
+}
 
+.menu-item:hover {
+  background-color: var(--cor-primaria);
+  color: #fff;
+}
+
+.user-box {
+  margin-top: auto;
+
+  background-color: var(--cor-primaria);
+  border-radius: 18px;
+
+  padding: 16px;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  color: #fff;
+}
+
+.user-avatar {
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
 
-  background-color: rgba(255,255,255,.2);
+  background-color: #fff;
+  color: var(--cor-primaria);
 
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 
   flex-shrink: 0;
 }
 
-.profile-icone svg{
-  width: 22px;
-  height: 22px;
+.user-avatar i {
+  font-size: 1.2rem;
 }
 
-/* INFORMAÇÕES PROFILE */
-
-.profile-info{
-  display: flex;
-  flex-direction: column;
+.user-info strong {
+  display: block;
+  font-size: 13px;
 }
 
-/* NOME */
-
-.nome-admin{
-  margin: 0;
-
-  font-size: 14px;
-  font-weight: 700;
-}
-
-/* EMAIL */
-
-.email-admin{
-  font-size: 12px;
-  opacity: .9;
-}
-
-/* =========================
-   ÁREA PRINCIPAL
-========================= */
-
-main section{
-  background-color: #F8F9FA;
-}
-
-/* =========================
-   ÁREA PRINCIPAL
-========================= */
-
-.area-dashboard-admin{
-  width: 100%;
-}
-
-/* =========================
-   CARDS DASHBOARD
-========================= */
-
-.card-admin-info{
-  background-color: #ffffff;
-
-  border-radius: 22px;
-
-  padding: 24px;
-
-  min-height: 150px;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  gap: 18px;
-
-  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.04);
-}
-
-/* =========================
-   CONTEÚDO CARD
-========================= */
-
-.card-admin-info header{
-  display: flex;
-  flex-direction: column;
-}
-
-/* TÍTULO */
-
-.titulo-card-admin{
-  margin-bottom: 10px;
-
-  font-size: 15px;
-  font-weight: 600;
-
-  color: #94a3b8;
-}
-
-/* NÚMERO */
-
-.numero-card-admin{
-  margin-bottom: 10px;
-
-  font-size: 34px;
-  font-weight: 800;
-
-  line-height: 1;
-
-  color: #0f172a;
-}
-
-/* CRESCIMENTO */
-
-.crescimento-card-admin{
-  font-size: 14px;
-  font-weight: 700;
-
-  color: #22c55e;
-}
-
-/* =========================
-   ÍCONE CARD
-========================= */
-
-.icone-card-admin{
-  width: 78px;
-  height: 78px;
-
-  border-radius: 22px;
-
-  background-color: #4fd1c5;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  flex-shrink: 0;
-}
-
-/* SVG */
-
-.icone-card-admin svg{
-  width: 34px;
-  height: 34px;
-
-  color: #ffffff;
-}
-
-/* =========================
-   TABELA AGÊNCIAS
-========================= */
-
-.tabela-agencias {
-  background-color: #ffffff;
-  border-radius: 22px;
-  padding: 24px;
-  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.04);
-}
-
-.tabela-agencias h2 {
-  font-size: 18px;
-  font-weight: 700;
-  color: #0f172a;
-  margin-bottom: 20px;
-}
-
-/* CABEÇALHO */
-
-.tabela-agencias thead th {
+.user-info small {
   font-size: 11px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: #94a3b8;
-  border-bottom: 1px solid #e5e7eb;
-  padding-bottom: 12px;
 }
 
-/* CÉLULAS */
 
-.tabela-agencias tbody td {
-  font-size: 14px;
-  color: #1e293b;
-  padding: 16px 12px;
-  border-bottom: 1px solid #f1f5f9;
-  vertical-align: middle;
-}
-
-.tabela-agencias tbody tr:last-child td {
-  border-bottom: none;
-}
-
-/* NOME DA AGÊNCIA */
-
-.tabela-agencias .nome-agencia {
-  font-weight: 700;
-  color: #0f172a;
-}
-
-/* =========================
-   BADGE STATUS
-========================= */
-
-.badge-online {
-  background-color: #4fd1c5;
-  color: #085041;
-  font-size: 12px;
-  font-weight: 600;
-  padding: 4px 12px;
-  border-radius: 999px;
-}
-
-.badge-offline {
-  background-color: #e5e7eb;
-  color: #33363a;
-  font-size: 12px;
-  font-weight: 600;
-  padding: 4px 12px;
-  border-radius: 999px;
-}
-
-/* =========================
-   BOTÕES DE AÇÃO
-========================= */
-
-.btn-acao-agencia {
-  background-color: #4fd1c5;
-  color: #085041;
-  font-size: 12px;
-  font-weight: 600;
-  padding: 6px 14px;
-  border-radius: 999px;
-  border: none;
-  cursor: pointer;
-  transition: opacity 0.2s;
-}
-
-.tabela-agencias .badge-online,
-.tabela-agencias .badge-offline{
-  color: #fff;
-} 
-
-.tabela-agencias .btn-acao-agencia{
-  color: #fff;
-}
-
-.tabela-agencias .btn-acao-agencia:hover{
-      opacity: 0.8;
-
-  color: #fff;
-}
-
-/* ===== SEÇÃO EXTRA DO DASHBOARD ===== */
-.dashboard-extra {
-  margin-top: 1.5rem;
-}
-
-/* ===== CARD BASE (GRÁFICO E LATERAL) ===== */
-.card-chart,
-.card-activity {
-  background-color: #ffffff;
-  border-radius: 22px;
+main,
+.admin-content {
+  margin-left: 240px;
   padding: 24px;
-  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.04);
-  border: none;
+  background-color: #f3f4f6;
+  min-height: calc(100vh - var(--header-height));
+}
+
+.dashboard-card {
+  background-color: #fff;
+  border-radius: 18px;
+
+  padding: 20px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+
   height: 100%;
 }
 
-/* ===== TÍTULO DAS SEÇÕES ===== */
-.card-chart h3,
-.card-activity h3 {
-  font-size: 1rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-  color: #1f2937;
+.card-label {
+  font-size: 13px;
+  color: #9ca3af;
+  margin-bottom: 6px;
 }
 
-/* ===== BLOCO DO GRÁFICO (ÁREA RESERVADA) ===== */
-.chart-placeholder {
-  width: 100%;
-  height: 260px;
-  border-radius: 10px;
-  background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
+.card-value {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.card-growth {
+  font-size: 12px;
+  color: #22c55e;
+  margin-bottom: 0;
+}
+
+.card-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+
+  background-color: var(--cor-primaria);
+
   display: flex;
-  align-items: center;
   justify-content: center;
-  color: #f3f4f6;
-  font-size: 0.9rem;
-}
-
-/* ===== LISTA DE ATIVIDADES ===== */
-.activity-list {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-
-/* ITEM INDIVIDUAL */
-.activity-item {
-  display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 0.75rem 0.9rem;
-  border-radius: 10px;
-  background: #f9fafb;
-  transition: background 0.2s ease;
+
+  flex-shrink: 0;
 }
 
-.activity-item:hover {
-  background: #f3f4f6;
+.card-icon i {
+  font-size: 1.5rem;
+  color: #fff;
 }
 
-/* TEXTO DA ATIVIDADE */
-.activity-text {
-  font-size: 0.875rem;
-  color: #374151;
-}
-
-/* ===== STATUS (ONLINE / OFFLINE) ===== */
-.status-online,
-.status-offline {
-  font-size: 0.75rem;
-  font-weight: 600;
-  padding: 0.25rem 0.6rem;
-  border-radius: 999px;
-  color: #ffffff;
-}
-
-.status-online {
-  background: #16a34a;
-}
-
-.status-offline {
-  background: #dc2626;
-}
-
-.card,
-.card-chart,
-.card-activity,
-.tabela-agencias {
-  border: none;
-}
