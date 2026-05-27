@@ -238,6 +238,18 @@
 
 </aside>
 
+<button
+    class="btn btn-dark d-lg-none sidebar-fab"
+    type="button"
+    data-bs-toggle="offcanvas"
+    data-bs-target="#sidebarMobile"
+    aria-controls="sidebarMobile"
+    aria-expanded="false"
+    aria-label="Abrir menu de navegação"
+>
+    <i class="bi bi-grid" aria-hidden="true"></i>
+</button>
+
 <main class="admin-content">
 
     <section class="container-fluid">
@@ -493,117 +505,238 @@
 
 </section>
 
+<section class="container-fluid mt-4">
 
-<!-- DASHBOARD SECTION -->
-<section class="container-fluid mt-4" aria-label="Painel de métricas e atividades">
+  <section class="row g-4">
 
-    <div class="row g-4">
+    <!-- GRÁFICO -->
+    <article class="col-12 col-xl-7">
 
-        <!-- GRÁFICO -->
-        <article class="col-12 col-xl-7">
+      <section class="card border-0 shadow-sm rounded-4 h-100 chart-card">
 
-            <section class="dashboard-panel h-100" aria-labelledby="grafico-title">
+         <div class="card-body">
 
-                <header class="d-flex justify-content-between align-items-center mb-4">
+  <div class="d-flex flex-column gap-3 mb-4">
 
-                    <h2 id="grafico-title" class="panel-title mb-0">
-                        Crescimento de agências e veículos
-                    </h2>
+    <h2 class="fs-6 fw-semibold mb-0">
+      Crescimento de agências e veículos
+    </h2>
 
-                    <div class="d-flex gap-3 small" aria-label="Legenda do gráfico">
+    <div class="chart-legend">
 
-                        <div class="d-flex align-items-center gap-2">
-                            <span class="legend-dot bg-purple" aria-hidden="true"></span>
-                            <span>Agências ativas</span>
-                        </div>
+      <div class="legend-item">
 
-                        <div class="d-flex align-items-center gap-2">
-                            <span class="legend-dot bg-green" aria-hidden="true"></span>
-                            <span>Veículos publicados</span>
-                        </div>
+        <span class="legend-color agencias"></span>
 
-                    </div>
+        <p class="legend-label">
+          🟪 Agências ativas
+        </p>
 
-                </header>
+      </div>
 
-                <div class="chart-wrapper" role="img" aria-label="Gráfico de crescimento de agências e veículos">
-                    <canvas id="graficoCrescimento"></canvas>
-                </div>
+      <div class="legend-item">
 
-            </section>
+        <span class="legend-color veiculos"></span>
 
-        </article>
+        <p class="legend-label">
+          🟩 Veículos publicados
+        </p>
 
-        <!-- ATIVIDADES -->
-        <article class="col-12 col-xl-5">
-
-            <section class="dashboard-panel h-100" aria-labelledby="atividades-title">
-
-                <header>
-                    <h2 id="atividades-title" class="panel-title mb-4">
-                        Atividades recentes
-                    </h2>
-                </header>
-
-                <ul class="activities-list" aria-label="Lista de atividades recentes">
-
-                    <li class="activity-item">
-                        <span class="activity-icon" aria-hidden="true">
-                            <i class="bi bi-clock-history"></i>
-                        </span>
-                        <span class="activity-content">
-                            Nova agência cadastrada: AutoSul Motors
-                        </span>
-                    </li>
-
-                    <li class="activity-item">
-                        <span class="activity-icon" aria-hidden="true">
-                            <i class="bi bi-clock-history"></i>
-                        </span>
-                        <span class="activity-content">
-                            Soma São Roque atualizou seu plano para Prime
-                        </span>
-                    </li>
-
-                    <li class="activity-item">
-                        <span class="activity-icon" aria-hidden="true">
-                            <i class="bi bi-clock-history"></i>
-                        </span>
-                        <span class="activity-content">
-                            Shark Motos publicou um novo veículo
-                        </span>
-                    </li>
-
-                    <li class="activity-item">
-                        <span class="activity-icon" aria-hidden="true">
-                            <i class="bi bi-clock-history"></i>
-                        </span>
-                        <span class="activity-content">
-                            Pagamento aprovado: Soma São Roque
-                        </span>
-                    </li>
-
-                    <li class="activity-item border-0 pb-0">
-                        <span class="activity-icon" aria-hidden="true">
-                            <i class="bi bi-clock-history"></i>
-                        </span>
-                        <span class="activity-content">
-                            Chevrolet Roque foi desativado por inatividade
-                        </span>
-                    </li>
-
-                </ul>
-
-            </section>
-
-        </article>
+      </div>
 
     </div>
+
+  </div>
+
+  <div class="chart-wrapper">
+
+    <canvas
+      id="graficoCrescimento"
+      aria-label="Gráfico de crescimento de agências e veículos"
+      role="img"
+    ></canvas>
+
+  </div>
+          </div>
+
+        </div>
+
+      </section>
+
+    </article>
+
+    <!-- ATIVIDADES -->
+    <article class="col-12 col-xl-5">
+
+      <section class="card border-0 shadow-sm rounded-4 h-100 activity-card">
+
+        <div class="card-body">
+
+          <h2 class="fs-6 fw-semibold mb-4">
+            Atividades recentes
+          </h2>
+
+          <ul class="list-unstyled mb-0 activity-list">
+
+            <li class="activity-item">
+
+              <div class="activity-icon">
+
+                <i class="bi bi-clock-history"></i>
+
+              </div>
+
+              <p class="activity-text">
+                Nova agência cadastrada: AutoSul Motors
+              </p>
+
+            </li>
+
+            <li class="activity-item">
+
+              <div class="activity-icon">
+
+                <i class="bi bi-clock-history"></i>
+
+              </div>
+
+              <p class="activity-text">
+                Soma São Roque atualizou seu plano para Prime
+              </p>
+
+            </li>
+
+            <li class="activity-item">
+
+              <div class="activity-icon">
+
+                <i class="bi bi-clock-history"></i>
+
+              </div>
+
+              <p class="activity-text">
+                Shark Motos publicou um novo veículo
+              </p>
+
+            </li>
+
+            <li class="activity-item">
+
+              <div class="activity-icon">
+
+                <i class="bi bi-clock-history"></i>
+
+              </div>
+
+              <p class="activity-text">
+                Pagamento aprovado: Soma São Roque
+              </p>
+
+            </li>
+
+            <li class="activity-item">
+
+              <div class="activity-icon">
+
+                <i class="bi bi-clock-history"></i>
+
+              </div>
+
+              <p class="activity-text">
+                Chevrolet Roqueii foi desativado por inatividade
+              </p>
+
+            </li>
+
+          </ul>
+
+        </div>
+
+      </section>
+
+    </article>
+
+  </section>
 
 </section>
 
 </main>
 
+<!-- OFFCANVAS SIDEBAR MOBILE -->
+<aside
+    class="offcanvas offcanvas-start"
+    tabindex="-1"
+    id="sidebarMobile"
+    aria-label="Menu lateral"
+>
+    <header class="offcanvas-header">
+        <h5 class="offcanvas-title">Menu</h5>
+        <button
+            type="button"
+            class="btn-close shadow-none"
+            data-bs-dismiss="offcanvas"
+            aria-label="Fechar menu"
+        ></button>
+    </header>
+
+    <div class="offcanvas-body d-flex flex-column p-0">
+
+        <nav class="sidebar-menu flex-grow-1 pt-2" aria-label="Navegação principal">
+            <a href="#" class="menu-item" data-bs-dismiss="offcanvas">
+                <i class="bi bi-grid" aria-hidden="true"></i>
+                <span>Visão geral</span>
+            </a>
+            <a href="#" class="menu-item" data-bs-dismiss="offcanvas">
+                <i class="bi bi-buildings" aria-hidden="true"></i>
+                <span>Agências</span>
+            </a>
+            <a href="#" class="menu-item" data-bs-dismiss="offcanvas">
+                <i class="bi bi-car-front" aria-hidden="true"></i>
+                <span>Veículos</span>
+            </a>
+            <a href="#" class="menu-item" data-bs-dismiss="offcanvas">
+                <i class="bi bi-chat-left-text" aria-hidden="true"></i>
+                <span>Leads</span>
+            </a>
+            <a href="#" class="menu-item" data-bs-dismiss="offcanvas">
+                <i class="bi bi-box-seam" aria-hidden="true"></i>
+                <span>Planos</span>
+            </a>
+            <a href="#" class="menu-item" data-bs-dismiss="offcanvas">
+                <i class="bi bi-file-earmark-bar-graph" aria-hidden="true"></i>
+                <span>Relatórios</span>
+            </a>
+            <a href="#" class="menu-item" data-bs-dismiss="offcanvas">
+                <i class="bi bi-people" aria-hidden="true"></i>
+                <span>Usuários</span>
+            </a>
+            <a href="#" class="menu-item" data-bs-dismiss="offcanvas">
+                <i class="bi bi-gear" aria-hidden="true"></i>
+                <span>Configurações</span>
+            </a>
+            <a href="#" class="menu-item" data-bs-dismiss="offcanvas">
+                <i class="bi bi-clipboard-data" aria-hidden="true"></i>
+                <span>Audit Log</span>
+            </a>
+        </nav>
+
+        <footer class="user-box">
+            <div class="user-avatar" aria-hidden="true">
+                <i class="bi bi-person-fill"></i>
+            </div>
+            <address class="user-info">
+                <strong>Alan Turing</strong>
+                <small>Administrador</small>
+            </address>
+        </footer>
+
+    </div>
+
+</aside>
+
+<script src="dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="./javascript/admin.js"></script>
 </body>
 
 </html>
