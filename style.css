@@ -279,11 +279,203 @@ main,
   box-shadow: 0 4px 16px rgba(0,0,0,.25);
 }
 
-/* RESPONSIVO */
 
 @media (max-width: 991.98px) {
   main,
   .admin-content {
     margin-left: 0;
   }
+}
+
+/* PÁGINA DE CLIENTE */ 
+
+.pagina-admin .cliente-dashboard .card,
+.pagina-admin .cliente-dashboard .table,
+.pagina-admin .cliente-dashboard .form-control,
+.pagina-admin .cliente-dashboard .form-select,
+.pagina-admin .cliente-dashboard .input-group-text {
+  border-color: var(--border);
+}
+
+.pagina-admin .cliente-dashboard .card {
+  border-radius: var(--radius);
+  background: var(--white);
+  box-shadow: var(--shadow);
+}
+
+.pagina-admin .cliente-dashboard .cliente-title {
+  color: var(--text);
+}
+
+.pagina-admin .cliente-dashboard .cliente-subtitle {
+  color: var(--text-muted);
+}
+
+.pagina-admin .cliente-dashboard .btn-success {
+  border-color: var(--primary);
+  background: var(--primary);
+  color: var(--white);
+}
+
+.pagina-admin .cliente-dashboard .btn-success:hover {
+  border-color: var(--primary);
+  background: #49c3bf;
+}
+
+.pagina-admin .cliente-dashboard .btn-outline-success {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.pagina-admin .cliente-dashboard .btn-outline-success:hover {
+  background: var(--primary);
+  color: var(--white);
+}
+
+.pagina-admin .cliente-dashboard .cliente-stat-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 60px;
+  height: 60px;
+
+  border-radius: 16px;
+
+  background: rgba(95, 211, 207, .18);
+}
+
+.pagina-admin .cliente-dashboard .cliente-stat-icon i {
+  color: var(--primary);
+}
+
+.pagina-admin .cliente-dashboard .cliente-stat-label {
+  color: var(--text-light);
+  font-size: 13px;
+}
+
+.pagina-admin .cliente-dashboard .cliente-stat-value {
+  color: var(--text);
+}
+
+.pagina-admin .cliente-dashboard .cliente-stat-growth {
+  color: var(--success);
+  font-size: 12px;
+}
+
+
+.pagina-admin .cliente-dashboard .input-group-text {
+  background: var(--primary);
+  color: var(--white);
+}
+
+.pagina-admin .cliente-dashboard .form-control,
+.pagina-admin .cliente-dashboard .form-select {
+  background: var(--white);
+  color: var(--text);
+}
+
+.pagina-admin .cliente-dashboard .form-control:focus,
+.pagina-admin .cliente-dashboard .form-select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 .2rem rgba(95, 211, 207, .18);
+}
+
+.pagina-admin .cliente-dashboard .table {
+  margin-bottom: 0;
+}
+
+.pagina-admin .cliente-dashboard .table thead th {
+  border-bottom-color: var(--border);
+
+  font-size: 12px;
+  font-weight: 600;
+
+  color: var(--text-light);
+}
+
+.pagina-admin .cliente-dashboard .table tbody td {
+  border-color: var(--border);
+  color: var(--text-muted);
+}
+
+.pagina-admin .cliente-dashboard .cliente-car-title {
+  color: var(--text);
+}
+
+.pagina-admin .cliente-dashboard .cliente-car-subtitle {
+  color: var(--text-light);
+  font-size: 12px;
+}
+
+
+.pagina-admin .cliente-dashboard .status-active {
+  color: var(--success);
+}
+
+.pagina-admin .cliente-dashboard .status-paused {
+  color: var(--text-light);
+}
+
+
+.pagina-admin .cliente-dashboard .cliente-sidebar-title {
+  color: var(--text);
+}
+
+.pagina-admin .cliente-dashboard .cliente-sidebar-text {
+  color: var(--text-muted);
+}
+
+.pagina-admin .cliente-dashboard .progress {
+  height: 10px;
+  background: var(--bg-alt);
+}
+
+.pagina-admin .cliente-dashboard .progress-bar {
+  background: var(--primary);
+}
+
+.pagina-admin .cliente-dashboard .cliente-shortcuts a {
+  color: var(--text-muted);
+  transition: var(--transition);
+}
+
+.pagina-admin .cliente-dashboard .cliente-shortcuts a:hover {
+  color: var(--primary);
+}
+
+.pagina-admin .cliente-dashboard .cliente-stat-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 60px;
+  height: 60px;
+
+  border-radius: 16px;
+
+  background: rgba(95, 211, 207, .18);
+}
+
+.pagina-admin .cliente-dashboard .cliente-stat-icon i {
+  color: var(--primary);
+}
+
+.pagina-admin .cliente-dashboard .cliente-progress-bar {
+  width: 53%;
+  background-color: var(--primary);
+}
+
+.pagina-admin .cliente-dashboard .cliente-car-image {
+  width: 70px;
+  height: 50px;
+}
+
+.search-bar {
+  border: 1px solid #e5e7eb;
+  background: #fff;
+}
+.search-bar:focus {
+  border-color: #adb5bd;
+  box-shadow: none;
 }
