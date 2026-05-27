@@ -238,6 +238,18 @@
 
 </aside>
 
+<button
+    class="btn btn-dark d-lg-none sidebar-fab"
+    type="button"
+    data-bs-toggle="offcanvas"
+    data-bs-target="#sidebarMobile"
+    aria-controls="sidebarMobile"
+    aria-expanded="false"
+    aria-label="Abrir menu de navegação"
+>
+    <i class="bi bi-grid" aria-hidden="true"></i>
+</button>
+
 <main class="admin-content">
 
     <section class="container-fluid">
@@ -650,6 +662,79 @@
 
 </main>
 
+<!-- OFFCANVAS SIDEBAR MOBILE -->
+<aside
+    class="offcanvas offcanvas-start"
+    tabindex="-1"
+    id="sidebarMobile"
+    aria-label="Menu lateral"
+>
+    <header class="offcanvas-header">
+        <h5 class="offcanvas-title">Menu</h5>
+        <button
+            type="button"
+            class="btn-close shadow-none"
+            data-bs-dismiss="offcanvas"
+            aria-label="Fechar menu"
+        ></button>
+    </header>
+
+    <div class="offcanvas-body d-flex flex-column p-0">
+
+        <nav class="sidebar-menu flex-grow-1 pt-2" aria-label="Navegação principal">
+            <a href="#" class="menu-item" data-bs-dismiss="offcanvas">
+                <i class="bi bi-grid" aria-hidden="true"></i>
+                <span>Visão geral</span>
+            </a>
+            <a href="#" class="menu-item" data-bs-dismiss="offcanvas">
+                <i class="bi bi-buildings" aria-hidden="true"></i>
+                <span>Agências</span>
+            </a>
+            <a href="#" class="menu-item" data-bs-dismiss="offcanvas">
+                <i class="bi bi-car-front" aria-hidden="true"></i>
+                <span>Veículos</span>
+            </a>
+            <a href="#" class="menu-item" data-bs-dismiss="offcanvas">
+                <i class="bi bi-chat-left-text" aria-hidden="true"></i>
+                <span>Leads</span>
+            </a>
+            <a href="#" class="menu-item" data-bs-dismiss="offcanvas">
+                <i class="bi bi-box-seam" aria-hidden="true"></i>
+                <span>Planos</span>
+            </a>
+            <a href="#" class="menu-item" data-bs-dismiss="offcanvas">
+                <i class="bi bi-file-earmark-bar-graph" aria-hidden="true"></i>
+                <span>Relatórios</span>
+            </a>
+            <a href="#" class="menu-item" data-bs-dismiss="offcanvas">
+                <i class="bi bi-people" aria-hidden="true"></i>
+                <span>Usuários</span>
+            </a>
+            <a href="#" class="menu-item" data-bs-dismiss="offcanvas">
+                <i class="bi bi-gear" aria-hidden="true"></i>
+                <span>Configurações</span>
+            </a>
+            <a href="#" class="menu-item" data-bs-dismiss="offcanvas">
+                <i class="bi bi-clipboard-data" aria-hidden="true"></i>
+                <span>Audit Log</span>
+            </a>
+        </nav>
+
+        <footer class="user-box">
+            <div class="user-avatar" aria-hidden="true">
+                <i class="bi bi-person-fill"></i>
+            </div>
+            <address class="user-info">
+                <strong>Alan Turing</strong>
+                <small>Administrador</small>
+            </address>
+        </footer>
+
+    </div>
+
+</aside>
+
+<script src="dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="./javascript/admin.js"></script>
 </body>
