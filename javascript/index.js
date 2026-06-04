@@ -81,5 +81,3 @@ estadoSelect.addEventListener("change", function () {
     }
 });
 
-// Inicialização
-carregarEstados();
