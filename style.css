@@ -649,10 +649,36 @@ css.car__sidebar {
    border-radius: 8px;
 }
 
-.rodape-compra{
-  padding: 20px;
+.rodape-compra {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 -4px 20px rgba(0,0,0,.15);
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+  z-index: 9999;
+  padding: 10px;
   background-color: #37c7bb;
+  border-radius: 2px;
 }
 
+.avista{
+  margin-left: 170px;
+}
 
+.h3{
+  
+  margin-bottom: 0px;
+}
 
+.btn-final{
+  -bottom: 10px ;
+height: 35px;
+padding: 10px;
+border-radius: 8px;
+background-color: #297c75;
+}
