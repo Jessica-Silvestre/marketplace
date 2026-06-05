@@ -618,8 +618,7 @@ css.car__sidebar {
 
 .subtitulo{
   color: #6c757d;
-  margin-left: 10px;
-  font-size: 20px;
+  font-size: 30px;
   padding: 20px;
 
 }
@@ -647,6 +646,7 @@ css.car__sidebar {
    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
    padding: 25px; 
    border-radius: 8px;
+   margin-bottom: 100px;
 }
 
 .rodape-compra {
@@ -667,18 +667,26 @@ css.car__sidebar {
 }
 
 .avista{
-  margin-left: 170px;
+  margin-left: 250px;
 }
 
 .h3{
-  
+  margin-left: 100px;
   margin-bottom: 0px;
 }
 
-.btn-final{
-  -bottom: 10px ;
-height: 35px;
-padding: 10px;
-border-radius: 8px;
-background-color: #297c75;
+.btn-final {
+  background-color: white ;
+    color:black;
+    height: 35px;
+    margin-top: 20px;
+    margin-right: 100px;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.inv{
+  margin-left: 50px;
 }
