@@ -630,5 +630,29 @@ css.car__sidebar {
   border-radius: 10px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
 }
-=======
->>>>>>> 66b0c23e4fe2b3a96a02ae0bd3b4bf09e471bc40
+.info-box {
+  text-align: center;
+  display: grid;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+.seguro{
+  margin-top: 90px;
+  margin-left: 20px;
+}
+.box-detalhes{
+  display:grid;
+   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+   padding: 25px; 
+   border-radius: 8px;
+}
+
+.rodape-compra{
+  padding: 20px;
+  background-color: #37c7bb;
+}
+
+
+
