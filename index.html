@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Marketplace</title>
+</head>
+<body class="marketplace-page">
+
+<!-- ========== HEADER ========== -->
+<header>
+  <nav class="navbar navbar-expand-lg py-3">
+    <div class="container-fluid px-4 align-items-center">
+
+      <!-- LOGO -->
+      <a class="navbar-brand me-0" href="#">
+        <img src="./img/logo.png" alt="Logo Roque Garages" class="img-fluid logo-navbar">
+      </a>
+
+      <!-- BOTÃO MOBILE -->
+      <button class="navbar-toggler border-0 shadow-none d-lg-none" type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#menuMobile"
+              aria-controls="menuMobile">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- MENU DESKTOP -->
+      <div class="d-none d-lg-flex flex-grow-1 justify-content-center">
+        <ul class="navbar-nav gap-5">
+          <li class="nav-item">
+            <a class="nav-link fw-semibold text-white" href="#">Comprar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-semibold text-white" href="#">Vender</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-semibold text-white" href="#">Lojas</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- ÁREA DO LOJISTA -->
+      <div class="d-none d-lg-flex">
+        <a href="#" class="d-flex align-items-center gap-2 text-decoration-none text-white fw-semibold">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M6 3a2 2 0 0 0-2 2v1h1V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-1H4v1a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H6z"/>
+            <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"/>
+          </svg>
+          <span>Entrar</span>
+        </a>
+      </div>
+
+    </div>
+  </nav>
+</header>
+
+
+<!-- ========== HERO / BUSCA ========== -->
+<section class="container my-4">
+  <div class="hero-box text-center">
+    <h1 class="fw-bold mb-2">Encontre Seu Carro Ideal</h1>
+    <p class="text-muted mb-4">Compare as ofertas de lojas de todo o Brasil e faça o melhor negócio</p>
+
+    <div class="row g-3 justify-content-center">
+      <div class="col-lg-3">
+        <input type="text" id="marca" class="form-control" placeholder="Ex: Toyota Corolla" aria-label="Marca ou modelo">
+      </div>
+      <div class="col-lg-2">
+        <select class="form-select" aria-label="Faixa de preço">
+          <option selected>Faixa de preço</option>
+          <option>Até R$50.000</option>
+          <option>Até R$100.000</option>
+          <option>Até R$150.000</option>
+        </select>
+      </div>
+      <div class="col-lg-2">
+        <select class="form-select" aria-label="Região">
+          <option selected>Região</option>
+          <option>São Paulo</option>
+          <option>Rio de Janeiro</option>
+          <option>Minas Gerais</option>
+        </select>
+      </div>
+      <div class="col-lg-2">
+        <select class="form-select">
+          <option>Ano de</option>
+          <option>2018</option>
+          <option>2019</option>
+          <option>2020</option>
+          <option>2021</option>
+          <option>2022</option>
+          <option>2023</option>
+          <option>2024</option>
+        </select>
+      </div>
+      <div class="col-lg-2">
+        <select class="form-select">
+          <option>Até</option>
+          <option>2019</option>
+          <option>2020</option>
+          <option>2021</option>
+          <option>2022</option>
+          <option>2023</option>
+          <option>2024</option>
+          <option>2025</option>
+        </select>
+      </div>
+      <div class="col-lg-2">
+        <button class="btn btn-success w-100" type="button">BUSCAR</button>
+      </div>
+    </div>
+
+    <div class="hero-benefits mt-4">
+      <span><i class="bi bi-shield-check"></i> Veículos de Lojas Confiáveis</span>
+      <span><i class="bi bi-tag"></i> Compare Preços</span>
+      <span><i class="bi bi-globe"></i> Ofertas de todo Brasil</span>
+      <span><i class="bi bi-lock"></i> Negociação Segura</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- ========== FILTROS + CARDS ========== -->
+<section class="container my-4">
+  <div class="d-flex gap-4 align-items-start">
+
+    <!-- SIDEBAR DE FILTROS (sticky) -->
+    <aside style="width: 220px; flex-shrink: 0; position: sticky; top: 16px; align-self: flex-start;">
+      <div class="card p-3">
+        <h5 class="fw-semibold mb-3">Filtros</h5>
+
+        <label class="form-label small text-muted mb-1">Marca</label>
+        <select class="form-select form-select-sm mb-3">
+          <option>Selecione a Marca</option>
+          <option>BMW</option>
+          <option>BYD</option>
+          <option>Caoa Chery</option>
+          <option>Chevrolet</option>
+          <option>Citroën</option>
+          <option>Fiat</option>
+          <option>Honda</option>
+          <option>Hyundai</option>
+          <option>Jeep</option>
+          <option>Kia</option>
+          <option>Mercedes-Benz</option>
+          <option>Mitsubishi</option>
+          <option>Nissan</option>
+          <option>Peugeot</option>
+          <option>Renault</option>
+          <option>Toyota</option>
+          <option>Volkswagen</option>
+        </select>
+
+        <label class="form-label small text-muted mb-1">Ano</label>
+        <select class="form-select form-select-sm mb-3">
+          <option>Selecione</option>
+          <option>2010</option>
+          <option>2011</option>
+          <option>2012</option>
+          <option>2013</option>
+          <option>2014</option>
+          <option>2015</option>
+          <option>2016</option>
+          <option>2017</option>
+          <option>2018</option>
+          <option>2019</option>
+          <option>2020</option>
+          <option>2021</option>
+          <option>2022</option>
+          <option>2023</option>
+          <option>2024</option>
+          <option>2025</option>
+          <option>2026</option>
+        </select>
+
+        <label class="form-label small text-muted mb-1">Câmbio</label>
+        <select class="form-select form-select-sm mb-3">
+          <option>Selecione</option>
+          <option>Manual</option>
+          <option>Automático</option>
+        </select>
+
+        <label class="form-label small text-muted mb-1">Combustível</label>
+        <select class="form-select form-select-sm mb-3">
+          <option>Selecione</option>
+          <option>Diesel</option>
+          <option>Elétrico</option>
+          <option>Flex</option>
+          <option>Gasolina</option>
+        </select>
+
+        <label class="form-label small text-muted mb-1">Estado</label>
+        <select id="estado" class="form-select form-select-sm mb-3">
+          <option value="">Selecione um estado</option>
+        </select>
+
+        <label class="form-label small text-muted mb-1">Cidade</label>
+        <select id="cidade" class="form-select form-select-sm mb-3">
+          <option value="">Selecione uma cidade</option>
+        </select>
+
+        <button class="btn btn-success btn-sm w-100 mt-1">Aplicar Filtros</button>
+      </div>
+    </aside>
+
+    <!-- GRID DE CARDS (3 por linha) -->
+    <div class="flex-grow-1">
+      <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4">
+
+        <div class="col">
+          <article class="card car-card h-100">
+            <img src="./img/fiat-mobi-500.jpg" class="card-img-top" alt="Camaro 2.0">
+            <div class="card-body">
+              <h3 class="fs-6 fw-bold">Camaro 2.0</h3>
+              <small class="text-muted">2020/2020</small>
+              <h4 class="mt-2 text-success fw-bold">R$ 80.000</h4>
+              <small>São Paulo - SP</small>
+            </div>
+            <div class="card-footer bg-white border-0">
+              <button class="btn btn-outline-success w-100">Ver anúncio</button>
+            </div>
+          </article>
+        </div>
+
+        <div class="col">
+          <article class="card car-card h-100">
+            <img src="./img/fiat-mobi-500.jpg" class="card-img-top" alt="Camaro 2.0">
+            <div class="card-body">
+              <h3 class="fs-6 fw-bold">Camaro 2.0</h3>
+              <small class="text-muted">2020/2020</small>
+              <h4 class="mt-2 text-success fw-bold">R$ 80.000</h4>
+              <small>São Paulo - SP</small>
+            </div>
+            <div class="card-footer bg-white border-0">
+              <button class="btn btn-outline-success w-100">Ver anúncio</button>
+            </div>
+          </article>
+        </div>
+
+        <div class="col">
+          <article class="card car-card h-100">
+            <img src="./img/fiat-mobi-500.jpg" class="card-img-top" alt="Camaro 2.0">
+            <div class="card-body">
+              <h3 class="fs-6 fw-bold">Camaro 2.0</h3>
+              <small class="text-muted">2020/2020</small>
+              <h4 class="mt-2 text-success fw-bold">R$ 80.000</h4>
+              <small>São Paulo - SP</small>
+            </div>
+            <div class="card-footer bg-white border-0">
+              <button class="btn btn-outline-success w-100">Ver anúncio</button>
+            </div>
+          </article>
+        </div>
+
+        <div class="col">
+          <article class="card car-card h-100">
+            <img src="./img/fiat-mobi-500.jpg" class="card-img-top" alt="Camaro 2.0">
+            <div class="card-body">
+              <h3 class="fs-6 fw-bold">Camaro 2.0</h3>
+              <small class="text-muted">2020/2020</small>
+              <h4 class="mt-2 text-success fw-bold">R$ 80.000</h4>
+              <small>São Paulo - SP</small>
+            </div>
+            <div class="card-footer bg-white border-0">
+              <button class="btn btn-outline-success w-100">Ver anúncio</button>
+            </div>
+          </article>
+        </div>
+
+        <div class="col">
+          <article class="card car-card h-100">
+            <img src="./img/fiat-mobi-500.jpg" class="card-img-top" alt="Camaro 2.0">
+            <div class="card-body">
+              <h3 class="fs-6 fw-bold">Camaro 2.0</h3>
+              <small class="text-muted">2020/2020</small>
+              <h4 class="mt-2 text-success fw-bold">R$ 80.000</h4>
+              <small>São Paulo - SP</small>
+            </div>
+            <div class="card-footer bg-white border-0">
+              <button class="btn btn-outline-success w-100">Ver anúncio</button>
+            </div>
+          </article>
+        </div>
+
+        <div class="col">
+          <article class="card car-card h-100">
+            <img src="./img/fiat-mobi-500.jpg" class="card-img-top" alt="Camaro 2.0">
+            <div class="card-body">
+              <h3 class="fs-6 fw-bold">Camaro 2.0</h3>
+              <small class="text-muted">2020/2020</small>
+              <h4 class="mt-2 text-success fw-bold">R$ 80.000</h4>
+              <small>São Paulo - SP</small>
+            </div>
+            <div class="card-footer bg-white border-0">
+              <button class="btn btn-outline-success w-100">Ver anúncio</button>
+            </div>
+          </article>
+        </div>
+
+        <div class="col">
+          <article class="card car-card h-100">
+            <img src="./img/fiat-mobi-500.jpg" class="card-img-top" alt="Camaro 2.0">
+            <div class="card-body">
+              <h3 class="fs-6 fw-bold">Camaro 2.0</h3>
+              <small class="text-muted">2020/2020</small>
+              <h4 class="mt-2 text-success fw-bold">R$ 80.000</h4>
+              <small>São Paulo - SP</small>
+            </div>
+            <div class="card-footer bg-white border-0">
+              <button class="btn btn-outline-success w-100">Ver anúncio</button>
+            </div>
+          </article>
+        </div>
+
+        <div class="col">
+          <article class="card car-card h-100">
+            <img src="./img/fiat-mobi-500.jpg" class="card-img-top" alt="Camaro 2.0">
+            <div class="card-body">
+              <h3 class="fs-6 fw-bold">Camaro 2.0</h3>
+              <small class="text-muted">2020/2020</small>
+              <h4 class="mt-2 text-success fw-bold">R$ 80.000</h4>
+              <small>São Paulo - SP</small>
+            </div>
+            <div class="card-footer bg-white border-0">
+              <button class="btn btn-outline-success w-100">Ver anúncio</button>
+            </div>
+          </article>
+        </div>
+
+        <div class="col">
+          <article class="card car-card h-100">
+            <img src="./img/fiat-mobi-500.jpg" class="card-img-top" alt="Camaro 2.0">
+            <div class="card-body">
+              <h3 class="fs-6 fw-bold">Camaro 2.0</h3>
+              <small class="text-muted">2020/2020</small>
+              <h4 class="mt-2 text-success fw-bold">R$ 80.000</h4>
+              <small>São Paulo - SP</small>
+            </div>
+            <div class="card-footer bg-white border-0">
+              <button class="btn btn-outline-success w-100">Ver anúncio</button>
+            </div>
+          </article>
+        </div>
+
+      </div><!-- /row -->
+    </div><!-- /grid -->
+
+  </div><!-- /d-flex -->
+</section>
+
+
+<!-- ========== FOOTER ========== -->
+<footer class="marketplace-footer text-center">
+  <div class="container">
+    <p class="mb-1 fw-semibold">Roque Garages &copy; 2024</p>
+    <p class="mb-3 small opacity-75">O marketplace de carros mais confiável do Brasil</p>
+    <div class="d-flex justify-content-center gap-3">
+      <i class="bi bi-instagram"></i>
+      <i class="bi bi-facebook"></i>
+      <i class="bi bi-whatsapp"></i>
+    </div>
+  </div>
+</footer>
+
+<script src="dist/js/bootstrap.bundle.min.js"></script>
+<script src="index.js"></script>
+</body>
+</html>
