@@ -8,7 +8,19 @@
     <link rel="stylesheet" href="dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="style.css">
+    <script src="detalhe.js"></script>
 </head>
+<div id="modalImagem" class="modal-imagem">
+
+    <span class="fechar-modal">&times;</span>
+
+    <button class="seta seta-esquerda">&#10094;</button>
+
+    <img id="imagemModal" class="imagem-modal">
+
+    <button class="seta seta-direita">&#10095;</button>
+
+</div>
 <body>
    <header>
     <nav class="navbar navbar-expand-lg py-3">
@@ -213,9 +225,9 @@
             <!-- INFORMAÇÕES -->
             <div class="col-lg-5">
 
-                <h2 class="nome-veiculo">
+                <strong class="nome-veiculo">
                     FIAT MOBI
-                </h2>
+                </strong>
 
                 <p class="versao">
                     1.0 Evo Flex Like Manual
@@ -246,10 +258,13 @@
                 </button>
 
                 <div class="seguro">
-                    <img src="icons/icons8-verificado-50.png" alt="icone verificado">
-                    Compra 100% segura<br>
-                    Seus dados protegidos
-                </div>
+                <img src="icons/icons8-verificado-50.png" alt="icone-verificado">
+
+                <div class="texto-seguro">
+                    <strong>Compra 100% segura</strong>
+                    <span>Seus dados protegidos</span>
+    </div>
+</div>
 
             </div>
 
@@ -305,56 +320,72 @@
 
     <!-- DETALHES -->
 
-    <div class="row mt-4">
+   <div class="row mt-4">
 
-        <div class="col-lg-6">
+    <!-- DETALHES -->
+    <div class="col-lg-6">
+        <div class="card-detalhes">
 
-            <div class="box-detalhes">
+            <h2>Detalhes do Veículo</h2>
 
-                <h4>Detalhes do Veículo</h4>
+            <div class="detalhe-item">
+                <span class="label">Marca</span>
+                <span class="valor">Fiat</span>
+            </div>
 
-                <ul>
-                    <li>Marca: Fiat</li>
-                    <li>Modelo: Mobi</li>
-                    <li>Ano: 2023</li>
-                    <li>Cor: Branco</li>
-                    <li>Câmbio: Manual</li>
-                </ul>
+            <div class="detalhe-item">
+                <span class="label">Modelo</span>
+                <span class="valor">Mobi</span>
+            </div>
 
+            <div class="detalhe-item">
+                <span class="label">Ano</span>
+                <span class="valor">2023</span>
+            </div>
+
+            <div class="detalhe-item">
+                <span class="label">Cor</span>
+                <span class="valor">Branco</span>
+            </div>
+
+            <div class="detalhe-item">
+                <span class="label">Câmbio</span>
+                <span class="valor">Manual</span>
+            </div>
+
+            <div class="detalhe-item">
+                <span class="label">Combustível</span>
+                <span class="valor">Flex</span>
             </div>
 
         </div>
+    </div>
 
-        <div class="col-lg-6">
+    <!-- DESCRIÇÃO -->
+    <div class="col-lg-6">
+        <div class="card-descricao">
 
-            <div class="box-detalhes">
+            <h2>Descrição do Veículo</h2>
 
-                <h4>Descrição do Veículo</h4>
+            <p>
+                Veículo em excelente estado de conservação, único dono,
+                revisões em dia e documentação regular.
+            </p>
 
-                <p>
-                    Veículo em ótimo estado,
-                    único dono,
-                    revisões em dia
-                    e documentação regular.
-                </p>
+            <h3>Diferenciais</h3>
 
-                <h5>Diferenciais</h5>
-
-                <div class="d-flex gap-3">
-
-                    <span class="circulo"></span>
-                    <span class="circulo"></span>
-                    <span class="circulo"></span>
-                    <span class="circulo"></span>
-
-                </div>
-
-            </div>
+            <ul class="diferenciais">
+                <li>Único dono</li>
+                <li>Manual do proprietário</li>
+                <li>Chave reserva</li>
+                <li>Revisões realizadas</li>
+                <li>Documentação em dia</li>
+            </ul>
 
         </div>
+    </div>
 
-    </div>
-    </div>
+</div>
 
     <!-- RODAPÉ DA OFERTA -->
 

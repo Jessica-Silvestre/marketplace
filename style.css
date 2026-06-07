@@ -556,8 +556,6 @@ css.car__sidebar {
   overflow-y: auto;
 }
 
-
-<<<<<<< HEAD
 .detalhes-veiculo{
     max-width: 1200px;
     margin: 0 auto;
@@ -580,6 +578,15 @@ css.car__sidebar {
     object-fit: cover;
     border-radius: 8px;
     display: block;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.miniatura:hover{
+    transform: scale(1.05);
+}
+.miniatura.ativa{
+    border: 3px solid #3ac4bc;
 }
 
 .preco{
@@ -624,10 +631,14 @@ css.car__sidebar {
 }
 .card-veiculo{
   margin: 0;
-  padding: 25px;
   background-color: white;
   border-radius: 10px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+    background: #fff;
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 8px 25px rgba(0,0,0,.08);
+
 }
 .info-box {
   text-align: center;
@@ -691,11 +702,236 @@ css.car__sidebar {
   margin-left: 50px;
 }
 
-.icone{
-  width: 30px;
-  height: 30px;
+.info-box{
+    background: #fff;
+    border-radius: 16px;
+    padding: 30px;
+    text-align: center;
 
     display: flex;
-    justify-content: center; 
-    align-items: center;    
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.icone{
+    width: 35px;
+    height: 35px;
+    display: block;
+    margin: 0 auto 15px auto;
+}
+
+.info-box strong{
+    display: block;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.info-box span{
+    font-size: 22px;
+    font-weight: 700;
+    color: #3ac4bc;
+}
+
+.seguro{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.texto-seguro{
+    display: flex;
+    flex-direction: column;
+}
+
+.texto-seguro span{
+    margin-top: 4px;
+}
+
+.nome-veiculo{
+  text-align: center;
+  font-size: 30px;
+}
+
+.versao{
+  text-align: left;
+  font-size: 18px;
+}
+.tag{
+    background: #d9f3f1;
+    color: #1a6f69;
+    font-weight: 600;
+    border-radius: 20px;
+    padding: 6px 18px;
+    font-size: 14px;
+}
+.preco{
+    font-size: 52px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.condicao{
+    color: #666;
+    font-size: 16px;
+}
+.info-veiculo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.btn-comprar{
+    background: #3ac4bc;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.btn-comprar:hover{
+    background: #2db2aa;
+}
+.btn-vendedor{
+    background: #f5f5f5;
+    border: 1px solid #ddd;
+}
+.info-veiculo > *{
+    margin-bottom: 18px;
+}
+.card-detalhes,
+.card-descricao{
+    background: #fff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0,0,0,.08);
+    height: 100%;
+}
+
+.card-detalhes h2,
+.card-descricao h2{
+    margin-bottom: 25px;
+    font-size: 32px;
+    color: #0c1f3f;
+}
+
+.card-descricao h3{
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.detalhe-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #ececec;
+}
+
+.label{
+    color: #666;
+    font-size: 16px;
+}
+
+.valor{
+    font-weight: 600;
+    color: #0c1f3f;
+}
+
+.card-descricao p{
+    color: #444;
+    line-height: 1.8;
+}
+
+.diferenciais{
+    padding: 0;
+    margin: 0;
+}
+
+.diferenciais li{
+    list-style: none;
+    margin-bottom: 12px;
+    font-size: 16px;
+}
+
+.diferenciais li::before{
+    content: "✓";
+    color: #3ac4bc;
+    font-weight: bold;
+    margin-right: 10px;
+}
+.rodape-compra{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+    background: #3ac4bc;
+    padding: 12px 40px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    box-shadow: 0 -4px 15px rgba(0,0,0,.15);
+    z-index: 999;
+}
+.modal-imagem{
+    display:none;
+    position:fixed;
+    z-index:9999;
+    inset:0;
+    background:rgba(0,0,0,.95);
+
+    justify-content:center;
+    align-items:center;
+}
+
+.imagem-modal{
+    max-width:90%;
+    max-height:90%;
+    border-radius:10px;
+}
+
+.fechar-modal{
+    position:absolute;
+    top:20px;
+    right:40px;
+
+    color:white;
+    font-size:45px;
+
+    cursor:pointer;
+}
+
+.seta{
+    position:absolute;
+    top:50%;
+
+    transform:translateY(-50%);
+
+    border:none;
+    background:none;
+
+    color:white;
+    font-size:60px;
+
+    cursor:pointer;
+}
+
+.seta-esquerda{
+    left:30px;
+}
+
+.seta-direita{
+    right:30px;
+}
+
+.foto-principal{
+    cursor:pointer;
+}
+
+.miniatura{
+    cursor:pointer;
 }
