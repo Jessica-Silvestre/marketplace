@@ -26,3 +26,10 @@ new Chart(ctx, {
     }
   }
 }); 
+
+const botao = document.getElementById('toggleSidebar')
+const sidebar = document.querySelector('.sidebar-admin')
+
+botao.addEventListener('click', () => {
+  sidebar.classList.toggle('ativa')
+})

@@ -17,9 +17,18 @@
 <body class="pagina-admin">
 
 <header>
-    <nav class="navbar navbar-expand-lg py-3">
+
+<nav class="navbar navbar-expand-lg py-3">
 
         <div class="container-fluid px-4 align-items-center">
+
+            <button
+    id="toggleSidebar"
+    class="btn btn-link text-white p-0 me-3"
+    type="button"
+>
+    <i class="bi bi-list fs-3"></i>
+</button>
 
             <!-- LOGO -->
             <a class="navbar-brand me-0" href="#">
@@ -46,25 +55,25 @@
 
                 <ul class="navbar-nav gap-5">
 
-                    <li class="nav-item">
+                    <li class="nav-item" role="menuitem">
                         <a class="nav-link fw-semibold text-white" href="#">
                             Dashboard
                         </a>
                     </li>
 
-                    <li class="nav-item">
+                    <li class="nav-item" role="menuitem">
                         <a class="nav-link fw-semibold text-white" href="#">
                             Agências
                         </a>
                     </li>
 
-                    <li class="nav-item">
+                    <li class="nav-item" role="menuitem">
                         <a class="nav-link fw-semibold text-white" href="#">
                             Planos
                         </a>
                     </li>
 
-                    <li class="nav-item">
+                    <li class="nav-item" role="menuitem">
                         <a class="nav-link fw-semibold text-white" href="#">
                             Relatórios
                         </a>
@@ -104,7 +113,7 @@
         id="menuMobile"
     >
 
-        <div class="offcanvas-header">
+        <div class="offcanvas-">
 
             <h5 class="offcanvas-title">
                 Menu
@@ -129,25 +138,25 @@
                     </a>
                 </li>
 
-                <li class="nav-item">
+                <li class="nav-item" role="menuitem">
                     <a class="nav-link fw-semibold" href="#">
                         Agências
                     </a>
                 </li>
 
-                <li class="nav-item">
+                <li class="nav-item" role="menuitem">
                     <a class="nav-link fw-semibold" href="#">
                         Planos
                     </a>
                 </li>
 
-                <li class="nav-item">
+                <li class="nav-item" role="menuitem">
                     <a class="nav-link fw-semibold" href="#">
                         Relatórios
                     </a>
                 </li>
 
-                <li class="nav-item mt-3">
+                <li class="nav-item mt-3" role="menuitem">
 
                     <a
                         href="#"
@@ -171,9 +180,13 @@
 
     </div>
 </header>
-<aside class="sidebar-admin d-none d-lg-flex flex-column">
 
-    <nav class="sidebar-menu">
+<aside
+    id="sidebarDesktop"
+    class="sidebar-admin d-none d-lg-flex flex-column"
+>
+
+    <nav class="sidebar-menu" role="navigation" aria-label="Navegação principal">
 
         <a href="#" class="menu-item">
             <i class="bi bi-grid"></i>
@@ -424,8 +437,8 @@
               </td>
               <td class="text-end">
                 <button class="btn btn-success btn-sm">Ativar</button>
-                <button class="btn btn-outline-primary btn-sm">Ver cadastro</button>
-                <button class="btn btn-outline-danger btn-sm">Desativar</button>
+                <button class="btn btn-primary btn-sm">Ver cadastro</button>
+                <button class="btn btn-danger btn-sm">Desativar</button>
               </td>
             </tr>
 
@@ -440,8 +453,8 @@
               </td>
               <td class="text-end">
                 <button class="btn btn-success btn-sm">Ativar</button>
-                <button class="btn btn-outline-primary btn-sm">Ver cadastro</button>
-                <button class="btn btn-outline-danger btn-sm">Desativar</button>
+                <button class="btn btn-primary btn-sm">Ver cadastro</button>
+                <button class="btn btn-danger btn-sm">Desativar</button>
               </td>
             </tr>
 
@@ -456,8 +469,8 @@
               </td>
               <td class="text-end">
                 <button class="btn btn-success btn-sm">Ativar</button>
-                <button class="btn btn-outline-primary btn-sm">Ver cadastro</button>
-                <button class="btn btn-outline-danger btn-sm">Desativar</button>
+                <button class="btn btn-primary btn-sm">Ver cadastro</button>
+                <button class="btn btn-danger btn-sm">Desativar</button>
               </td>
             </tr>
 
@@ -472,8 +485,8 @@
               </td>
               <td class="text-end">
                 <button class="btn btn-success btn-sm">Ativar</button>
-                <button class="btn btn-outline-primary btn-sm">Ver cadastro</button>
-                <button class="btn btn-outline-danger btn-sm">Desativar</button>
+                <button class="btn btn-primary btn-sm">Ver cadastro</button>
+                <button class="btn btn-danger btn-sm">Desativar</button>
               </td>
             </tr>
 
@@ -488,8 +501,8 @@
               </td>
               <td class="text-end">
                 <button class="btn btn-success btn-sm">Ativar</button>
-                <button class="btn btn-outline-primary btn-sm">Ver cadastro</button>
-                <button class="btn btn-outline-danger btn-sm">Desativar</button>
+                <button class="btn btn-primary btn-sm">Ver cadastro</button>
+                <button class="btn btn-danger btn-sm">Desativar</button>
               </td>
             </tr>
 
@@ -669,15 +682,18 @@
     id="sidebarMobile"
     aria-label="Menu lateral"
 >
-    <header class="offcanvas-header">
-        <h5 class="offcanvas-title">Menu</h5>
-        <button
-            type="button"
-            class="btn-close shadow-none"
-            data-bs-dismiss="offcanvas"
-            aria-label="Fechar menu"
-        ></button>
-    </header>
+<div class="offcanvas-header">
+
+    <h5 class="offcanvas-title">Menu</h5>
+
+    <button
+        type="button"
+        class="btn-close shadow-none"
+        data-bs-dismiss="offcanvas"
+        aria-label="Fechar menu"
+    ></button>
+
+</div>
 
     <div class="offcanvas-body d-flex flex-column p-0">
 
@@ -733,6 +749,7 @@
     </div>
 
 </aside>
+
 
 <script src="dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>

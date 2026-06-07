@@ -1,3 +1,5 @@
+/* ADMIN */ 
+
 :root {
   --primary: #5fd3cf;
   --bg: #f8f9fa;
@@ -23,8 +25,6 @@
   --transition: .2s ease;
 }
 
-/* RESET */
-
 *,
 *::before,
 *::after {
@@ -37,8 +37,6 @@ body {
   background: var(--bg);
   color: var(--text);
 }
-
-/* HEADER */
 
 header {
   position: sticky;
@@ -66,11 +64,12 @@ header {
   box-shadow: none;
 }
 
-/* SIDEBAR */
 
 .sidebar-admin {
   position: fixed;
   inset: var(--header-h) auto 0 0;
+
+  z-index: 2000;
 
   width: var(--sidebar-w);
 
@@ -82,6 +81,13 @@ header {
 
   background: var(--bg);
   border-right: 1px solid var(--border);
+
+  transform: translateX(-100%);
+  transition: transform .3s ease;
+}
+
+.sidebar-admin.ativa {
+  transform: translateX(0);
 }
 
 .sidebar-menu {
@@ -129,7 +135,6 @@ header {
   font-weight: 500;
 }
 
-/* USER */
 
 .user-box {
   gap: 12px;
@@ -167,19 +172,16 @@ header {
   font-size: 11px;
 }
 
-/* MAIN */
 
 main,
 .admin-content {
   min-height: calc(100vh - var(--header-h));
 
-  margin-left: var(--sidebar-w);
+  margin-left: 0;
   padding: 24px;
 
   background: var(--bg-alt);
 }
-
-/* CARDS */
 
 .dashboard-card {
   display: flex;
@@ -227,8 +229,6 @@ main,
   color: var(--white);
 }
 
-/* ACTIVITY */
-
 .activity-item {
   gap: 12px;
 
@@ -246,8 +246,6 @@ main,
   transition: color var(--transition);
 }
 
-/* CHART */
-
 .chart-legend {
   gap: 24px;
   flex-wrap: wrap;
@@ -256,8 +254,6 @@ main,
 .legend-item {
   gap: 8px;
 }
-
-/* FAB */
 
 .sidebar-fab {
   position: fixed;
@@ -286,6 +282,8 @@ main,
     margin-left: 0;
   }
 }
+
+
 
 /* PÁGINA DE CLIENTE */ 
 
@@ -478,4 +476,25 @@ main,
 .search-bar:focus {
   border-color: #adb5bd;
   box-shadow: none;
+}
+
+/* LOGIN */ 
+
+.gradient-custom {
+background: #5fd3cf; } 
+
+.login-bg { background: #5fd3cf; }
+
+:root {
+    --verde-agua: #40E0D0;
+}
+.btn-verde-agua {
+    background-color: var(--verde-agua);
+    border-color: var(--verde-agua);
+    color: #fff;
+}
+
+.btn-verde-agua:hover {
+    background-color: #2fc9bb;
+    border-color: #2fc9bb;
 }

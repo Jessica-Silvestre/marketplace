@@ -18,54 +18,56 @@
 
 <header>
 
-    <nav class="navbar navbar-expand-lg py-3">
+    <nav class="navbar navbar-expand-lg py-3"  aria-label="Menu principal">
 
         <div class="container-fluid px-4 align-items-center">
 
             <!-- LOGO -->
-            <a class="navbar-brand me-0" href="#">
-                <img
-                    src="./img/logo.png"
-                    alt="Logo Roque Garages"
-                    class="img-fluid logo-navbar"
-                >
-            </a>
+    <a class="navbar-brand me-0" href="/" aria-label="Ir para a página inicial da Roque Garages">
+    <img
+        src="./img/logo.png"
+        alt="Logo Meu CARRO"
+        class="img-fluid logo-navbar"
+    >
+</a>
 
             <!-- BOTÃO MOBILE -->
             <button
-                class="navbar-toggler border-0 shadow-none d-lg-none"
-                type="button"
-                data-bs-toggle="offcanvas"
-                data-bs-target="#menuMobile"
-                aria-controls="menuMobile"
+             class="navbar-toggler border-0 shadow-none d-lg-none"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#menuMobile"
+            aria-controls="menuMobile"
+            aria-label="Abrir menu principal"
+            aria-expanded="false"
             >
-                <span class="navbar-toggler-icon"></span>
-            </button>
+    <span class="navbar-toggler-icon"></span>
+</button>
 
-            <!-- MENU DESKTOP -->
+
             <div class="d-none d-lg-flex flex-grow-1 justify-content-center">
 
                 <ul class="navbar-nav gap-5">
 
-                    <li class="nav-item">
-                        <a class="nav-link fw-semibold text-white" href="#">
+                    <li class="nav-item" role="menuitem">
+                        <a class="nav-link fw-semibold text-white" href="#" aria-current="page">
                             Dashboard
                         </a>
                     </li>
 
-                    <li class="nav-item">
+                    <li class="nav-item" role="menuitem">
                         <a class="nav-link fw-semibold text-white" href="#">
                             Agências
                         </a>
                     </li>
 
-                    <li class="nav-item">
+                    <li class="nav-item" role="menuitem">
                         <a class="nav-link fw-semibold text-white" href="#">
                             Planos
                         </a>
                     </li>
 
-                    <li class="nav-item">
+                    <li class="nav-item" role="menuitem">
                         <a class="nav-link fw-semibold text-white" href="#">
                             Relatórios
                         </a>
@@ -124,25 +126,25 @@
 
             <ul class="navbar-nav gap-3">
 
-                <li class="nav-item">
+                <li class="nav-item" role="menuitem">
                     <a class="nav-link fw-semibold" href="#">
                         Meu estoque
                     </a>
                 </li>
 
-                <li class="nav-item">
+                <li class="nav-item" role="menuitem">
                     <a class="nav-link fw-semibold" href="#">
                         Mensagens
                     </a>
                 </li>
 
-                <li class="nav-item">
+                <li class="nav-item" role="menuitem">
                     <a class="nav-link fw-semibold" href="#">
                         Meu perfil
                     </a>
                 </li>
 
-                <li class="nav-item mt-3">
+                <li class="nav-item mt-3" role="menuitem">
 
                     <a
                         href="#"
@@ -169,7 +171,7 @@
 </header>
 
 <!-- MAIN -->
-<main class="container-fluid py-4 px-4 cliente-dashboard">
+<main class="container-fluid py-4 px-4 cliente-dashboard" >
 
     <div class="row g-4">
 
