@@ -954,3 +954,101 @@ css.car__sidebar {
     cursor:pointer;
 }
 
+/* MODO CONTRASTE */
+/* =========================
+   MODO CONTRASTE GLOBAL
+========================= */
+
+body.contraste-ativo {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+/* Links e textos gerais */
+body.contraste-ativo a,
+body.contraste-ativo span,
+body.contraste-ativo p,
+body.contraste-ativo h1,
+body.contraste-ativo h2,
+body.contraste-ativo h3,
+body.contraste-ativo h4,
+body.contraste-ativo h5 {
+  color: #fff !important;
+}
+
+/* =========================
+   NAVBAR / HEADER
+========================= */
+body.contraste-ativo .navbar {
+  background-color: #000 !important;
+  border-bottom: 1px solid #fff !important;
+}
+
+/* =========================
+   FOOTER
+========================= */
+body.contraste-ativo footer {
+  background-color: #000 !important;
+  border-top: 1px solid #fff !important;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+body.contraste-ativo .sidebar-admin {
+  background-color: #000 !important;
+  border-right: 1px solid #fff !important;
+}
+
+/* itens do menu */
+body.contraste-ativo .menu-item {
+  color: #fff !important;
+}
+
+/* =========================
+   USER BOX (Alan Turing)
+========================= */
+body.contraste-ativo .user-box {
+  background-color: #000 !important;
+  border-top: 1px solid #fff !important;
+}
+
+body.contraste-ativo .user-avatar {
+  border: 1px solid #fff !important;
+}
+
+/* =========================
+   CARDS
+========================= */
+body.contraste-ativo .card,
+body.contraste-ativo .dashboard-card {
+  background-color: #000 !important;
+  border: 1px solid #fff !important;
+  color: #fff !important;
+}
+
+/* =========================
+   TABELAS
+========================= */
+body.contraste-ativo .table {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+body.contraste-ativo .table thead {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+body.contraste-ativo .table td,
+body.contraste-ativo .table th {
+  border-color: #fff !important;
+}
+
+body.contraste-ativo * {
+  background-color: transparent !important;
+}
+
+body.contraste-ativo {
+  background-color: #000 !important;
+}

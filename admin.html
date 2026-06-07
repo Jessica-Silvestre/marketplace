@@ -89,24 +89,51 @@
 
             </div>
 
-            <!-- SAIR DESKTOP -->
-            <div class="d-none d-lg-flex">
+        
+<!-- SAIR DESKTOP -->
+<div class="d-none d-lg-flex align-items-center gap-3">
 
-                <a
-                    href="#"
-                    class="d-flex align-items-center gap-2 text-decoration-none text-white fw-semibold"
-                >
+    <!-- ACESSIBILIDADE (A+) -->
+    <button
+        id="aumentarFonte"
+        class="btn btn-outline-light btn-sm fw-semibold"
+        type="button"
+        aria-label="Aumentar fonte"
+    >
+        A+
+    </button>
 
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M6 3a2 2 0 0 0-2 2v1h1V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-1H4v1a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H6z"/>
-                        <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"/>
-                    </svg>
+    <!-- ACESSIBILIDADE (A-) -->
+    <button
+        id="diminuirFonte"
+        class="btn btn-outline-light btn-sm fw-semibold"
+        type="button"
+        aria-label="Diminuir fonte"
+    >
+        A-
+    </button>
 
-                    <span>Sair</span>
+    <!-- CONTRASTE -->
+    <button
+        id="contrasteNavbar"
+        class="btn btn-outline-light btn-sm d-flex align-items-center gap-2"
+        type="button"
+        aria-pressed="false"
+    >
+        <i class="bi bi-circle-half"></i>
+        Contraste
+    </button>
 
-                </a>
+    <!-- SAIR -->
+    <a
+        href="#"
+        class="d-flex align-items-center gap-2 text-decoration-none text-white fw-semibold"
+    >
+        <i class="bi bi-box-arrow-right"></i>
+        <span>Sair</span>
+    </a>
 
-            </div>
+</div>
 
         </div>
 
@@ -828,9 +855,11 @@
 
 </aside>
 
+
 <script src="dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="./javascript/admin.js"></script>
+<script src="./javascript/acessibilidade.js"></script>
 </body>
 
 </html>
