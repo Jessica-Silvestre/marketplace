@@ -123,3 +123,46 @@ document.addEventListener('keydown', (e) => {
     }
 
 });
+
+// ======================
+// ZOOM NO MODAL
+// ======================
+
+let zoomAtual = 1;
+
+imagemModal.addEventListener('wheel', (e) => {
+
+    e.preventDefault();
+
+    if (e.deltaY < 0) {
+        zoomAtual += 0.2;
+    } else {
+        zoomAtual -= 0.2;
+    }
+
+    if (zoomAtual < 1) zoomAtual = 1;
+    if (zoomAtual > 5) zoomAtual = 5;
+
+    imagemModal.style.transform = `scale(${zoomAtual})`;
+
+});
+
+
+// RESETA O ZOOM AO ABRIR O MODAL
+
+fotoPrincipal.addEventListener('click', () => {
+
+    zoomAtual = 1;
+    imagemModal.style.transform = 'scale(1)';
+
+});
+
+
+// RESETA O ZOOM AO FECHAR
+
+fecharModal.addEventListener('click', () => {
+
+    zoomAtual = 1;
+    imagemModal.style.transform = 'scale(1)';
+
+});
