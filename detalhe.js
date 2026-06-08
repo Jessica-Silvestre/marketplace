@@ -1,3 +1,4 @@
+
 const fotoPrincipal = document.querySelector('.foto-principal');
 const miniaturas = document.querySelectorAll('.miniatura');
 
