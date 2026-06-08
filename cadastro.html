@@ -54,22 +54,38 @@
         </ul>
       </div>
 
-      <!-- USUÁRIO LOGADO -->
-      <div class="d-none d-lg-flex">
-        <div class="user-chip" role="button" aria-label="Menu do usuário: Soma São Roque" tabindex="0">
-          <div class="user-avatar" aria-hidden="true">
-            <i class="bi bi-person-fill fs-5"></i>
-          </div>
-          <div class="user-info">
-            <strong>Soma São Roque</strong>
-            <small>Agência</small>
-          </div>
-          <i class="bi bi-chevron-down ms-1" style="font-size:11px;" aria-hidden="true"></i>
-        </div>
-      </div>
+<!-- ACESSIBILIDADE -->
+ <!--(A+) -->
+<button id="aumentarFonte"  class="btn btn-outline-light btn-sm fw-semibold" type="button" aria-label="Aumentar fonte" >
+  A+
+</button>
 
+<!-- (A-) -->
+<button id="diminuirFonte" class="btn btn-outline-light btn-sm fw-semibold" type="button" aria-label="Diminuir fonte">
+  A-
+</button>
+
+<!-- CONTRASTE -->
+<button id="contrasteNavbar" class="btn btn-outline-light btn-sm d-flex align-items-center gap-2" type="button" aria-pressed="false">
+  <i class="bi bi-circle-half"></i>
+    Contraste
+</button>
+
+<!-- USUÁRIO LOGADO -->
+  <div class="d-none d-lg-flex">
+    <div class="user-chip" role="button" aria-label="Menu do usuário: Soma São Roque" tabindex="0">
+      <div class="user-avatar" aria-hidden="true">
+        <i class="bi bi-person-fill fs-5"></i>
+      </div>
+     <div class="user-info">
+       <strong>Soma São Roque</strong>
+        <small>Agência</small>
     </div>
-  </nav>
+      <i class="bi bi-chevron-down ms-1" style="font-size:11px;" aria-hidden="true"></i>
+   </div>
+  </div>
+ </div>
+</nav>
 </header>
 
 
@@ -367,7 +383,7 @@
    </div>
 
         <div class="preview-body">
-          <p class="preview-title" id="preview-titulo" aria-live="polite">TOYOTA COROLLA XEI 2.0</p>
+          <p class="preview-title" id="preview-titulo" aria-live="polite">FIAT MOBI 1.6 </p>
           <p class="preview-sub" id="preview-sub" aria-live="polite">2020/2020 &nbsp;·&nbsp; 48.000 km &nbsp;·&nbsp; FLEX &nbsp;·&nbsp; Automático</p>
           <p class="preview-price" id="preview-preco" aria-live="polite">R$ 89.900,00</p>
 
