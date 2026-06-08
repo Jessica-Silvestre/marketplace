@@ -16,13 +16,28 @@
 
 <body class="pagina-admin">
 
+<h1 class="visually-hidden">Painel Administrativo — Roque Garages</h1>
+
+
 <header>
-    <nav class="navbar navbar-expand-lg py-3">
+
+<nav class="navbar navbar-expand-lg py-3" aria-label="Menu principal">
 
         <div class="container-fluid px-4 align-items-center">
 
+<button
+    id="toggleSidebar"
+    class="btn btn-link text-white p-0 me-3"
+    type="button"
+    aria-expanded="true"
+    aria-controls="sidebarDesktop"
+    aria-label="Abrir ou recolher menu lateral"
+>
+    <i class="bi bi-list fs-3" aria-hidden="true"></i>
+</button>
+
             <!-- LOGO -->
-            <a class="navbar-brand me-0" href="#">
+            <a class="navbar-brand me-0" href="./index.html">
                 <img
                     src="./img/logo.png"
                     alt="Logo Roque Garages"
@@ -37,6 +52,7 @@
                 data-bs-toggle="offcanvas"
                 data-bs-target="#menuMobile"
                 aria-controls="menuMobile"
+                aria-label="Abrir menu navegação"
             >
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -46,25 +62,25 @@
 
                 <ul class="navbar-nav gap-5">
 
-                    <li class="nav-item">
-                        <a class="nav-link fw-semibold text-white" href="#">
+                    <li class="nav-item" role="menuitem">
+                        <a class="nav-link fw-semibold text-white" href="./admin.html" aria-current="page">
                             Dashboard
                         </a>
                     </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link fw-semibold text-white" href="#">
+                    <li class="nav-item" role="menuitem">
+                        <a class="nav-link fw-semibold text-white" href="./cliente.html">
                             Agências
                         </a>
                     </li>
 
-                    <li class="nav-item">
+                    <li class="nav-item" role="menuitem">
                         <a class="nav-link fw-semibold text-white" href="#">
                             Planos
                         </a>
                     </li>
 
-                    <li class="nav-item">
+                    <li class="nav-item" role="menuitem">
                         <a class="nav-link fw-semibold text-white" href="#">
                             Relatórios
                         </a>
@@ -74,24 +90,33 @@
 
             </div>
 
-            <!-- SAIR DESKTOP -->
-            <div class="d-none d-lg-flex">
+        
+<!-- SAIR DESKTOP -->
+<div class="d-none d-lg-flex align-items-center gap-3">
 
-                <a
-                    href="#"
-                    class="d-flex align-items-center gap-2 text-decoration-none text-white fw-semibold"
-                >
+    <a
+        href="#conteudo"
+        class="btn btn-outline-light btn-sm"
+        aria-label="Ir para o conteúdo principal"
+    >
+        Ir conteúdo principal
+    </a>
 
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M6 3a2 2 0 0 0-2 2v1h1V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-1H4v1a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H6z"/>
-                        <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"/>
-                    </svg>
+    <button id="aumentarFonte" class="btn btn-outline-light btn-sm" aria-label="Aumentar tamanho da fonte">
+        A+
+    </button>
 
-                    <span>Sair</span>
+    <button id="diminuirFonte" class="btn btn-outline-light btn-sm" aria-label="Diminuir tamanho da fonte">
+        A-
+    </button>
 
-                </a>
+    <button id="contrasteNavbar" class="btn btn-outline-light btn-sm" aria-label="Ativar modo de contraste">
+        Contraste
+    </button>
 
-            </div>
+    <a href="./login.html" class="d-flex align-items-center gap-2 text-decoration-none text-white fw-semibold" > <i class="bi bi-box-arrow-right" aria-hidden="true"></i> <span>Sair</span> </a>
+
+</div>
 
         </div>
 
@@ -104,7 +129,7 @@
         id="menuMobile"
     >
 
-        <div class="offcanvas-header">
+        <div class="offcanvas-">
 
             <h5 class="offcanvas-title">
                 Menu
@@ -124,37 +149,37 @@
             <ul class="navbar-nav gap-3">
 
                 <li class="nav-item">
-                    <a class="nav-link fw-semibold" href="#">
+                    <a class="nav-link fw-semibold" href="./admin.html" aria-current="page">
                         Dashboard
                     </a>
                 </li>
 
-                <li class="nav-item">
-                    <a class="nav-link fw-semibold" href="#">
+                <li class="nav-item" role="menuitem">
+                    <a class="nav-link fw-semibold" href="./cliente.html">
                         Agências
                     </a>
                 </li>
 
-                <li class="nav-item">
+                <li class="nav-item" role="menuitem">
                     <a class="nav-link fw-semibold" href="#">
                         Planos
                     </a>
                 </li>
 
-                <li class="nav-item">
+                <li class="nav-item" role="menuitem">
                     <a class="nav-link fw-semibold" href="#">
                         Relatórios
                     </a>
                 </li>
 
-                <li class="nav-item mt-3">
+                <li class="nav-item mt-3" role="menuitem">
 
                     <a
-                        href="#"
+                        href="./login.html"
                         class="d-flex align-items-center gap-2 text-decoration-none fw-semibold"
                     >
 
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16" aria-hidden="true">
                             <path fill-rule="evenodd" d="M6 3a2 2 0 0 0-2 2v1h1V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-1H4v1a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H6z"/>
                             <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"/>
                         </svg>
@@ -171,52 +196,56 @@
 
     </div>
 </header>
-<aside class="sidebar-admin d-none d-lg-flex flex-column">
 
-    <nav class="sidebar-menu">
+<aside
+    id="sidebarDesktop"
+    class="sidebar-admin d-none d-lg-flex flex-column"
+>
 
-        <a href="#" class="menu-item">
-            <i class="bi bi-grid"></i>
+    <nav class="sidebar-menu" role="navigation" aria-label="Navegação principal">
+
+        <a href="./admin.html" class="menu-item" aria-current="page">
+            <i class="bi bi-grid" aria-hidden="true"></i>
             <span>Visão geral</span>
         </a>
 
-        <a href="#" class="menu-item">
-            <i class="bi bi-buildings"></i>
+        <a href="./cliente.html" class="menu-item">
+            <i class="bi bi-buildings" aria-hidden="true"></i>
             <span>Agências</span>
         </a>
 
         <a href="#" class="menu-item">
-            <i class="bi bi-car-front"></i>
+            <i class="bi bi-car-front" aria-hidden="true"></i>
             <span>Veículos</span>
         </a>
 
         <a href="#" class="menu-item">
-            <i class="bi bi-chat-left-text"></i>
+            <i class="bi bi-chat-left-text" aria-hidden="true"></i>
             <span>Leads</span>
         </a>
 
         <a href="#" class="menu-item">
-            <i class="bi bi-box-seam"></i>
+            <i class="bi bi-box-seam" aria-hidden="true"></i>
             <span>Planos</span>
         </a>
 
         <a href="#" class="menu-item">
-            <i class="bi bi-file-earmark-bar-graph"></i>
+            <i class="bi bi-file-earmark-bar-graph" aria-hidden="true"></i>
             <span>Relatórios</span>
         </a>
 
         <a href="#" class="menu-item">
-            <i class="bi bi-people"></i>
+            <i class="bi bi-people" aria-hidden="true"></i>
             <span>Usuários</span>
         </a>
 
         <a href="#" class="menu-item">
-            <i class="bi bi-gear"></i>
+            <i class="bi bi-gear" aria-hidden="true"></i>
             <span>Configurações</span>
         </a>
 
         <a href="#" class="menu-item">
-            <i class="bi bi-clipboard-data"></i>
+            <i class="bi bi-clipboard-data" aria-hidden="true"></i>
             <span>Audit Log</span>
         </a>
 
@@ -226,7 +255,7 @@
     <div class="user-box">
 
         <div class="user-avatar">
-            <i class="bi bi-person-fill"></i>
+            <i class="bi bi-person-fill" aria-hidden="true"></i>
         </div>
 
         <div class="user-info">
@@ -250,42 +279,60 @@
     <i class="bi bi-grid" aria-hidden="true"></i>
 </button>
 
-<main class="admin-content">
+<main id="conteudo" class="admin-content">
 
     <section class="container-fluid">
 
         <section class="row g-4">
 
             <!-- CARD 1 -->
-            <article class="col-12 col-md-6 col-xl-3">
 
-                <section class="dashboard-card">
+            <article
+    class="col-12 col-md-6 col-xl-3"
+    aria-labelledby="agencias-ativas-titulo"
+>
 
-                    <div>
+    <section
+        class="dashboard-card"
+        role="region"
+        aria-labelledby="agencias-ativas-titulo"
+    >
 
-                        <p class="card-label">
-                            Agências ativas
-                        </p>
+        <div>
 
-                        <h2 class="card-value">
-                            1.248
-                        </h2>
+            <h2
+                id="agencias-ativas-titulo"
+                class="card-label"
+            >
+                Agências ativas
+            </h2>
 
-                        <p class="card-growth">
-                            +51% vs mês anterior
-                        </p>
+            <p
+                class="card-value"
+                aria-label="Mil duzentas e quarenta e oito agências ativas"
+            >
+                1.248
+            </p>
 
-                    </div>
+            <p
+                class="card-growth"
+                aria-label="Crescimento de cinquenta e um por cento em relação ao mês anterior"
+            >
+                +51% vs mês anterior
+            </p>
 
-                    <div class="card-icon">
+        </div>
 
-                        <i class="bi bi-buildings"></i>
+        <div
+            class="card-icon"
+            aria-hidden="true"
+        >
+            <i class="bi bi-buildings" aria-hidden="true"></i>
+        </div>
 
-                    </div>
+    </section>
 
-                </section>
-
-            </article>
+</article>
 
             <!-- CARD 2 -->
             <article class="col-12 col-md-6 col-xl-3">
@@ -310,7 +357,7 @@
 
                     <div class="card-icon">
 
-                        <i class="bi bi-car-front-fill"></i>
+                        <i class="bi bi-car-front-fill" aria-hidden="true"></i>
 
                     </div>
 
@@ -341,7 +388,7 @@
 
                     <div class="card-icon">
 
-                        <i class="bi bi-chat-left-text-fill"></i>
+                        <i class="bi bi-chat-left-text-fill" aria-hidden="true"></i>
 
                     </div>
 
@@ -372,7 +419,7 @@
 
                     <div class="card-icon">
 
-                        <i class="bi bi-currency-dollar"></i>
+                        <i class="bi bi-currency-dollar" aria-hidden="true"></i>
 
                     </div>
 
@@ -396,7 +443,8 @@
 
       <div class="table-responsive">
 
-        <table class="table align-middle">
+<table class="table align-middle">
+  <caption class="visually-hidden">Lista de agências ativas</caption>
 
           <thead class="table-light">
 
@@ -423,9 +471,9 @@
                 <span class="badge bg-success">Online</span>
               </td>
               <td class="text-end">
-                <button class="btn btn-success btn-sm">Ativar</button>
-                <button class="btn btn-outline-primary btn-sm">Ver cadastro</button>
-                <button class="btn btn-outline-danger btn-sm">Desativar</button>
+                <button class="btn btn-success btn-sm" aria-label="Ativar Soma São Roque">Ativar</button>
+                <button class="btn btn-primary btn-sm" aria-label="Ver cadastro de Soma São Roque">Ver cadastro</button>
+                <button class="btn btn-danger btn-sm" aria-label="Desativar Soma São Roque">Desativar</button>
               </td>
             </tr>
 
@@ -439,9 +487,9 @@
                 <span class="badge bg-secondary">Offline</span>
               </td>
               <td class="text-end">
-                <button class="btn btn-success btn-sm">Ativar</button>
-                <button class="btn btn-outline-primary btn-sm">Ver cadastro</button>
-                <button class="btn btn-outline-danger btn-sm">Desativar</button>
+                <button class="btn btn-success btn-sm" aria-label="Ativar Chevrolet Rocque">Ativar</button>
+                <button class="btn btn-primary btn-sm" aria-label="Ver cadastro de Chevrolet Rocque">Ver cadastro</button>
+                <button class="btn btn-danger btn-sm" aria-label="Desativar Chevrolet Rocque">Desativar</button>
               </td>
             </tr>
 
@@ -455,9 +503,9 @@
                 <span class="badge bg-success">Online</span>
               </td>
               <td class="text-end">
-                <button class="btn btn-success btn-sm">Ativar</button>
-                <button class="btn btn-outline-primary btn-sm">Ver cadastro</button>
-                <button class="btn btn-outline-danger btn-sm">Desativar</button>
+                <button class="btn btn-success btn-sm" aria-label="Ativar São Roque Veículos">Ativar</button>
+                <button class="btn btn-primary btn-sm" aria-label="Ver cadastro de São Roque Veículos">Ver cadastro</button>
+                <button class="btn btn-danger btn-sm" aria-label="Desativar São Roque Veículos">Desativar</button>
               </td>
             </tr>
 
@@ -471,9 +519,9 @@
                 <span class="badge bg-secondary">Offline</span>
               </td>
               <td class="text-end">
-                <button class="btn btn-success btn-sm">Ativar</button>
-                <button class="btn btn-outline-primary btn-sm">Ver cadastro</button>
-                <button class="btn btn-outline-danger btn-sm">Desativar</button>
+                <button class="btn btn-success btn-sm" aria-label="Ativar Shark motos">Ativar</button>
+                <button class="btn btn-primary btn-sm" aria-label="Ver cadastro de Shark motos">Ver cadastro</button>
+                <button class="btn btn-danger btn-sm" aria-label="Desativar Shark motos">Desativar</button>
               </td>
             </tr>
 
@@ -487,9 +535,9 @@
                 <span class="badge bg-success">Online</span>
               </td>
               <td class="text-end">
-                <button class="btn btn-success btn-sm">Ativar</button>
-                <button class="btn btn-outline-primary btn-sm">Ver cadastro</button>
-                <button class="btn btn-outline-danger btn-sm">Desativar</button>
+                <button class="btn btn-success btn-sm" aria-label="Ativar Rodcar 7 Veículos">Ativar</button>
+                <button class="btn btn-primary btn-sm" aria-label="Ver cadastro de Rodcar 7 Veículos">Ver cadastro</button>
+                <button class="btn btn-danger btn-sm" aria-label="Desativar Rodcar 7 Veículos">Desativar</button>
               </td>
             </tr>
 
@@ -549,12 +597,71 @@
   </div>
 
   <div class="chart-wrapper">
+<figure>
+  <canvas
+    id="graficoCrescimento"
+    aria-label="Gráfico de crescimento de agências e veículos"
+    role="img"
+    aria-labelledby="grafico-titulo"
+  aria-describedby="descricao-grafico"
+  ></canvas>
 
-    <canvas
-      id="graficoCrescimento"
-      aria-label="Gráfico de crescimento de agências e veículos"
-      role="img"
-    ></canvas>
+
+   <figcaption class = "fig-grafico">
+          Comparação semanal entre agências ativas e veículos publicados.
+   </figcaption>
+</figure>
+<p id="descricao-grafico" class="visually-hidden">
+  Tabela com os dados de agências ativas e veículos publicados durante a semana atual.
+</p>
+
+<table class="visually-hidden" aria-describedby="descricao-grafico">
+  <caption>Dados do gráfico de crescimento semanal</caption>
+  <thead>
+    <tr>
+      <th scope="col" id="col-dia">Dia</th>
+      <th scope="col" id="col-agencias">Agências ativas</th>
+      <th scope="col" id="col-veiculos">Veículos publicados</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row" id="row-dom">Domingo</th>
+      <td headers="row-dom col-agencias" aria-label="200 agências">200</td>
+      <td headers="row-dom col-veiculos" aria-label="120 veículos">120</td>
+    </tr>
+    <tr>
+      <th scope="row" id="row-seg">Segunda</th>
+      <td headers="row-seg col-agencias" aria-label="120 agências">120</td>
+      <td headers="row-seg col-veiculos" aria-label="90 veículos">90</td>
+    </tr>
+    <tr>
+      <th scope="row" id="row-ter">Terça</th>
+      <td headers="row-ter col-agencias" aria-label="380 agências">380</td>
+      <td headers="row-ter col-veiculos" aria-label="290 veículos">290</td>
+    </tr>
+    <tr>
+      <th scope="row" id="row-qua">Quarta</th>
+      <td headers="row-qua col-agencias" aria-label="280 agências">280</td>
+      <td headers="row-qua col-veiculos" aria-label="280 veículos">280</td>
+    </tr>
+    <tr>
+      <th scope="row" id="row-qui">Quinta</th>
+      <td headers="row-qui col-agencias" aria-label="180 agências">180</td>
+      <td headers="row-qui col-veiculos" aria-label="90 veículos">90</td>
+    </tr>
+    <tr>
+      <th scope="row" id="row-sex">Sexta</th>
+      <td headers="row-sex col-agencias" aria-label="150 agências">150</td>
+      <td headers="row-sex col-veiculos" aria-label="100 veículos">100</td>
+    </tr>
+    <tr>
+      <th scope="row" id="row-sab">Sábado</th>
+      <td headers="row-sab col-agencias" aria-label="300 agências">300</td>
+      <td headers="row-sab col-veiculos" aria-label="300 veículos">300</td>
+    </tr>
+  </tbody>
+</table>
 
   </div>
           </div>
@@ -582,7 +689,7 @@
 
               <div class="activity-icon">
 
-                <i class="bi bi-clock-history"></i>
+                <i class="bi bi-clock-history" aria-hidden="true"></i>
 
               </div>
 
@@ -610,7 +717,7 @@
 
               <div class="activity-icon">
 
-                <i class="bi bi-clock-history"></i>
+                <i class="bi bi-clock-history" aria-hidden="true"></i>
 
               </div>
 
@@ -624,7 +731,7 @@
 
               <div class="activity-icon">
 
-                <i class="bi bi-clock-history"></i>
+                <i class="bi bi-clock-history" aria-hidden="true"></i>
 
               </div>
 
@@ -638,7 +745,7 @@
 
               <div class="activity-icon">
 
-                <i class="bi bi-clock-history"></i>
+                <i class="bi bi-clock-history" aria-hidden="true"></i>
 
               </div>
 
@@ -662,6 +769,8 @@
 
 </main>
 
+  </div>
+
 <!-- OFFCANVAS SIDEBAR MOBILE -->
 <aside
     class="offcanvas offcanvas-start"
@@ -669,15 +778,18 @@
     id="sidebarMobile"
     aria-label="Menu lateral"
 >
-    <header class="offcanvas-header">
-        <h5 class="offcanvas-title">Menu</h5>
-        <button
-            type="button"
-            class="btn-close shadow-none"
-            data-bs-dismiss="offcanvas"
-            aria-label="Fechar menu"
-        ></button>
-    </header>
+<div class="offcanvas-header">
+
+    <h5 class="offcanvas-title">Menu</h5>
+
+    <button
+        type="button"
+        class="btn-close shadow-none"
+        data-bs-dismiss="offcanvas"
+        aria-label="Fechar menu"
+    ></button>
+
+</div>
 
     <div class="offcanvas-body d-flex flex-column p-0">
 
@@ -690,7 +802,7 @@
                 <i class="bi bi-buildings" aria-hidden="true"></i>
                 <span>Agências</span>
             </a>
-            <a href="#" class="menu-item" data-bs-dismiss="offcanvas">
+            <a href="./index.html" class="menu-item" data-bs-dismiss="offcanvas">
                 <i class="bi bi-car-front" aria-hidden="true"></i>
                 <span>Veículos</span>
             </a>
@@ -722,7 +834,7 @@
 
         <footer class="user-box">
             <div class="user-avatar" aria-hidden="true">
-                <i class="bi bi-person-fill"></i>
+                <i class="bi bi-person-fill" aria-hidden="true"></i>
             </div>
             <address class="user-info">
                 <strong>Alan Turing</strong>
@@ -734,9 +846,22 @@
 
 </aside>
 
+<footer class="marketplace-footer text-center">
+  <div class="container">
+    <p class="mb-1 fw-semibold">Roque Garages &copy; 2024</p>
+    <p class="mb-3 small opacity-75">O marketplace de carros mais confiável do Brasil</p>
+    <div class="d-flex justify-content-center gap-3">
+      <i class="bi bi-instagram" aria-hidden="true"></i>
+      <i class="bi bi-facebook" aria-hidden="true"></i>
+      <i class="bi bi-whatsapp" aria-hidden="true"></i>
+    </div>
+  </div>
+</footer>
+
 <script src="dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="./javascript/admin.js"></script>
+<script src="./javascript/acessibilidade.js"></script>
 </body>
 
 </html>

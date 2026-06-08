@@ -1,3 +1,5 @@
+/* ADMIN */ 
+
 :root {
   --primary: #5fd3cf;
   --bg: #f8f9fa;
@@ -23,8 +25,6 @@
   --transition: .2s ease;
 }
 
-/* RESET */
-
 *,
 *::before,
 *::after {
@@ -37,8 +37,6 @@ body {
   background: var(--bg);
   color: var(--text);
 }
-
-/* HEADER */
 
 header {
   position: sticky;
@@ -66,11 +64,12 @@ header {
   box-shadow: none;
 }
 
-/* SIDEBAR */
 
 .sidebar-admin {
   position: fixed;
   inset: var(--header-h) auto 0 0;
+
+  z-index: 2000;
 
   width: var(--sidebar-w);
 
@@ -82,6 +81,13 @@ header {
 
   background: var(--bg);
   border-right: 1px solid var(--border);
+
+  transform: translateX(-100%);
+  transition: transform .3s ease;
+}
+
+.sidebar-admin.ativa {
+  transform: translateX(0);
 }
 
 .sidebar-menu {
@@ -129,7 +135,6 @@ header {
   font-weight: 500;
 }
 
-/* USER */
 
 .user-box {
   gap: 12px;
@@ -167,19 +172,16 @@ header {
   font-size: 11px;
 }
 
-/* MAIN */
 
 main,
 .admin-content {
   min-height: calc(100vh - var(--header-h));
 
-  margin-left: var(--sidebar-w);
+  margin-left: 0;
   padding: 24px;
 
   background: var(--bg-alt);
 }
-
-/* CARDS */
 
 .dashboard-card {
   display: flex;
@@ -227,8 +229,6 @@ main,
   color: var(--white);
 }
 
-/* ACTIVITY */
-
 .activity-item {
   gap: 12px;
 
@@ -246,8 +246,6 @@ main,
   transition: color var(--transition);
 }
 
-/* CHART */
-
 .chart-legend {
   gap: 24px;
   flex-wrap: wrap;
@@ -256,8 +254,6 @@ main,
 .legend-item {
   gap: 8px;
 }
-
-/* FAB */
 
 .sidebar-fab {
   position: fixed;
@@ -286,6 +282,8 @@ main,
     margin-left: 0;
   }
 }
+
+
 
 /* PÁGINA DE CLIENTE */ 
 
@@ -477,6 +475,26 @@ main,
   box-shadow: none;
 }
 
+/* LOGIN */ 
+
+.gradient-custom {
+background: #5fd3cf; } 
+
+.login-bg { background: #5fd3cf; }
+
+:root {
+    --verde-agua: #40E0D0;
+}
+.btn-verde-agua {
+    background-color: var(--verde-agua);
+    border-color: var(--verde-agua);
+    color: #fff;
+}
+
+.btn-verde-agua:hover {
+    background-color: #2fc9bb;
+    border-color: #2fc9bb;
+}
 
 /* INDEX (MARKETPLACE)  */
  
@@ -492,7 +510,7 @@ p{
 }
 
 .hero-box {
-    background: #d9f5f3;
+    background: #d0d2d3c0;   /* cinza claro igual ao form-section */
     padding: 3rem;
     border-radius: 20px;
 }
@@ -502,11 +520,12 @@ p{
     justify-content: center;
     gap: 2rem;
     flex-wrap: wrap;
-    font-size: .9rem;
+    font-size: .10rem;
+    color: #4b5563;        /* texto cinza escuro */
 }
 
 .hero-benefits i {
-    color: var(--primary);
+    color: #4b5563;        /* ícones cinza escuro */
 }
 
 .marketplace-filter {
@@ -514,19 +533,23 @@ p{
 }
 
 .car-card {
-    border: none;
+    border: 1.5px solid #dee2e6;   /* borda cinza igual ao preview-card */
     border-radius: 18px;
     box-shadow: var(--shadow);
     transition: .3s;
+    overflow: hidden;
 }
 
 .car-card:hover {
     transform: translateY(-4px);
+    border-color: #b0b8c1;         /* borda cinza mais escura no hover */
+    box-shadow: 0 6px 18px rgba(0,0,0,.10);
 }
 
 .car-card img {
     height: 180px;
     object-fit: cover;
+    border-bottom: 1.5px solid #dee2e6;  /* separa foto do corpo */
 }
 
 .marketplace-footer {
@@ -552,7 +575,6 @@ css.car__sidebar {
   max-height: 100vh;
   overflow-y: auto;
 }
-
 
 
 /* ── reset ── */
@@ -1295,18 +1317,23 @@ body {
     box-shadow: 0 2px 10px rgba(0,0,0,.05);
 }
 
-.title-main {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #444;
+.sidebar-admin.ativa {
+  transform: translateX(0);
 }
 
 .title-main span {
     color: #34c7c2;
 }
 
-.text-destaque {
-    color: #34c7c2;
+.menu-item,
+.user-box,
+.card-icon,
+.user-avatar,
+.legend-item,
+.chart-legend,
+.activity-item {
+  display: flex;
+  align-items: center;
 }
 
 .text-muted {
@@ -1361,9 +1388,10 @@ body {
     margin-top: 50px;
 }
 
-.lista-vantagens li {
-    margin-top: 20px;
-    font-size: 16px;
+.pagina-admin .cliente-dashboard .card {
+  border-radius: var(--radius);
+  background: var(--white);
+  box-shadow: var(--shadow);
 }
 
 .lista-vantagens li::before {
@@ -1391,8 +1419,11 @@ body {
     object-fit: cover;
 }
 
-.conteudo-card {
-    padding: 25px;
+.marketplace-footer {
+    background: var(--primary);
+    color: white;
+    padding: 3rem 0;
+    margin-top: 4rem;
 }
 
 .conteudo-card h3 {
