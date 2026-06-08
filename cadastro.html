@@ -220,163 +220,156 @@
       </section>
 
 
-      <!-- 2. Descrição do veículo -->
-      <section class="form-section" aria-labelledby="sec-desc">
-        <h2 class="form-section-title" id="sec-desc">2. Descrição do veículo</h2>
+<!-- 2. Descrição do veículo -->
+ <section class="form-section" aria-labelledby="sec-desc">
+  <h2 class="form-section-title" id="sec-desc">2. Descrição do veículo</h2>
+    <div class="row g-3">
+    <div class="col-md-8">
+    <label class="form-label" for="descricao"> Descrição <span aria-hidden="true" style="color:#e24b4a">*</span> </label>
+     <textarea class="form-control" id="descricao" name="descricao"
+               rows="7"
+               maxlength="1000"
+               required aria-required="true"
+               aria-describedby="desc-counter"
+               placeholder="Descreva o veículo com detalhes: estado de conservação,
+               diferenciais, histórico de manutenção..."></textarea>
+    <div class="char-counter" id="desc-counter" aria-live="polite"> <span id="char-count">0</span>/1000 caracteres
+    </div>
+    </div>
 
-        <div class="row g-3">
-
-          <div class="col-md-8">
-            <label class="form-label" for="descricao">
-              Descrição <span aria-hidden="true" style="color:#e24b4a">*</span>
-            </label>
-            <textarea class="form-control" id="descricao" name="descricao"
-                      rows="7"
-                      maxlength="1000"
-                      required aria-required="true"
-                      aria-describedby="desc-counter"
-                      placeholder="Descreva o veículo com detalhes: estado de conservação, diferenciais, histórico de manutenção..."></textarea>
-            <div class="char-counter" id="desc-counter" aria-live="polite">
-              <span id="char-count">0</span>/1000 caracteres
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <fieldset>
-              <legend class="form-label">
-                Destaque do Veículo
-                <button type="button"
-                        class="btn btn-link p-0 ms-1"
-                        style="font-size:12px; color:var(--text-light); vertical-align:middle"
-                        aria-label="Saiba mais sobre destaques do veículo"
-                        data-bs-toggle="tooltip"
-                        title="Marque os itens que se aplicam ao veículo para destacar no anúncio">
-                  <i class="bi bi-question-circle" aria-hidden="true"></i>
-                </button>
-              </legend>
-              <div class="destaque-check" role="group">
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="aceita-troca" name="destaques" value="aceita-troca">
-                  <label class="form-check-label" for="aceita-troca">Aceita Troca</label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="unico-dono" name="destaques" value="unico-dono">
-                  <label class="form-check-label" for="unico-dono">Único Dono</label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="ipva-pago" name="destaques" value="ipva-pago">
-                  <label class="form-check-label" for="ipva-pago">IPVA Pago</label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="manual" name="destaques" value="manual">
-                  <label class="form-check-label" for="manual">Manual do Proprietário</label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="revisoes" name="destaques" value="revisoes">
-                  <label class="form-check-label" for="revisoes">Revisões em dia</label>
-                </div>
-              </div>
-            </fieldset>
-          </div>
-
+    <div class="col-md-4">
+     <fieldset> <legend class="form-label"> Destaque do Veículo 
+      <button type="button"
+              class="btn btn-link p-0 ms-1"
+              style="font-size:12px; color:var(--text-light); vertical-align:middle"
+              aria-label="Saiba mais sobre destaques do veículo"
+              data-bs-toggle="tooltip"
+              title="Marque os itens que se aplicam ao veículo para destacar no anúncio">
+              <i class="bi bi-question-circle" aria-hidden="true"></i>
+      </button> </legend>
+              
+    <div class="destaque-check" role="group">
+    <div class="form-check">
+     <input class="form-check-input" type="checkbox" id="aceita-troca" name="destaques" value="aceita-troca">
+      <label class="form-check-label" for="aceita-troca">Aceita Troca</label>
+    </div>
+    
+    <div class="form-check">
+     <input class="form-check-input" type="checkbox" id="unico-dono" name="destaques" value="unico-dono">
+       <label class="form-check-label" for="unico-dono">Único Dono</label>
         </div>
-      </section>
+        
+    <div class="form-check">
+     <input class="form-check-input" type="checkbox" id="ipva-pago" name="destaques" value="ipva-pago">
+      <label class="form-check-label" for="ipva-pago">IPVA Pago</label>
+    </div>
+    
+    <div class="form-check">
+     <input class="form-check-input" type="checkbox" id="manual" name="destaques" value="manual">
+      <label class="form-check-label" for="manual">Manual do Proprietário</label>
+    </div>
+    
+    <div class="form-check">
+     <input class="form-check-input" type="checkbox" id="revisoes" name="destaques" value="revisoes">
+      <label class="form-check-label" for="revisoes">Revisões em dia</label>
+    </div>
+   </div>
+  </fieldset>
+ </div>
+</div>
+</section>
 
+<!-- 3. Fotos do veículo -->
+<section class="form-section" aria-labelledby="sec-fotos">
+ <h2 class="form-section-title" id="sec-fotos">3. Fotos do veículo</h2>
+   <p style="font-size:12px; color:var(--text-muted); margin-bottom:16px">
+      Adicione fotos reais do veículo. Recomendamos no mínimo 6 imagens.
+   </p>
 
-      <!-- 3. Fotos do veículo -->
-      <section class="form-section" aria-labelledby="sec-fotos">
-        <h2 class="form-section-title" id="sec-fotos">3. Fotos do veículo</h2>
-        <p style="font-size:12px; color:var(--text-muted); margin-bottom:16px">
-          Adicione fotos reais do veículo. Recomendamos no mínimo 6 imagens.
-        </p>
+  <div class="fotos-row" role="list" aria-label="Fotos do veículo">
 
-        <div class="fotos-row" role="list" aria-label="Fotos do veículo">
+  <label class="foto-upload-btn" for="foto-upload" role="listitem">
+   <i class="bi bi-plus-circle" aria-hidden="true"></i>
+      Adicionar Foto
+    <span class="hint">Ou arraste arquivos aqui<br>Formatos PNG ou JPG<br>Máx 10 MB por imagem</span>
+      <input type="file" id="foto-upload" name="fotos" accept="image/png,image/jpeg"
+             multiple class="visually-hidden"
+             aria-label="Selecionar fotos do veículo">
+   </label>
 
-          <label class="foto-upload-btn" for="foto-upload" role="listitem">
-            <i class="bi bi-plus-circle" aria-hidden="true"></i>
-            Adicionar Foto
-            <span class="hint">Ou arraste arquivos aqui<br>Formatos PNG ou JPG<br>Máx 10 MB por imagem</span>
-            <input type="file" id="foto-upload" name="fotos" accept="image/png,image/jpeg"
-                   multiple class="visually-hidden"
-                   aria-label="Selecionar fotos do veículo">
-          </label>
+  <div class="foto-thumb-wrap" role="listitem">
+   <img src="./img/mobi1.jpg" class="foto-thumb" alt="Foto principal do veículo">
+    <span class="badge-principal">Foto Principal</span>
+      <button class="btn-remove" aria-label="Remover foto principal" type="button">
+       <i class="bi bi-x" aria-hidden="true"></i>
+      </button>
+  </div>
 
-          <div class="foto-thumb-wrap" role="listitem">
-            <img src="./img/fiat-mobi-500.jpg" class="foto-thumb" alt="Foto principal do veículo">
-            <span class="badge-principal">Foto Principal</span>
-            <button class="btn-remove" aria-label="Remover foto principal" type="button">
-              <i class="bi bi-x" aria-hidden="true"></i>
-            </button>
-          </div>
+   <div class="foto-thumb-wrap" role="listitem">
+    <img src="./img/mobi2.jpg" class="foto-thumb" alt="Foto 2 do veículo">
+     <button class="btn-remove" aria-label="Remover foto 2" type="button">
+       <i class="bi bi-x" aria-hidden="true"></i>
+     </button>
+   </div>
 
-          <div class="foto-thumb-wrap" role="listitem">
-            <img src="./img/fiat-mobi-500.jpg" class="foto-thumb" alt="Foto 2 do veículo">
-            <button class="btn-remove" aria-label="Remover foto 2" type="button">
-              <i class="bi bi-x" aria-hidden="true"></i>
-            </button>
-          </div>
+   <div class="foto-thumb-wrap" role="listitem">
+    <img src="./img/mobi3.jpg" class="foto-thumb" alt="Foto 3 do veículo">
+     <button class="btn-remove" aria-label="Remover foto 3" type="button">
+      <i class="bi bi-x" aria-hidden="true"></i>
+     </button>
+   </div>
 
-          <div class="foto-thumb-wrap" role="listitem">
-            <img src="./img/fiat-mobi-500.jpg" class="foto-thumb" alt="Foto 3 do veículo">
-            <button class="btn-remove" aria-label="Remover foto 3" type="button">
-              <i class="bi bi-x" aria-hidden="true"></i>
-            </button>
-          </div>
+   <div class="foto-thumb-wrap" role="listitem">
+    <img src="./img/interna.jpg" class="foto-thumb" alt="Foto 4 do veículo">
+     <button class="btn-remove" aria-label="Remover foto 4" type="button">
+      <i class="bi bi-x" aria-hidden="true"></i>
+     </button>
+   </div>
 
-          <div class="foto-thumb-wrap" role="listitem">
-            <img src="./img/fiat-mobi-500.jpg" class="foto-thumb" alt="Foto 4 do veículo">
-            <button class="btn-remove" aria-label="Remover foto 4" type="button">
-              <i class="bi bi-x" aria-hidden="true"></i>
-            </button>
-          </div>
+   <div class="foto-thumb-wrap" role="listitem">
+    <img src="./img/interna2.jpg" class="foto-thumb" alt="Foto 5 do veículo">
+     <button class="btn-remove" aria-label="Remover foto 5" type="button">
+       <i class="bi bi-x" aria-hidden="true"></i>
+     </button>
+   </div>
+</div>
+</section>
 
-          <div class="foto-thumb-wrap" role="listitem">
-            <img src="./img/fiat-mobi-500.jpg" class="foto-thumb" alt="Foto 5 do veículo">
-            <button class="btn-remove" aria-label="Remover foto 5" type="button">
-              <i class="bi bi-x" aria-hidden="true"></i>
-            </button>
-          </div>
-
-        </div>
-      </section>
-
-      <!-- Ações -->
-      <div class="form-actions" role="group" aria-label="Ações do formulário">
-        <button type="button" class="btn-rascunho" aria-label="Salvar como rascunho">
+<!-- Ações -->
+<div class="form-actions" role="group" aria-label="Ações do formulário">
+ <button type="button" class="btn-rascunho" aria-label="Salvar como rascunho">
           Salvar Rascunho
-        </button>
-        <button type="submit" class="btn-publicar" aria-label="Publicar anúncio do veículo">
-          Publicar Anúncio
-        </button>
-        <span class="secure-note" aria-label="Seus dados estão seguros. O anúncio será revisado antes da publicação.">
-          <i class="bi bi-shield-check" aria-hidden="true"></i>
-          Seus dados estão seguros. Anúncio será revisado antes da publicação.
-        </span>
-      </div>
+ </button>
+ <button type="submit" class="btn-publicar" aria-label="Publicar anúncio do veículo">
+         Publicar Anúncio
+ </button>
+   <span class="secure-note" aria-label="Seus dados estão seguros. O anúncio será revisado antes da publicação.">
+     <i class="bi bi-shield-check" aria-hidden="true"></i>
+        Seus dados estão seguros. Anúncio será revisado antes da publicação.
+    </span>
+</div>
+</div><!-- /coluna form -->
 
-    </div><!-- /coluna form -->
+<!-- ===== SIDEBAR PREVIEW ===== -->
+<aside class="preview-sidebar" aria-label="Pré-visualização do anúncio">
+ <div class="preview-card">
 
+ <div class="preview-header">
+  <span>Pré Visualização do anúncio</span>
+   <span class="badge-rascunho" aria-label="Status: Rascunho">Rascunho</span>
+  </div>
 
-    <!-- ===== SIDEBAR PREVIEW ===== -->
-    <aside class="preview-sidebar" aria-label="Pré-visualização do anúncio">
-
-      <div class="preview-card">
-        <div class="preview-header">
-          <span>Pré Visualização do anúncio</span>
-          <span class="badge-rascunho" aria-label="Status: Rascunho">Rascunho</span>
-        </div>
-
-        <div class="preview-img-wrap">
-          <img src="./img/fiat-mobi-500.jpg" class="preview-img" alt="Pré-visualização do veículo" id="preview-main-img">
-          <button class="btn-fav" id="btnFavorito" type="button">
-            <i class="bi bi-heart" aria-hidden="true"></i>
-          </button>
-        </div>
+  <div class="preview-img-wrap">
+   <img src="./img/fiat-mobi-500.jpg" class="preview-img" alt="Pré-visualização do veículo" id="preview-main-img">
+     <button class="btn-fav" id="btnFavorito" type="button">
+      <i class="bi bi-heart" aria-hidden="true"></i>
+   </button>
+   </div>
 
         <div class="preview-body">
           <p class="preview-title" id="preview-titulo" aria-live="polite">TOYOTA COROLLA XEI 2.0</p>
           <p class="preview-sub" id="preview-sub" aria-live="polite">2020/2020 &nbsp;·&nbsp; 48.000 km &nbsp;·&nbsp; FLEX &nbsp;·&nbsp; Automático</p>
-          <p class="preview-price" id="preview-preco" aria-live="polite">R$ 52.000,00</p>
+          <p class="preview-price" id="preview-preco" aria-live="polite">R$ 89.900,00</p>
 
           <div class="preview-tags" aria-label="Destaques do veículo">
             <span class="tag tag-green">Único Dono</span>
@@ -442,19 +435,15 @@
 
 
 <!-- ========== FOOTER ========== -->
-<footer class="admin-footer" role="contentinfo">
-  <div class="container d-flex align-items-center justify-content-between flex-wrap gap-3">
-    <div>
-      <img src="./img/logo.png" alt="Meu Carro" class="logo-footer mb-2">
-      <p>Todos os direitos reservados</p>
+<footer class="marketplace-footer text-center">
+  <div class="container">
+    <p class="mb-1 fw-semibold">Roque Garages &copy; 2024</p>
+    <p class="mb-3 small opacity-75">O marketplace de carros mais confiável do Brasil</p>
+    <div class="d-flex justify-content-center gap-3">
+      <i class="bi bi-instagram"></i>
+      <i class="bi bi-facebook"></i>
+      <i class="bi bi-whatsapp"></i>
     </div>
-    <nav aria-label="Redes sociais">
-      <div class="footer-social">
-        <a href="#" aria-label="Twitter / X"><i class="bi bi-twitter-x" aria-hidden="true"></i></a>
-        <a href="#" aria-label="Facebook"><i class="bi bi-facebook" aria-hidden="true"></i></a>
-        <a href="#" aria-label="Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a>
-      </div>
-    </nav>
   </div>
 </footer>
 

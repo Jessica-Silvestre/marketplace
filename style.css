@@ -510,7 +510,7 @@ p{
 }
 
 .hero-box {
-    background: #d9f5f3;
+    background: #d0d2d3c0;   /* cinza claro igual ao form-section */
     padding: 3rem;
     border-radius: 20px;
 }
@@ -520,11 +520,12 @@ p{
     justify-content: center;
     gap: 2rem;
     flex-wrap: wrap;
-    font-size: .9rem;
+    font-size: .10rem;
+    color: #4b5563;        /* texto cinza escuro */
 }
 
 .hero-benefits i {
-    color: var(--primary);
+    color: #4b5563;        /* ícones cinza escuro */
 }
 
 .marketplace-filter {
@@ -532,19 +533,23 @@ p{
 }
 
 .car-card {
-    border: none;
+    border: 1.5px solid #dee2e6;   /* borda cinza igual ao preview-card */
     border-radius: 18px;
     box-shadow: var(--shadow);
     transition: .3s;
+    overflow: hidden;
 }
 
 .car-card:hover {
     transform: translateY(-4px);
+    border-color: #b0b8c1;         /* borda cinza mais escura no hover */
+    box-shadow: 0 6px 18px rgba(0,0,0,.10);
 }
 
 .car-card img {
     height: 180px;
     object-fit: cover;
+    border-bottom: 1.5px solid #dee2e6;  /* separa foto do corpo */
 }
 
 .marketplace-footer {
