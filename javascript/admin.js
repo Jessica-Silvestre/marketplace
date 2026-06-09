@@ -33,3 +33,4 @@ const sidebar = document.querySelector('.sidebar-admin')
 botao.addEventListener('click', () => {
   sidebar.classList.toggle('ativa')
 })
+
