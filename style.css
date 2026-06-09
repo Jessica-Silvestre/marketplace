@@ -2762,6 +2762,13 @@ textarea.form-control { height: auto; border-radius: 10px; resize: vertical; }
     cursor:pointer;
 }
 
+.fig-grafico {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
 /* MODO CONTRASTE */
 /* =========================
    MODO CONTRASTE GLOBAL
@@ -2860,3 +2867,23 @@ body.contraste-ativo * {
 body.contraste-ativo {
   background-color: #000 !important;
 }
+
+.contraste {
+    background:#000 !important;
+    color:#fff !important;
+}
+
+.contraste .dashboard-card,
+.contraste .card,
+.contraste .activity-card,
+.contraste .chart-card,
+.contraste .sidebar-admin,
+.contraste .navbar,
+.contraste .marketplace-footer,
+.contraste .user-box,
+.contraste .fig-grafico{
+    background:#000 !important;
+    color:#fff !important;
+    border:1px solid #fff !important;
+}
+

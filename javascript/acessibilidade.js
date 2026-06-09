@@ -36,3 +36,6 @@ btnContraste.addEventListener("click", () => {
   const ativo = document.body.classList.contains("contraste-ativo");
   btnContraste.setAttribute("aria-pressed", ativo);
 });
+
+usuario.removeAttribute("aria-invalid");
+senha.removeAttribute("aria-invalid");

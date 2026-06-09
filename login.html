@@ -9,8 +9,39 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="login-bg">
-<form>
-<section class="vh-100 gradient-custom">
+<div class="d-flex justify-content-center gap-2 mt-5">
+    <button
+        id="aumentarFonte"
+        class="btn btn-outline-light btn-sm"
+        type="button"
+        aria-label="Aumentar fonte"
+    >
+        A+
+    </button>
+
+    <button
+        id="diminuirFonte"
+        class="btn btn-outline-light btn-sm"
+        type="button"
+        aria-label="Diminuir fonte"
+    >
+        A-
+    </button>
+
+    <button
+        id="contrasteNavbar"
+        class="btn btn-outline-light btn-sm"
+        type="button"
+        aria-pressed="false"
+    >
+        Contraste
+    </button>
+</div>
+  <main class="login-bg"> 
+
+    
+<form id="loginForm"  aria-describedby="login-descricao">
+<section class="gradient-custom">
   <div class="container py-5 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col-12 col-md-8 col-lg-6 col-xl-5">
@@ -18,26 +49,50 @@
 <div class="card-body p-3 text-center">
     <div class="mt-2 mb-2">
 
-              <h2 class="fw-bold mb-2 text-uppercase">Login</h2>
-<p class="text-dark mb-5">Por favor, insira seu nome de usuário e senha</p>
+  <h1 class="fw-bold mb-2 text-uppercase">
+    Login
+</h1>
+<p
+    id="login-descricao"
+    class="text-dark mb-5"
+>
+    Por favor, insira seu nome de usuário e senha
+</p>
 
               <div data-mdb-input-init class="form-outline form-white mb-4">
-                <input type="email" id="typeEmailX" class="form-control form-control-lg" />
-                <label class="form-label" for="typeEmailX">Usuário</label>
+              <input type="text" id="usuario" class="form-control form-control-lg"  autocomplete="username" />
+
+                <label class="form-label" for="usuario">Usuário</label>
               </div>
 
               <div data-mdb-input-init class="form-outline form-white mb-4">
-                <input type="password" id="typePasswordX" class="form-control form-control-lg" />
-                <label class="form-label" for="typePasswordX">Senha</label>
+<input type="password" id="senha" class="form-control form-control-lg" autocomplete="current-password" />
+                <label class="form-label" for="senha">Senha</label>
               </div>
 
-              <button class="btn btn-verde-agua btn-lg px-5">Entrar</button>
+<button type="submit" class="btn btn-verde-agua btn-lg px-5">
+    Entrar
+</button>
 
+<p
+    id="erro-login"
+    class="text-danger mt-2"
+    aria-live="assertive"
+    role="alert"
+></p>
+</div>
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
+</form>
+
+
+</main> 
+<script src="./javascript/login.js"></script>
+<script src="./javascript/acessibilidade.js"></script>
+
 </body>
 </html>
