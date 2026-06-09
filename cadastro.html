@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -12,9 +13,11 @@
 </head>
 <body>
 
-<!-- ========== HEADER ========== -->
+
+
+<!--  HEADER  -->
 <header>
-  <nav class="navbar navbar-expand-lg py-3">
+  <nav class="navbar navbar-expand-lg py-3" aria-label="Menu principal">
     <div class="container-fluid px-4 align-items-center">
 
       <!-- LOGO -->
@@ -55,21 +58,19 @@
       </div>
 
 <!-- ACESSIBILIDADE -->
- <!--(A+) -->
-<button id="aumentarFonte"  class="btn btn-outline-light btn-sm fw-semibold" type="button" aria-label="Aumentar fonte" >
-  A+
-</button>
 
-<!-- (A-) -->
-<button id="diminuirFonte" class="btn btn-outline-light btn-sm fw-semibold" type="button" aria-label="Diminuir fonte">
-  A-
-</button>
-
-<!-- CONTRASTE -->
-<button id="contrasteNavbar" class="btn btn-outline-light btn-sm d-flex align-items-center gap-2" type="button" aria-pressed="false">
-  <i class="bi bi-circle-half"></i>
-    Contraste
-</button>
+<div class="d-none d-lg-flex align-items-center gap-2 mx-3" role="group" aria-label="Controles de acessibilidade">
+  <!-- ===== PULAR PARA CONTEÚDO PRINCIPAL (acessibilidade) ===== -->
+<a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+  <button id="aumentarFonte" class="btn btn-outline-light btn-sm fw-semibold"
+          type="button" aria-label="Aumentar tamanho da fonte">A+</button>
+  <button id="diminuirFonte" class="btn btn-outline-light btn-sm fw-semibold"
+          type="button" aria-label="Diminuir tamanho da fonte">A-</button>
+  <button id="contrasteNavbar" class="btn btn-outline-light btn-sm d-flex align-items-center gap-1"
+          type="button" aria-pressed="false" aria-label="Ativar alto contraste">
+    <i class="bi bi-circle-half" aria-hidden="true"></i> Contraste
+  </button>
+</div>
 
 <!-- USUÁRIO LOGADO -->
   <div class="d-none d-lg-flex">
@@ -89,7 +90,7 @@
 </header>
 
 
-<!-- ========== CONTEÚDO PRINCIPAL ========== -->
+<!--  CONTEÚDO PRINCIPAL -->
 <main class="container-xl py-3" id="main-content" aria-label="Cadastro de veículo">
 
   <!-- breadcrumb -->
@@ -420,7 +421,7 @@
         </div>
 
         <div class="contato-item">
-          <div class="contato-icon" aria-hidden="true"><i class="bi bi-whatsapp"></i></div>
+          <div class="contato-icon" aria-hidden="true"><i class="bi bi-whatsapp" aria-hidden="true"></i></div>
           <div class="contato-text">
             <strong>(11) 99999-9999</strong>
             <small>WhatsApp</small>
@@ -456,14 +457,15 @@
     <p class="mb-1 fw-semibold">Roque Garages &copy; 2024</p>
     <p class="mb-3 small opacity-75">O marketplace de carros mais confiável do Brasil</p>
     <div class="d-flex justify-content-center gap-3">
-      <i class="bi bi-instagram"></i>
-      <i class="bi bi-facebook"></i>
-      <i class="bi bi-whatsapp"></i>
+      <i class="bi bi-instagram" aria-hidden="true"></i>
+      <i class="bi bi-facebook" aria-hidden="true"></i>
+      <i class="bi bi-whatsapp" aria-hidden="true"></i>
     </div>
   </div>
 </footer>
 
 <script src="dist/js/bootstrap.bundle.min.js"></script>
 <script src="cadastro-veiculo.js"></script>
+<script src="acessibilidade.js"></script>
 </body>
 </html>

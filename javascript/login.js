@@ -46,3 +46,19 @@ form.addEventListener("submit", function(event) {
 erro.innerHTML = erros
     .map(item => `<li>${item}</li>`)
     .join("");
+
+usuario.removeAttribute("aria-invalid");
+senha.removeAttribute("aria-invalid");
+
+// ── Toggle mostrar/ocultar senha ──────────────────────────────
+const toggleBtn = document.getElementById('toggleSenha');
+const senhaInput = document.getElementById('senha');
+const toggleIcon = toggleBtn.querySelector('i');
+
+toggleBtn.addEventListener('click', () => {
+  const visible = senhaInput.type === 'text';
+  senhaInput.type = visible ? 'password' : 'text';
+  toggleIcon.className = visible ? 'bi bi-eye-slash' : 'bi bi-eye';
+  toggleBtn.setAttribute('aria-pressed', String(!visible));
+  toggleBtn.setAttribute('aria-label', visible ? 'Mostrar senha' : 'Ocultar senha');
+});
