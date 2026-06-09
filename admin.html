@@ -29,13 +29,13 @@
     id="toggleSidebar"
     class="btn btn-link text-white p-0 me-3"
     type="button"
-    data-bs-toggle="offcanvas"
-    data-bs-target="#sidebarMobile"
-    aria-controls="sidebarMobile"
-    aria-label="Abrir menu lateral"
+    aria-expanded="true"
+    aria-controls="sidebarDesktop"
+    aria-label="Abrir ou recolher menu lateral"
 >
     <i class="bi bi-list fs-3" aria-hidden="true"></i>
 </button>
+
             <!-- LOGO -->
             <a class="navbar-brand me-0" href="./index.html">
                 <img
@@ -110,7 +110,7 @@
         A-
     </button>
 
-    <button id="contrasteNavbar" class="btn btn-outline-light btn-sm" aria-label="Ativar modo de contraste">
+    <button id="contrasteNavbar" class="btn btn-outline-light btn-sm" aria-label="Ativar modo de contraste" aria-pressed="false">
         Contraste
     </button>
 
@@ -173,6 +173,49 @@
                 </li>
 
                 <li class="nav-item mt-3" role="menuitem">
+    <hr>
+
+    <div class="d-flex flex-wrap gap-2">
+
+        <a
+            href="#conteudo"
+            class="btn btn-outline-secondary btn-sm flex-fill"
+            aria-label="Ir para conteúdo"
+        >
+            Ir ao conteúdo
+        </a>
+
+        <button
+            id="aumentarFonteMobile"
+            class="btn btn-outline-secondary btn-sm"
+            type="button"
+            aria-label="Aumentar fonte"
+        >
+            A+
+        </button>
+
+        <button
+            id="diminuirFonteMobile"
+            class="btn btn-outline-secondary btn-sm"
+            type="button"
+            aria-label="Diminuir fonte"
+        >
+            A-
+        </button>
+
+        <button
+            id="contrasteNavbarMobile"
+            class="btn btn-outline-secondary btn-sm"
+            type="button"
+            aria-label="Ativar contraste"
+                aria-pressed="false"
+        >
+            Contraste
+        </button>
+
+    </div>
+
+    <hr>
 
                     <a
                         href="./login.html"
@@ -338,7 +381,8 @@
             <article class="col-12 col-sm-6 col-xl-3">
 
 
-                <section class="dashboard-card">
+                <section class="dashboard-card"   role="region"
+  aria-labelledby="veiculos-titulo">
 
                     <div>
 
@@ -369,7 +413,8 @@
             <!-- CARD 3 -->
             <article class="col-12 col-sm-6 col-xl-3">
 
-                <section class="dashboard-card">
+                <section class="dashboard-card"   role="region"
+  aria-labelledby="total-leads">
 
                     <div>
 
@@ -400,7 +445,8 @@
             <!-- CARD 4 -->
             <article class="col-12 col-md-6 col-xl-3">
 
-                <section class="dashboard-card">
+                <section class="dashboard-card"   role="region"
+  aria-labelledby="receita-mensal">
 
                     <div>
 
@@ -752,7 +798,7 @@
 
   <div class="d-flex flex-column gap-3 mb-4">
 
-    <h2 class="fs-6 fw-semibold mb-0">
+    <h2 id="grafico-titulo" class="fs-6 fw-semibold mb-0">
       Crescimento de agências e veículos
     </h2>
 
@@ -888,7 +934,7 @@
 
               <div class="activity-icon">
 
-                <i class="bi bi-clock-history"></i>
+                <i class="bi bi-clock-history" aria-hidden="true"></i>
 
               </div>
 
@@ -1031,14 +1077,28 @@
 
 </aside>
 
-<footer class="marketplace-footer text-center">
+<footer class="marketplace-footer text-center" aria-label="Rodapé do site">
   <div class="container">
     <p class="mb-1 fw-semibold">Roque Garages &copy; 2024</p>
-    <p class="mb-3 small opacity-75">O marketplace de carros mais confiável do Brasil</p>
+
+    <p class="mb-3 small opacity-75">
+      O marketplace de carros mais confiável do Brasil
+    </p>
+
     <div class="d-flex justify-content-center gap-3">
-      <i class="bi bi-instagram" aria-hidden="true"></i>
-      <i class="bi bi-facebook" aria-hidden="true"></i>
-      <i class="bi bi-whatsapp" aria-hidden="true"></i>
+
+      <a href="#" class="text-white" aria-label="Instagram">
+        <i class="bi bi-instagram" aria-hidden="true"></i>
+      </a>
+
+      <a href="#" class="text-white" aria-label="Facebook">
+        <i class="bi bi-facebook" aria-hidden="true"></i>
+      </a>
+
+      <a href="#" class="text-white" aria-label="WhatsApp">
+        <i class="bi bi-whatsapp" aria-hidden="true"></i>
+      </a>
+
     </div>
   </div>
 </footer>

@@ -1,41 +1,84 @@
-'use strict' 
-const btnAumentar = document.getElementById("aumentarFonte");
-const btnDiminuir = document.getElementById("diminuirFonte");
+'use strict';
 
-let tamanhoBase = 16; // base em px
+// BOTÕES DESKTOP
+const btnAumentar = document.getElementById('aumentarFonte');
+const btnDiminuir = document.getElementById('diminuirFonte');
+const btnContraste = document.getElementById('contrasteNavbar');
+
+// BOTÕES MOBILE
+const btnAumentarMobile = document.getElementById('aumentarFonteMobile');
+const btnDiminuirMobile = document.getElementById('diminuirFonteMobile');
+const btnContrasteMobile = document.getElementById('contrasteNavbarMobile');
+
+let tamanhoBase = 16;
 
 function aplicarFonte() {
-  document.documentElement.style.fontSize = tamanhoBase + "px";
+  document.documentElement.style.fontSize = `${tamanhoBase}px`;
 }
 
-// A+
-btnAumentar.addEventListener("click", () => {
+function aumentarFonte() {
   if (tamanhoBase < 22) {
-    tamanhoBase += 1;
+    tamanhoBase++;
     aplicarFonte();
   }
-});
+}
 
-// A-
-btnDiminuir.addEventListener("click", () => {
+function diminuirFonte() {
   if (tamanhoBase > 12) {
-    tamanhoBase -= 1;
+    tamanhoBase--;
     aplicarFonte();
   }
-});
+}
 
-// inicia padrão
 aplicarFonte();
 
-const btnContraste = document.getElementById("contrasteNavbar");
+// ====================
+// CONTRASTE
+// ====================
 
-btnContraste.addEventListener("click", () => {
-  document.body.classList.toggle("contraste-ativo");
+function alternarContraste() {
+  document.body.classList.toggle('contraste-ativo');
 
-  // acessibilidade (estado do botão)
-  const ativo = document.body.classList.contains("contraste-ativo");
-  btnContraste.setAttribute("aria-pressed", ativo);
-});
+  const ativo = document.body.classList.contains('contraste-ativo');
 
-usuario.removeAttribute("aria-invalid");
-senha.removeAttribute("aria-invalid");
+  if (btnContraste) {
+    btnContraste.setAttribute('aria-pressed', ativo);
+  }
+
+  if (btnContrasteMobile) {
+    btnContrasteMobile.setAttribute('aria-pressed', ativo);
+  }
+}
+
+// ====================
+// EVENTOS DESKTOP
+// ====================
+
+if (btnAumentar) {
+  btnAumentar.addEventListener('click', aumentarFonte);
+}
+
+if (btnDiminuir) {
+  btnDiminuir.addEventListener('click', diminuirFonte);
+}
+
+if (btnContraste) {
+  btnContraste.addEventListener('click', alternarContraste);
+}
+
+// ====================
+// EVENTOS MOBILE
+// ====================
+
+if (btnAumentarMobile) {
+  btnAumentarMobile.addEventListener('click', aumentarFonte);
+}
+
+if (btnDiminuirMobile) {
+  btnDiminuirMobile.addEventListener('click', diminuirFonte);
+}
+
+if (btnContrasteMobile) {
+  btnContrasteMobile.addEventListener('click', alternarContraste);
+}
+
