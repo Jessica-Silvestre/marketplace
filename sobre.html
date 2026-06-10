@@ -10,85 +10,111 @@
 <body>
 
  <header>
-    <nav class="navbar navbar-expand-lg py-3">
+    <nav class="navbar navbar-expand-lg py-3" aria-label="Menu principal">
+    <div class="container-fluid px-4 align-items-center">
 
-        <div class="container-fluid px-4 align-items-center">
+      <!-- LOGO -->
+      <a class="navbar-brand me-0" href="#">
+        <img src="./img/logo.png" alt="Logo Roque Garages" class="img-fluid logo-navbar">
+      </a>
 
-            <!-- LOGO -->
-            <a class="navbar-brand me-0" href="#">
-                <img
-                    src="./img/logo.png"
-                    alt="Logo Roque Garages"
-                    class="img-fluid logo-navbar"
-                >
-            </a>
+      <!-- BOTÃO MOBILE -->
+      <button class="navbar-toggler border-0 shadow-none d-lg-none" type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#menuMobile"
+              aria-controls="menuMobile">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-            <!-- BOTÃO MOBILE -->
-            <button
-                class="navbar-toggler border-0 shadow-none d-lg-none"
-                type="button"
-                data-bs-toggle="offcanvas"
-                data-bs-target="#menuMobile"
-                aria-controls="menuMobile"
-            >
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
+      <!-- MENU DESKTOP -->
 <!-- MENU DESKTOP -->
 <div class="d-none d-lg-flex flex-grow-1 justify-content-center">
-  <ul class="navbar-nav gap-5">
-    <li class="nav-item">
-      <a class="nav-link fw-semibold text-white" href="index.html">Dashboard</a>
-          <li class="nav-item">
-                        <a class="nav-link fw-semibold text-white" href="index.html">
-                            Início
-                        </a>
-                    </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link fw-semibold text-white" href="index.html">
-                          Comprar  
-                        </a>
-                    </li>
+    <ul class="navbar-nav gap-3">
 
+        <li class="nav-item">
+            <a class="nav-link fw-semibold text-white" href="#">
+                Dashboard
+            </a>
+        </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link fw-semibold text-white" href="sobre.html">
-                            Sobre nós
-                        </a>
+        <li class="nav-item">
+            <a class="nav-link fw-semibold text-white" href="#">
+                Veículos
+            </a>
+        </li>
 
-                        
-                    <li class="nav-item">
-                        <a class="nav-link fw-semibold text-white" href="login.html">
-                             Sou vendedor
-                        </a>
-                    </li>
+        <li class="nav-item">
+            <a class="nav-link fw-semibold text-white" href="#">
+                Leads
+            </a>
+        </li>
 
-                </ul>
+        <li class="nav-item">
+            <a class="nav-link fw-semibold text-white" href="#">
+                Vendas
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link fw-semibold text-white" href="#">
+                Relatórios
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link fw-semibold text-white" href="#">
+                Configurações
+            </a>
+        </li>
+
+    </ul>
+
 </div>
 
-            <!-- SAIR DESKTOP -->
-            <div class="d-none d-lg-flex">
+<!-- ACESSIBILIDADE -->
+<div class="d-none d-lg-flex align-items-center gap-2">
 
-                <a
-                    href="#"
-                    class="d-flex align-items-center gap-2 text-decoration-none text-white fw-semibold"
-                >
+    <a
+        href="#main-content"
+        class="btn btn-outline-light btn-sm"
+        aria-label="Ir para o conteúdo principal"
+    >
+        Ir conteúdo
+    </a>
 
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M6 3a2 2 0 0 0-2 2v1h1V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-1H4v1a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H6z"/>
-                        <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"/>
-                    </svg>
+    <button
+        id="aumentarFonte"
+        class="btn btn-outline-light btn-sm"
+        type="button"
+        aria-label="Aumentar tamanho da fonte"
+    >
+        A+
+    </button>
 
-                    <span>Sair</span>
+    <button
+        id="diminuirFonte"
+        class="btn btn-outline-light btn-sm"
+        type="button"
+        aria-label="Diminuir tamanho da fonte"
+    >
+        A-
+    </button>
 
-                </a>
+    <button
+        id="contrasteNavbar"
+        class="btn btn-outline-light btn-sm"
+        type="button"
+        aria-label="Ativar alto contraste"
+        aria-pressed="false"
+    >
+        Contraste
+    </button>
 
-            </div>
+</div>
 
-        </div>
 
-    </nav>
+</nav>
 
 
 <div class="container py-5">
@@ -229,6 +255,6 @@
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
+<script src="./javascript/acessibilidade.js"></script>
 </body>
 </html>
