@@ -5,7 +5,7 @@ const usuario = document.getElementById("usuario");
 const senha = document.getElementById("senha");
 const erro = document.getElementById("erro-login");
 
-form.addEventListener("submit", function(event) {
+form.addEventListener("submit", function (event) {
 
     event.preventDefault();
 
@@ -43,22 +43,23 @@ form.addEventListener("submit", function(event) {
     window.location.href = "admin.html";
 });
 
-erro.innerHTML = erros
-    .map(item => `<li>${item}</li>`)
-    .join("");
+// Mostrar/Ocultar senha
+const toggleBtn = document.getElementById("toggleSenha");
+const toggleIcon = toggleBtn.querySelector("i");
 
-usuario.removeAttribute("aria-invalid");
-senha.removeAttribute("aria-invalid");
+toggleBtn.addEventListener("click", () => {
 
-// ── Toggle mostrar/ocultar senha ──────────────────────────────
-const toggleBtn = document.getElementById('toggleSenha');
-const senhaInput = document.getElementById('senha');
-const toggleIcon = toggleBtn.querySelector('i');
+    const visible = senha.type === "text";
 
-toggleBtn.addEventListener('click', () => {
-  const visible = senhaInput.type === 'text';
-  senhaInput.type = visible ? 'password' : 'text';
-  toggleIcon.className = visible ? 'bi bi-eye-slash' : 'bi bi-eye';
-  toggleBtn.setAttribute('aria-pressed', String(!visible));
-  toggleBtn.setAttribute('aria-label', visible ? 'Mostrar senha' : 'Ocultar senha');
+    senha.type = visible ? "password" : "text";
+
+    toggleIcon.className = visible
+        ? "bi bi-eye-slash"
+        : "bi bi-eye";
+
+    toggleBtn.setAttribute("aria-pressed", String(!visible));
+    toggleBtn.setAttribute(
+        "aria-label",
+        visible ? "Mostrar senha" : "Ocultar senha"
+    );
 });

@@ -44,12 +44,17 @@
       <a class="nav-link fw-semibold text-white" href="cliente.html">Lojas</a>
     </li>
   </ul>
-</div>
 
 <!-- ACESSIBILIDADE -->
-<div class="d-none d-lg-flex align-items-center gap-2 mx-3" role="group" aria-label="Controles de acessibilidade">
+<div class="d-none d-lg-flex align-items-center gap-2 ms-5 ps-5" role="group" aria-label="Controles de acessibilidade">
   <!-- ===== PULAR PARA CONTEÚDO PRINCIPAL (acessibilidade) ===== -->
-<a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
+    <a
+        href="#conteudo"
+        class="btn btn-outline-light btn-sm"
+        aria-label="Ir para o conteúdo principal"
+    >
+        Ir conteúdo principal
+    </a>
   <button id="aumentarFonte" class="btn btn-outline-light btn-sm fw-semibold"
           type="button" aria-label="Aumentar tamanho da fonte">A+</button>
   <button id="diminuirFonte" class="btn btn-outline-light btn-sm fw-semibold"
@@ -60,18 +65,26 @@
   </button>
 </div>
 
-<!-- ÁREA DO LOJISTA -->
-  <div class="d-none d-lg-flex">
-    <a href="#" class="d-flex align-items-center gap-2 text-decoration-none text-white fw-semibold">
-     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
-      <path fill-rule="evenodd" d="M6 3a2 2 0 0 0-2 2v1h1V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-1H4v1a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H6z"/>
-      <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"/>
-     </svg>
-      <span><a href="cliente.html" class="d-flex ...">Entrar</a></span>
-    </a>
-  </div>
- </div>
-</nav>
+   <hr>
+
+                    <a
+                        href="./cliente.html"
+                        class="d-flex align-items-center text-white gap-2 text-decoration-none fw-semibold ms-4"
+                    >
+
+                  
+                        <span>Área lojista</span>
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
 </header>
 
 
@@ -389,15 +402,24 @@
     <p class="mb-1 fw-semibold">Roque Garages &copy; 2024</p>
     <p class="mb-3 small opacity-75">O marketplace de carros mais confiável do Brasil</p>
     <div class="d-flex justify-content-center gap-3">
-      <i class="bi bi-instagram" aria-hidden="true"></i>
-      <i class="bi bi-facebook" aria-hidden="true"></i>
-      <i class="bi bi-whatsapp" aria-hidden="true"></i>
+         <a href="#" class="text-white" aria-label="Instagram">
+        <i class="bi bi-instagram" aria-hidden="true"></i>
+      </a>
+
+      <a href="#" class="text-white" aria-label="Facebook">
+        <i class="bi bi-facebook" aria-hidden="true"></i>
+      </a>
+
+      <a href="#" class="text-white" aria-label="WhatsApp">
+        <i class="bi bi-whatsapp" aria-hidden="true"></i>
+      </a>
+
     </div>
   </div>
 </footer>
 
 <script src="dist/js/bootstrap.bundle.min.js"></script>
-<script src="index.js"></script>
-<script src="acessibilidade.js"></script>
+<script src="./javascript/index.js"></script>
+<script src="./javascript/acessibilidade.js"></script>
 </body>
 </html>

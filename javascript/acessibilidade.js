@@ -1,54 +1,83 @@
 'use strict';
 
-// ── Tamanho de fonte ──────────────────────────────────────────
+// BOTÕES DESKTOP
 const btnAumentar = document.getElementById('aumentarFonte');
 const btnDiminuir = document.getElementById('diminuirFonte');
+const btnContraste = document.getElementById('contrasteNavbar');
 
-// Lê tamanho salvo (persistência entre páginas) ou usa 16
-let tamanhoBase = parseInt(localStorage.getItem('fontSize'), 10) || 16;
+// BOTÕES MOBILE
+const btnAumentarMobile = document.getElementById('aumentarFonteMobile');
+const btnDiminuirMobile = document.getElementById('diminuirFonteMobile');
+const btnContrasteMobile = document.getElementById('contrasteNavbarMobile');
+
+let tamanhoBase = 16;
 
 function aplicarFonte() {
-  document.documentElement.style.fontSize = tamanhoBase + 'px';
+  document.documentElement.style.fontSize = `${tamanhoBase}px`;
 }
 
+function aumentarFonte() {
+  if (tamanhoBase < 22) {
+    tamanhoBase++;
+    aplicarFonte();
+  }
+}
+
+function diminuirFonte() {
+  if (tamanhoBase > 12) {
+    tamanhoBase--;
+    aplicarFonte();
+  }
+}
+
+aplicarFonte();
+
+// ====================
+// CONTRASTE
+// ====================
+
+function alternarContraste() {
+  document.body.classList.toggle('contraste-ativo');
+
+  const ativo = document.body.classList.contains('contraste-ativo');
+
+  if (btnContraste) {
+    btnContraste.setAttribute('aria-pressed', ativo);
+  }
+
+  if (btnContrasteMobile) {
+    btnContrasteMobile.setAttribute('aria-pressed', ativo);
+  }
+}
+
+// ====================
+// EVENTOS DESKTOP
+// ====================
+
 if (btnAumentar) {
-  btnAumentar.addEventListener('click', () => {
-    if (tamanhoBase < 22) {
-      tamanhoBase += 1;
-      localStorage.setItem('fontSize', tamanhoBase);
-      aplicarFonte();
-    }
-  });
+  btnAumentar.addEventListener('click', aumentarFonte);
 }
 
 if (btnDiminuir) {
-  btnDiminuir.addEventListener('click', () => {
-    if (tamanhoBase > 12) {
-      tamanhoBase -= 1;
-      localStorage.setItem('fontSize', tamanhoBase);
-      aplicarFonte();
-    }
-  });
-}
-
-// Aplica ao carregar a página
-aplicarFonte();
-
-
-// ── Alto contraste ────────────────────────────────────────────
-const btnContraste = document.getElementById('contrasteNavbar');
-
-// Restaura preferência salva
-if (localStorage.getItem('contraste') === 'ativo') {
-  document.body.classList.add('contraste-ativo');
-  if (btnContraste) btnContraste.setAttribute('aria-pressed', 'true');
+  btnDiminuir.addEventListener('click', diminuirFonte);
 }
 
 if (btnContraste) {
-  btnContraste.addEventListener('click', () => {
-    document.body.classList.toggle('contraste-ativo');
-    const ativo = document.body.classList.contains('contraste-ativo');
-    btnContraste.setAttribute('aria-pressed', String(ativo));
-    localStorage.setItem('contraste', ativo ? 'ativo' : 'inativo');
-  });
+  btnContraste.addEventListener('click', alternarContraste);
+}
+
+// ====================
+// EVENTOS MOBILE
+// ====================
+
+if (btnAumentarMobile) {
+  btnAumentarMobile.addEventListener('click', aumentarFonte);
+}
+
+if (btnDiminuirMobile) {
+  btnDiminuirMobile.addEventListener('click', diminuirFonte);
+}
+
+if (btnContrasteMobile) {
+  btnContrasteMobile.addEventListener('click', alternarContraste);
 }
