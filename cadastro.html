@@ -21,7 +21,7 @@
     <div class="container-fluid px-4 align-items-center">
 
       <!-- LOGO -->
-      <a class="navbar-brand me-0" href="#">
+      <a class="navbar-brand me-0" href="index.html">
         <img src="./img/logo.png" alt="Logo Roque Garages" class="img-fluid logo-navbar">
       </a>
 
@@ -34,25 +34,25 @@
       </button>
 
       <!-- MENU DESKTOP -->
-      <div class="d-none d-lg-flex flex-grow-1 justify-content-center">
+       <div class="d-none d-lg-flex flex-grow-1 justify-content-center">
         <ul class="navbar-nav gap-5">
           <li class="nav-item">
-            <a class="nav-link fw-semibold text-white" href="#">Dashboard</a>
+            <a class="nav-link fw-semibold text-white" href=".index.html">Veículos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link fw-semibold text-white" href="#">Veículos</a>
+            <a class="nav-link fw-semibold text-white" href="admin.html">Dashboard</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link fw-semibold text-white" href="#">Leads</a>
+            <a class="nav-link fw-semibold text-white" href="cliente.html">Vender</a>
           </li>
            <li class="nav-item">
-            <a class="nav-link fw-semibold text-white" href="#">Vendas</a>
+            <a class="nav-link fw-semibold text-white" href="login.html">login</a>
+          </li>
+             <li class="nav-item">
+            <a class="nav-link fw-semibold text-white" href="cadastro.html">Leads</a>
           </li>
            <li class="nav-item">
-            <a class="nav-link fw-semibold text-white" href="#">Relatórios</a>
-          </li>
-           <li class="nav-item">
-            <a class="nav-link fw-semibold text-white" href="#">Configurações</a>
+            <a class="nav-link fw-semibold text-white" href="sobre.html">Quem somos</a>
           </li>
         </ul>
       </div>
@@ -354,12 +354,19 @@
 
 <!-- Ações -->
 <div class="form-actions" role="group" aria-label="Ações do formulário">
- <button type="button" class="btn-rascunho" aria-label="Salvar como rascunho">
-          Salvar Rascunho
- </button>
- <button type="submit" class="btn-publicar" aria-label="Publicar anúncio do veículo">
-         Publicar Anúncio
- </button>
+ <button
+    type="button"
+    class="btn-rascunho"
+    onclick="window.location.href='detalhe.html'">
+    Salvar Rascunho
+</button>
+
+<button
+    type="button"
+    class="btn-publicar"
+    onclick="window.location.href='detalhe.html'">
+    Publicar Anúncio
+</button>
    <span class="secure-note" aria-label="Seus dados estão seguros. O anúncio será revisado antes da publicação.">
      <i class="bi bi-shield-check" aria-hidden="true"></i>
         Seus dados estão seguros. Anúncio será revisado antes da publicação.

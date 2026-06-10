@@ -11,8 +11,6 @@
 </head>
 <body class="login-page">
 
-<!-- Skip link -->
-<a href="#loginForm" class="skip-link">Pular para o formulário de login</a>
 
 <!--HEADER -->
 <header>
@@ -29,15 +27,21 @@
               data-bs-toggle="offcanvas" data-bs-target="#menuMobile" aria-controls="menuMobile">
         <span class="navbar-toggler-icon"></span>
       </button>
-
-      <!-- MENU DESKTOP -->
-      <div class="d-none d-lg-flex flex-grow-1 justify-content-center">
-        <ul class="navbar-nav gap-5">
-          <li class="nav-item"><a class="nav-link fw-semibold text-white" href="index.html">Comprar</a></li>
-          <li class="nav-item"><a class="nav-link fw-semibold text-white" href="cadastro.html">Vender</a></li>
-          <li class="nav-item"><a class="nav-link fw-semibold text-white" href="sobre.html">Lojas</a></li>
-        </ul>
-      </div>
+      
+<!-- MENU DESKTOP -->
+<div class="d-none d-lg-flex flex-grow-1 justify-content-center">
+  <ul class="navbar-nav gap-5">
+    <li class="nav-item">
+      <a class="nav-link fw-semibold text-white" href=".index.html">Comprar</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link fw-semibold text-white" href="cadastro.html">Vender</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link fw-semibold text-white" href="cliente.html">Lojas</a>
+    </li>
+  </ul>
+</div>
 
       <!-- ACESSIBILIDADE -->
       <div class="d-none d-lg-flex align-items-center gap-2 mx-3" role="group" aria-label="Controles de acessibilidade">
@@ -51,39 +55,9 @@
         </button>
       </div>
 
-      <!-- ENTRAR -->
-      <div class="d-none d-lg-flex">
-        <a href="login.html" class="d-flex align-items-center gap-2 text-decoration-none text-white fw-semibold">
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16" aria-hidden="true">
-            <path fill-rule="evenodd" d="M6 3a2 2 0 0 0-2 2v1h1V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-1H4v1a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H6z"/>
-            <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"/>
-          </svg>
-          <span>Entrar</span>
-        </a>
-      </div>
-    </div>
-  </nav>
+  
 
-  <!-- OFFCANVAS MOBILE -->
-  <div class="offcanvas offcanvas-end" tabindex="-1" id="menuMobile">
-    <div class="offcanvas-header">
-      <h5 class="offcanvas-title">Menu</h5>
-      <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas" aria-label="Fechar"></button>
-    </div>
-    <div class="offcanvas-body">
-      <ul class="navbar-nav gap-3">
-        <li class="nav-item"><a class="nav-link fw-semibold" href="index.html">Comprar</a></li>
-        <li class="nav-item"><a class="nav-link fw-semibold" href="cadastro.html">Vender</a></li>
-        <li class="nav-item"><a class="nav-link fw-semibold" href="sobre.html">Lojas</a></li>
-        <li class="nav-item mt-3 d-flex gap-2" role="group" aria-label="Controles de acessibilidade">
-          <button id="aumentarFonteMobile" class="btn btn-outline-secondary btn-sm" aria-label="Aumentar fonte">A+</button>
-          <button id="diminuirFonteMobile" class="btn btn-outline-secondary btn-sm" aria-label="Diminuir fonte">A-</button>
-          <button id="contrasteMobile" class="btn btn-outline-secondary btn-sm" aria-pressed="false">Contraste</button>
-        </li>
-      </ul>
-    </div>
-  </div>
-</header>
+ </header>
 
 <!-- ========== CONTEÚDO ========== -->
 <main class="login-hero" id="loginForm-region" aria-label="Área de login">
