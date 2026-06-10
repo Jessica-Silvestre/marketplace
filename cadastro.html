@@ -34,58 +34,110 @@
       </button>
 
       <!-- MENU DESKTOP -->
-      <div class="d-none d-lg-flex flex-grow-1 justify-content-center">
-        <ul class="navbar-nav gap-5">
-          <li class="nav-item">
-            <a class="nav-link fw-semibold text-white" href="#">Dashboard</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link fw-semibold text-white" href="#">Veículos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link fw-semibold text-white" href="#">Leads</a>
-          </li>
-           <li class="nav-item">
-            <a class="nav-link fw-semibold text-white" href="#">Vendas</a>
-          </li>
-           <li class="nav-item">
-            <a class="nav-link fw-semibold text-white" href="#">Relatórios</a>
-          </li>
-           <li class="nav-item">
-            <a class="nav-link fw-semibold text-white" href="#">Configurações</a>
-          </li>
-        </ul>
-      </div>
+<!-- MENU DESKTOP -->
+<div class="d-none d-lg-flex flex-grow-1 justify-content-center">
+
+    <ul class="navbar-nav gap-3">
+
+        <li class="nav-item">
+            <a class="nav-link fw-semibold text-white" href="#">
+                Dashboard
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link fw-semibold text-white" href="#">
+                Veículos
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link fw-semibold text-white" href="#">
+                Leads
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link fw-semibold text-white" href="#">
+                Vendas
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link fw-semibold text-white" href="#">
+                Relatórios
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link fw-semibold text-white" href="#">
+                Configurações
+            </a>
+        </li>
+
+    </ul>
+
+</div>
 
 <!-- ACESSIBILIDADE -->
+<div class="d-none d-lg-flex align-items-center gap-2">
 
-<div class="d-none d-lg-flex align-items-center gap-2 mx-3" role="group" aria-label="Controles de acessibilidade">
-  <!-- ===== PULAR PARA CONTEÚDO PRINCIPAL (acessibilidade) ===== -->
-<a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
-  <button id="aumentarFonte" class="btn btn-outline-light btn-sm fw-semibold"
-          type="button" aria-label="Aumentar tamanho da fonte">A+</button>
-  <button id="diminuirFonte" class="btn btn-outline-light btn-sm fw-semibold"
-          type="button" aria-label="Diminuir tamanho da fonte">A-</button>
-  <button id="contrasteNavbar" class="btn btn-outline-light btn-sm d-flex align-items-center gap-1"
-          type="button" aria-pressed="false" aria-label="Ativar alto contraste">
-    <i class="bi bi-circle-half" aria-hidden="true"></i> Contraste
-  </button>
+    <a
+        href="#main-content"
+        class="btn btn-outline-light btn-sm"
+        aria-label="Ir para o conteúdo principal"
+    >
+        Ir conteúdo
+    </a>
+
+    <button
+        id="aumentarFonte"
+        class="btn btn-outline-light btn-sm"
+        type="button"
+        aria-label="Aumentar tamanho da fonte"
+    >
+        A+
+    </button>
+
+    <button
+        id="diminuirFonte"
+        class="btn btn-outline-light btn-sm"
+        type="button"
+        aria-label="Diminuir tamanho da fonte"
+    >
+        A-
+    </button>
+
+    <button
+        id="contrasteNavbar"
+        class="btn btn-outline-light btn-sm"
+        type="button"
+        aria-label="Ativar alto contraste"
+        aria-pressed="false"
+    >
+        Contraste
+    </button>
+
 </div>
 
 <!-- USUÁRIO LOGADO -->
-  <div class="d-none d-lg-flex">
-    <div class="user-chip" role="button" aria-label="Menu do usuário: Soma São Roque" tabindex="0">
-      <div class="user-avatar" aria-hidden="true">
-        <i class="bi bi-person-fill fs-5"></i>
-      </div>
-     <div class="user-info">
-       <strong>Soma São Roque</strong>
-        <small>Agência</small>
+<div class="d-none d-lg-flex align-items-center ms-3">
+
+    <div
+        class="user-chip-sm"
+        role="button"
+        tabindex="0"
+        aria-label="Menu do usuário Soma São Roque"
+    >
+
+        <i class="bi bi-person-fill" aria-hidden="true"></i>
+
+        <span>Soma São Roque</span>
+
+        <i class="bi bi-chevron-down" aria-hidden="true"></i>
+
     </div>
-      <i class="bi bi-chevron-down ms-1" style="font-size:11px;" aria-hidden="true"></i>
-   </div>
-  </div>
- </div>
+
 </nav>
 </header>
 
@@ -457,15 +509,23 @@
     <p class="mb-1 fw-semibold">Roque Garages &copy; 2024</p>
     <p class="mb-3 small opacity-75">O marketplace de carros mais confiável do Brasil</p>
     <div class="d-flex justify-content-center gap-3">
-      <i class="bi bi-instagram" aria-hidden="true"></i>
-      <i class="bi bi-facebook" aria-hidden="true"></i>
-      <i class="bi bi-whatsapp" aria-hidden="true"></i>
+            <a href="#" class="text-white" aria-label="Instagram">
+        <i class="bi bi-instagram" aria-hidden="true"></i>
+      </a>
+
+      <a href="#" class="text-white" aria-label="Facebook">
+        <i class="bi bi-facebook" aria-hidden="true"></i>
+      </a>
+
+      <a href="#" class="text-white" aria-label="WhatsApp">
+        <i class="bi bi-whatsapp" aria-hidden="true"></i>
+      </a>
     </div>
   </div>
 </footer>
 
 <script src="dist/js/bootstrap.bundle.min.js"></script>
-<script src="cadastro-veiculo.js"></script>
-<script src="acessibilidade.js"></script>
+<script src="./javascript/cadastro-veiculo.js"></script>
+<script src="./javascript/acessibilidade.js"></script>
 </body>
 </html>

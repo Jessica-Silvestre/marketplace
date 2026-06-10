@@ -616,16 +616,30 @@ body { margin: 0; font: 14px/1.5 'Segoe UI', sans-serif; background: var(--bg-al
   background: var(--bg-alt);
   cursor: pointer;
 }
-.user-chip .avatar {
-  width: 34px; height: 34px;
-  border-radius: 50%;
-  background: var(--primary);
-  display: flex; align-items: center; justify-content: center;
-  color: var(--white); font-weight: 700; font-size: 13px;
+.user-chip-sm{
+    display:flex;
+    align-items:center;
+    gap:.5rem;
+
+    padding:.35rem .75rem;
+
+    border:1px solid rgba(255,255,255,.25);
+    border-radius:999px;
+
+    color:#fff;
+    cursor:pointer;
+
+    font-size:.85rem;
+    line-height:1;
 }
-.user-chip .info { line-height: 1.2; }
-.user-chip .info strong { display: block; font-size: 13px; color: var(--text); }
-.user-chip .info small { font-size: 11px; color: var(--text-muted); }
+
+.user-chip-sm span{
+    white-space:nowrap;
+}
+
+.user-chip-sm .bi-person-fill{
+    font-size:.9rem;
+}
 
 /* ── BREADCRUMB ── */
 .page-breadcrumb {
