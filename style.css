@@ -1407,6 +1407,7 @@ body {
 }
 
 .card-destaque {
+  padding: 10px;
     background: #fff;
     border-radius: 12px;
     overflow: hidden;
@@ -1414,6 +1415,7 @@ body {
 }
 
 .card-destaque img {
+  border-radius: 5px;
     width: 100%;
     height: auto;
     object-fit: cover;
@@ -1427,13 +1429,16 @@ body {
 }
 
 .conteudo-card h3 {
+    text-align: center;
+    margin-top: 20px;
     margin-bottom: 30px;
 }
 
 .conteudo-card p {
+    padding: 10px;
     font-size: 16px;
     text-align: left;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 footer {
@@ -1441,7 +1446,12 @@ footer {
     color: #fff;
     padding: 40px 0;
 }
-
+.text-destaque{
+      color: #3ac4bc;
+}
+.btn-final {
+  padding:5px;
+}
 /* =========================
    RESPONSIVO
 ========================= */
