@@ -1061,6 +1061,7 @@ body {
 
 /* ===== CARD PRINCIPAL ===== */
 .subtitulo{
+  text-align: left;
   color: rgba(0, 0, 0, 0.507) ;
 }
 .card-veiculo {
