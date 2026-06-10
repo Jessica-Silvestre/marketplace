@@ -1,65 +1,39 @@
-'use strict';
+/*  cadastro-veiculo.js  -    Scripts da página de cadastro de veículo */
 
-const form = document.getElementById("loginForm");
-const usuario = document.getElementById("usuario");
-const senha = document.getElementById("senha");
-const erro = document.getElementById("erro-login");
+document.addEventListener('DOMContentLoaded', () => {
 
-form.addEventListener("submit", function (event) {
+  // ── Contador de caracteres na descrição ──
+  const textarea = document.getElementById('descricao');
+  const counter  = document.getElementById('char-count');
 
-    event.preventDefault();
+  if (textarea && counter) {
+    textarea.addEventListener('input', () => {
+      counter.textContent = textarea.value.length;
+    });
+  }
 
-    erro.innerHTML = "";
+  // ── Tooltips Bootstrap ──
+  document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(el => {
+    new bootstrap.Tooltip(el);
+  });
 
-    const erros = [];
+const favorito = document.getElementById("btnFavorito");
+const icone = favorito.querySelector("i");
 
-    if (usuario.value.trim() === "") {
-        erros.push("O campo usuário não pode estar vazio.");
-        usuario.setAttribute("aria-invalid", "true");
-    } else {
-        usuario.removeAttribute("aria-invalid");
-    }
+favorito.addEventListener("click", () => {
 
-    if (senha.value.trim() === "") {
-        erros.push("O campo senha não pode estar vazio.");
-        senha.setAttribute("aria-invalid", "true");
-    } else {
-        senha.removeAttribute("aria-invalid");
-    }
+  favorito.classList.toggle("active");
 
-    if (erros.length > 0) {
-        erro.innerHTML = erros.join("<br>");
-        return;
-    }
+  if(favorito.classList.contains("active")){
+      icone.classList.replace("bi-heart", "bi-heart-fill");
+      favorito.setAttribute("aria-pressed", "true");
+      favorito.setAttribute("aria-label", "Remover dos favoritos");
+  } else {
+      icone.classList.replace("bi-heart-fill", "bi-heart");
+      favorito.setAttribute("aria-pressed", "false");
+      favorito.setAttribute("aria-label", "Adicionar aos favoritos");
+  }
 
-    if (
-        usuario.value !== "admin" ||
-        senha.value !== "123"
-    ) {
-        erro.textContent = "Usuário ou senha inválidos.";
-        return;
-    }
-
-    window.location.href = "admin.html";
 });
 
-// Mostrar/Ocultar senha
-const toggleBtn = document.getElementById("toggleSenha");
-const toggleIcon = toggleBtn.querySelector("i");
-
-toggleBtn.addEventListener("click", () => {
-
-    const visible = senha.type === "text";
-
-    senha.type = visible ? "password" : "text";
-
-    toggleIcon.className = visible
-        ? "bi bi-eye-slash"
-        : "bi bi-eye";
-
-    toggleBtn.setAttribute("aria-pressed", String(!visible));
-    toggleBtn.setAttribute(
-        "aria-label",
-        visible ? "Mostrar senha" : "Ocultar senha"
-    );
 });
