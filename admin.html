@@ -57,18 +57,12 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-<!-- MENU DESKTOP -->
-  <div class="d-none d-lg-flex flex-grow-1 justify-content-center">
-    <ul class="navbar-nav gap-5">
-      <li class="nav-item" role="menuitem">
-        <a class="nav-link fw-semibold text-white" href="admin.html">Dashboard</a>
-      </li>
+            <!-- MENU DESKTOP -->
+            <div class="d-none d-lg-flex flex-grow-1 justify-content-center">
 
-      <li class="nav-item" role="menuitem">
-        <a class="nav-link fw-semibold text-white" href="cliente.html">Agências</a>
-      </li>
+                <ul class="navbar-nav gap-5">
 
-                   <li class="nav-item" role="menuitem">
+                    <li class="nav-item" role="menuitem">
                         <a class="nav-link fw-semibold text-white" href="./admin.html" aria-current="page">
                             Dashboard
                         </a>
@@ -89,13 +83,12 @@
                     <li class="nav-item" role="menuitem">
                         <a class="nav-link fw-semibold text-white" href="#">
                             Relatórios
-                        </a>  
+                        </a>
                     </li>
 
                 </ul>
 
             </div>
-
 
         
 <!-- SAIR DESKTOP -->
@@ -117,7 +110,7 @@
         A-
     </button>
 
-    <button id="contrasteNavbar" class="btn btn-outline-light btn-sm" aria-label="Ativar modo de contraste">
+    <button id="contrasteNavbar" class="btn btn-outline-light btn-sm" aria-label="Ativar modo de contraste" aria-pressed="false">
         Contraste
     </button>
 
@@ -136,7 +129,7 @@
         id="menuMobile"
     >
 
-        <div class="offcanvas-">
+        <div class="offcanvas-header">
 
             <h5 class="offcanvas-title">
                 Menu
@@ -180,10 +173,53 @@
                 </li>
 
                 <li class="nav-item mt-3" role="menuitem">
+    <hr>
+
+    <div class="d-flex flex-wrap gap-2">
+
+        <a
+            href="#conteudo"
+            class="btn btn-outline-secondary btn-sm flex-fill"
+            aria-label="Ir para conteúdo"
+        >
+            Ir ao conteúdo
+        </a>
+
+        <button
+            id="aumentarFonteMobile"
+            class="btn btn-outline-secondary btn-sm"
+            type="button"
+            aria-label="Aumentar fonte"
+        >
+            A+
+        </button>
+
+        <button
+            id="diminuirFonteMobile"
+            class="btn btn-outline-secondary btn-sm"
+            type="button"
+            aria-label="Diminuir fonte"
+        >
+            A-
+        </button>
+
+        <button
+            id="contrasteNavbarMobile"
+            class="btn btn-outline-secondary btn-sm"
+            type="button"
+            aria-label="Ativar contraste"
+                aria-pressed="false"
+        >
+            Contraste
+        </button>
+
+    </div>
+
+    <hr>
 
                     <a
-                        href="./login.html"
-                        class="d-flex align-items-center gap-2 text-decoration-none fw-semibold"
+                        href="./login.html" 
+                        class="d-flex align-items-center gap-2 text-white text-decoration-none fw-semibold"
                     >
 
                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16" aria-hidden="true">
@@ -342,9 +378,11 @@
 </article>
 
             <!-- CARD 2 -->
-            <article class="col-12 col-md-6 col-xl-3">
+            <article class="col-12 col-sm-6 col-xl-3">
 
-                <section class="dashboard-card">
+
+                <section class="dashboard-card"   role="region"
+  aria-labelledby="veiculos-titulo">
 
                     <div>
 
@@ -373,9 +411,10 @@
             </article>
 
             <!-- CARD 3 -->
-            <article class="col-12 col-md-6 col-xl-3">
+            <article class="col-12 col-sm-6 col-xl-3">
 
-                <section class="dashboard-card">
+                <section class="dashboard-card"   role="region"
+  aria-labelledby="total-leads">
 
                     <div>
 
@@ -406,7 +445,8 @@
             <!-- CARD 4 -->
             <article class="col-12 col-md-6 col-xl-3">
 
-                <section class="dashboard-card">
+                <section class="dashboard-card"   role="region"
+  aria-labelledby="receita-mensal">
 
                     <div>
 
@@ -456,12 +496,12 @@
           <thead class="table-light">
 
             <tr>
-              <th>Agência</th>
-              <th>Localização</th>
-              <th>Plano</th>
-              <th>Data de cadastro</th>
-              <th>Status</th>
-              <th class="text-center">Ações</th>
+<th>Agência</th>
+<th>Localização</th>
+<th>Plano</th>
+<th class="d-none d-md-table-cell">Data de cadastro</th>
+<th>Status</th>
+<th class="text-center">Ações</th>
             </tr>
 
           </thead>
@@ -473,30 +513,104 @@
               <td>Soma São Roque</td>
               <td>São Roque, SP</td>
               <td>Pro</td>
-              <td>01/07/2021</td>
+              <td class="d-none d-md-table-cell">01/07/2021</td>
               <td>
                 <span class="badge bg-success">Online</span>
               </td>
               <td class="text-end">
-                <button class="btn btn-success btn-sm" aria-label="Ativar Soma São Roque">Ativar</button>
-                <button class="btn btn-primary btn-sm" aria-label="Ver cadastro de Soma São Roque">Ver cadastro</button>
-                <button class="btn btn-danger btn-sm" aria-label="Desativar Soma São Roque">Desativar</button>
+                <div class="d-none d-md-flex justify-content-end gap-1" role="group" aria-label="Ações para Soma São Roque">
+    <button class="btn btn-success btn-sm" aria-label="Ativar Soma São Roque">Ativar</button>
+    <button class="btn btn-primary btn-sm" aria-label="Ver cadastro de Soma São Roque">Ver cadastro</button>
+    <button class="btn btn-danger btn-sm" aria-label="Desativar Soma São Roque">Desativar</button>
+  </div>
+
+  <!-- Dropdown: mobile -->
+  <div class="d-md-none dropdown">
+    <button
+      class="btn btn-secondary btn-sm dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-haspopup="true"
+      aria-expanded="false"
+      aria-label="Abrir ações para Soma São Roque"
+      id="acoes-soma-sao-roque"
+    >
+      Ações
+    </button>
+    <ul
+      class="dropdown-menu dropdown-menu-end"
+      role="menu"
+      aria-labelledby="acoes-soma-sao-roque"
+    >
+      <li role="none">
+        <button class="dropdown-item text-success" role="menuitem" aria-label="Ativar Soma São Roque">
+          <i class="bi bi-check-circle me-2" aria-hidden="true"></i>Ativar
+        </button>
+      </li>
+      <li role="none">
+        <button class="dropdown-item" role="menuitem" aria-label="Ver cadastro de Soma São Roque">
+          <i class="bi bi-eye me-2" aria-hidden="true"></i>Ver cadastro
+        </button>
+      </li>
+      <li role="none">
+        <button class="dropdown-item text-danger" role="menuitem" aria-label="Desativar Soma São Roque">
+          <i class="bi bi-x-circle me-2" aria-hidden="true"></i>Desativar
+        </button>
+      </li>
+    </ul>
+  </div>
               </td>
             </tr>
 
             <!-- LINHA 2 -->
             <tr>
               <td>Chevrolet Rocque</td>
-              <td>São Roque, SP</td>
+              <td >São Roque, SP</td>
               <td>Básico</td>
-              <td>18/09/2023</td>
+              <td class="d-none d-md-table-cell">18/09/2023</td>
               <td>
                 <span class="badge bg-secondary">Offline</span>
               </td>
               <td class="text-end">
-                <button class="btn btn-success btn-sm" aria-label="Ativar Chevrolet Rocque">Ativar</button>
-                <button class="btn btn-primary btn-sm" aria-label="Ver cadastro de Chevrolet Rocque">Ver cadastro</button>
-                <button class="btn btn-danger btn-sm" aria-label="Desativar Chevrolet Rocque">Desativar</button>
+              <div class="d-none d-md-flex justify-content-end gap-1" role="group" aria-label="Ações para Chevrolet São Roque">
+    <button class="btn btn-success btn-sm" aria-label="Ativar Chevrolet São Roque">Ativar</button>
+    <button class="btn btn-primary btn-sm" aria-label="Ver cadastro de Chevrolet São Roque">Ver cadastro</button>
+    <button class="btn btn-danger btn-sm" aria-label="Desativar Chevrolet São Roque">Desativar</button>
+  </div>
+
+  <!-- Dropdown: mobile -->
+  <div class="d-md-none dropdown">
+    <button
+      class="btn btn-secondary btn-sm dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-haspopup="true"
+      aria-expanded="false"
+      aria-label="Abrir ações para Chevrolet São Roque"
+      id="acoes-chevrolet-sao-roque"
+    >
+      Ações
+    </button>
+    <ul
+      class="dropdown-menu dropdown-menu-end"
+      role="menu"
+      aria-labelledby="acoes-chevrolet-sao-roque"
+    >
+      <li role="none">
+        <button class="dropdown-item text-success" role="menuitem" aria-label="Ativar Chevrolet São Roque">
+          <i class="bi bi-check-circle me-2" aria-hidden="true"></i>Ativar
+        </button>
+      </li>
+      <li role="none">
+        <button class="dropdown-item" role="menuitem" aria-label="Ver cadastro de Chevrolet São Roque">
+          <i class="bi bi-eye me-2" aria-hidden="true"></i>Ver cadastro
+        </button>
+      </li>
+      <li role="none">
+        <button class="dropdown-item text-danger" role="menuitem" aria-label="Desativar Chevrolet São Roque">
+          <i class="bi bi-x-circle me-2" aria-hidden="true"></i>Desativar
+        </button>
+      </li>
+    </ul>
+  </div>
               </td>
             </tr>
 
@@ -505,14 +619,51 @@
               <td>São Roque Veículos</td>
               <td>São Roque, SP</td>
               <td>Profissional</td>
-              <td>06/12/2025</td>
+              <td class="d-none d-md-table-cell">06/12/2025</td>
               <td>
                 <span class="badge bg-success">Online</span>
               </td>
               <td class="text-end">
-                <button class="btn btn-success btn-sm" aria-label="Ativar São Roque Veículos">Ativar</button>
-                <button class="btn btn-primary btn-sm" aria-label="Ver cadastro de São Roque Veículos">Ver cadastro</button>
-                <button class="btn btn-danger btn-sm" aria-label="Desativar São Roque Veículos">Desativar</button>
+            <div class="d-none d-md-flex justify-content-end gap-1" role="group" aria-label="Ações para São Roque Veículos">
+    <button class="btn btn-success btn-sm" aria-label="Ativar São Roque Veículos">Ativar</button>
+    <button class="btn btn-primary btn-sm" aria-label="Ver cadastro de São Roque Veículos">Ver cadastro</button>
+    <button class="btn btn-danger btn-sm" aria-label="Desativar São Roque Veículos">Desativar</button>
+  </div>
+
+  <!-- Dropdown: mobile -->
+  <div class="d-md-none dropdown">
+    <button
+      class="btn btn-secondary btn-sm dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-haspopup="true"
+      aria-expanded="false"
+      aria-label="Abrir ações para São Roque Veículos"
+      id="acoes-sao-roque-veiculos"
+    >
+      Ações
+    </button>
+    <ul
+      class="dropdown-menu dropdown-menu-end"
+      role="menu"
+      aria-labelledby="acoes-sao-roque-veiculos"
+    >
+      <li role="none">
+        <button class="dropdown-item text-success" role="menuitem" aria-label="Ativar São Roque Veículos">
+          <i class="bi bi-check-circle me-2" aria-hidden="true"></i>Ativar
+        </button>
+      </li>
+      <li role="none">
+        <button class="dropdown-item" role="menuitem" aria-label="Ver cadastro de São Roque Veículos">
+          <i class="bi bi-eye me-2" aria-hidden="true"></i>Ver cadastro
+        </button>
+      </li>
+      <li role="none">
+        <button class="dropdown-item text-danger" role="menuitem" aria-label="Desativar São Roque Veículos">
+          <i class="bi bi-x-circle me-2" aria-hidden="true"></i>Desativar
+        </button>
+      </li>
+    </ul>
+  </div>
               </td>
             </tr>
 
@@ -521,14 +672,51 @@
               <td>Shark motos</td>
               <td>São Roque, SP</td>
               <td>Básico</td>
-              <td>28/02/2025</td>
+              <td class="d-none d-md-table-cell">28/02/2025</td>
               <td>
                 <span class="badge bg-secondary">Offline</span>
               </td>
               <td class="text-end">
-                <button class="btn btn-success btn-sm" aria-label="Ativar Shark motos">Ativar</button>
-                <button class="btn btn-primary btn-sm" aria-label="Ver cadastro de Shark motos">Ver cadastro</button>
-                <button class="btn btn-danger btn-sm" aria-label="Desativar Shark motos">Desativar</button>
+                <div class="d-none d-md-flex justify-content-end gap-1" role="group" aria-label="Ações para Shark motos">
+    <button class="btn btn-success btn-sm" aria-label="Ativar Shark motos">Ativar</button>
+    <button class="btn btn-primary btn-sm" aria-label="Ver cadastro de Shark motos">Ver cadastro</button>
+    <button class="btn btn-danger btn-sm" aria-label="Desativar Shark motos">Desativar</button>
+  </div>
+
+  <!-- Dropdown: mobile -->
+  <div class="d-md-none dropdown">
+    <button
+      class="btn btn-secondary btn-sm dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-haspopup="true"
+      aria-expanded="false"
+      aria-label="Abrir ações para Shark Motos"
+      id="acoes-shark-motos"
+    >
+      Ações
+    </button>
+    <ul
+      class="dropdown-menu dropdown-menu-end"
+      role="menu"
+      aria-labelledby="acoes-shark-motos"
+    >
+      <li role="none">
+        <button class="dropdown-item text-success" role="menuitem" aria-label="Ativar Shark Motos">
+          <i class="bi bi-check-circle me-2" aria-hidden="true"></i>Ativar
+        </button>
+      </li>
+      <li role="none">
+        <button class="dropdown-item" role="menuitem" aria-label="Ver cadastro de Shark Motos">
+          <i class="bi bi-eye me-2" aria-hidden="true"></i>Ver cadastro
+        </button>
+      </li>
+      <li role="none">
+        <button class="dropdown-item text-danger" role="menuitem" aria-label="Desativar Shark Motos">
+          <i class="bi bi-x-circle me-2" aria-hidden="true"></i>Desativar
+        </button>
+      </li>
+    </ul>
+  </div>
               </td>
             </tr>
 
@@ -537,14 +725,51 @@
               <td>Rodcar 7 Veículos</td>
               <td>São Roque, SP</td>
               <td>Profissional</td>
-              <td>12/10/2026</td>
+              <td class="d-none d-md-table-cell">12/10/2026</td>
               <td>
                 <span class="badge bg-success">Online</span>
               </td>
               <td class="text-end">
-                <button class="btn btn-success btn-sm" aria-label="Ativar Rodcar 7 Veículos">Ativar</button>
-                <button class="btn btn-primary btn-sm" aria-label="Ver cadastro de Rodcar 7 Veículos">Ver cadastro</button>
-                <button class="btn btn-danger btn-sm" aria-label="Desativar Rodcar 7 Veículos">Desativar</button>
+                <div class="d-none d-md-flex justify-content-end gap-1" role="group" aria-label="Ações para Rodcar 7 Veículos">
+    <button class="btn btn-success btn-sm" aria-label="Ativar Rodcar 7 Veículos">Ativar</button>
+    <button class="btn btn-primary btn-sm" aria-label="Ver cadastro de Rodcar 7 Veículos">Ver cadastro</button>
+    <button class="btn btn-danger btn-sm" aria-label="Desativar Rodcar 7 Veículos">Desativar</button>
+  </div>
+
+  <!-- Dropdown: mobile -->
+  <div class="d-md-none dropdown">
+    <button
+      class="btn btn-secondary btn-sm dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-haspopup="true"
+      aria-expanded="false"
+      aria-label="Abrir ações para Rodcar 7 Veículos"
+      id="acoes-rodcar-7-veiculos"
+    >
+      Ações
+    </button>
+    <ul
+      class="dropdown-menu dropdown-menu-end"
+      role="menu"
+      aria-labelledby="acoes-rodcar-7-veiculos"
+    >
+      <li role="none">
+        <button class="dropdown-item text-success" role="menuitem" aria-label="Ativar Rodcar 7 Veículos">
+          <i class="bi bi-check-circle me-2" aria-hidden="true"></i>Ativar
+        </button>
+      </li>
+      <li role="none">
+        <button class="dropdown-item" role="menuitem" aria-label="Ver cadastro de Rodcar 7 Veículos">
+          <i class="bi bi-eye me-2" aria-hidden="true"></i>Ver cadastro
+        </button>
+      </li>
+      <li role="none">
+        <button class="dropdown-item text-danger" role="menuitem" aria-label="Desativar Rodcar 7 Veículos">
+          <i class="bi bi-x-circle me-2" aria-hidden="true"></i>Desativar
+        </button>
+      </li>
+    </ul>
+  </div>
               </td>
             </tr>
 
@@ -565,7 +790,7 @@
   <section class="row g-4">
 
     <!-- GRÁFICO -->
-    <article class="col-12 col-xl-7">
+    <article class="col-12 col-lg-7">
 
       <section class="card border-0 shadow-sm rounded-4 h-100 chart-card">
 
@@ -573,7 +798,7 @@
 
   <div class="d-flex flex-column gap-3 mb-4">
 
-    <h2 class="fs-6 fw-semibold mb-0">
+    <h2 id="grafico-titulo" class="fs-6 fw-semibold mb-0">
       Crescimento de agências e veículos
     </h2>
 
@@ -680,8 +905,7 @@
     </article>
 
     <!-- ATIVIDADES -->
-    <article class="col-12 col-xl-5">
-
+    <article class="col-12 col-lg-5">
       <section class="card border-0 shadow-sm rounded-4 h-100 activity-card">
 
         <div class="card-body">
@@ -710,7 +934,7 @@
 
               <div class="activity-icon">
 
-                <i class="bi bi-clock-history"></i>
+                <i class="bi bi-clock-history" aria-hidden="true"></i>
 
               </div>
 
@@ -853,14 +1077,28 @@
 
 </aside>
 
-<footer class="marketplace-footer text-center">
+<footer class="marketplace-footer text-center" aria-label="Rodapé do site">
   <div class="container">
     <p class="mb-1 fw-semibold">Roque Garages &copy; 2024</p>
-    <p class="mb-3 small opacity-75">O marketplace de carros mais confiável do Brasil</p>
+
+    <p class="mb-3 small opacity-75">
+      O marketplace de carros mais confiável do Brasil
+    </p>
+
     <div class="d-flex justify-content-center gap-3">
-      <i class="bi bi-instagram" aria-hidden="true"></i>
-      <i class="bi bi-facebook" aria-hidden="true"></i>
-      <i class="bi bi-whatsapp" aria-hidden="true"></i>
+
+      <a href="#" class="text-white" aria-label="Instagram">
+        <i class="bi bi-instagram" aria-hidden="true"></i>
+      </a>
+
+      <a href="#" class="text-white" aria-label="Facebook">
+        <i class="bi bi-facebook" aria-hidden="true"></i>
+      </a>
+
+      <a href="#" class="text-white" aria-label="WhatsApp">
+        <i class="bi bi-whatsapp" aria-hidden="true"></i>
+      </a>
+
     </div>
   </div>
 </footer>

@@ -11,9 +11,6 @@
 </head>
 <body class="login-page">
 
-<!-- Skip link -->
-<a href="#loginForm" class="skip-link">Pular para o formulário de login</a>
-
 <!--HEADER -->
 <header>
   <nav class="navbar navbar-expand-lg py-3" aria-label="Menu principal">
@@ -26,7 +23,8 @@
 
       <!-- BOTÃO MOBILE -->
       <button class="navbar-toggler border-0 shadow-none d-lg-none" type="button"
-              data-bs-toggle="offcanvas" data-bs-target="#menuMobile" aria-controls="menuMobile">
+              data-bs-toggle="offcanvas" data-bs-target="#menuMobile" aria-controls="menuMobile" aria-expanded="false"
+  aria-label="Abrir menu">
         <span class="navbar-toggler-icon"></span>
       </button>
 
@@ -76,10 +74,27 @@
         <li class="nav-item"><a class="nav-link fw-semibold" href="cadastro.html">Vender</a></li>
         <li class="nav-item"><a class="nav-link fw-semibold" href="sobre.html">Lojas</a></li>
         <li class="nav-item mt-3 d-flex gap-2" role="group" aria-label="Controles de acessibilidade">
-          <button id="aumentarFonteMobile" class="btn btn-outline-secondary btn-sm" aria-label="Aumentar fonte">A+</button>
-          <button id="diminuirFonteMobile" class="btn btn-outline-secondary btn-sm" aria-label="Diminuir fonte">A-</button>
-          <button id="contrasteMobile" class="btn btn-outline-secondary btn-sm" aria-pressed="false">Contraste</button>
-        </li>
+         <button id="aumentarFonteMobile"
+        class="btn btn-outline-secondary btn-sm"
+        aria-label="Aumentar fonte"
+        aria-pressed="false">
+  A+
+</button>
+
+<button id="diminuirFonteMobile"
+        class="btn btn-outline-secondary btn-sm"
+        aria-label="Diminuir fonte"
+        aria-pressed="false">
+  A-
+</button>
+
+<button id="contrasteNavbarMobile"
+        class="btn btn-outline-secondary btn-sm"
+        aria-pressed="false"
+        aria-label="Ativar alto contraste"
+        aria-pressed="false">
+  Contraste
+</button>
       </ul>
     </div>
   </div>
@@ -94,8 +109,7 @@
     <div class="login-social-col">
       <h2>Entre com suas<br>redes sociais</h2>
 
-      <a href="#" class="btn-social btn-facebook" role="button"
-         aria-label="Entrar com Facebook">
+      <a href="#" class="btn-social btn-facebook"  aria-label="Entrar com Facebook" role="button">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="white" aria-hidden="true">
           <path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.235 2.686.235v2.97h-1.514c-1.491 0-1.956.93-1.956 1.886v2.268h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/>
         </svg>
@@ -104,7 +118,7 @@
 
       <div class="login-divider">ou</div>
 
-      <a href="#" class="btn-social btn-google" role="button"
+      <a href="#" class="btn-social btn-google"  aria-label="Entrar com Google" role="button"
          aria-label="Entrar com Google">
         <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
           <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
@@ -115,7 +129,7 @@
         Entrar com Google
       </a>
 
-      <a href="#" class="btn-social btn-apple" role="button"
+      <a href="#" class="btn-social btn-apple"  aria-label="Entrar com Apple" role="button"
          aria-label="Entrar com Apple">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="white" aria-hidden="true">
           <path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/>
@@ -126,26 +140,40 @@
 
     <!-- COLUNA DIREITA: E-mail e Senha -->
     <div class="login-form-col">
-      <h2>Digite o seu<br>e-mail e senha</h2>
+      <h2 id="titulo-login">Digite o seu<br>usuário e senha</h2>
 
-      <form id="loginForm" novalidate aria-describedby="login-descricao">
+      <form
+        id="loginForm"
+        novalidate
+        aria-labelledby="titulo-login"
+        aria-describedby="login-descricao">
         <p id="login-descricao" class="visually-hidden">Formulário de login com usuário e senha</p>
 
         <div class="mb-3">
           <label class="form-label" for="usuario">Usuário</label>
-          <input type="text" id="usuario" class="form-control"
-                 placeholder="Seu usuário ou e-mail"
-                 autocomplete="username"
-                 aria-required="true">
+                  <input
+                    type="text"
+                    id="usuario"
+                    class="form-control"
+                    placeholder="Seu usuário ou e-mail"
+                    autocomplete="username"
+                    inputmode="email"
+                    required
+                    aria-required="true">
+                                  
         </div>
 
         <div class="mb-2">
           <label class="form-label" for="senha">Senha</label>
           <div class="input-pw-wrap">
-            <input type="password" id="senha" class="form-control"
-                   placeholder="Sua senha"
-                   autocomplete="current-password"
-                   aria-required="true">
+                <input
+                  type="password"
+                  id="senha"
+                  class="form-control"
+                  placeholder="Sua senha"
+                  autocomplete="current-password"
+                  required
+                  aria-required="true">
             <button type="button" class="toggle-pw"
                     aria-label="Mostrar senha" aria-pressed="false"
                     id="toggleSenha">
@@ -161,7 +189,7 @@
         </button>
 
         <p id="erro-login" class="text-danger mt-2 small"
-           aria-live="assertive" role="alert" tabindex="-1"></p>
+           aria-live="assertive"  aria-atomic="true" role="alert" tabindex="-1"></p>
 
         <p class="login-register">
           Não tem uma conta? <a href="#">Crie a sua</a>
@@ -169,25 +197,33 @@
       </form>
     </div>
 
-  </div><!-- /.login-card -->
+  </div>
 
 </main>
 
 <!-- ========== FOOTER (igual ao index) ========== -->
-<footer class="marketplace-footer text-center">
+<footer class="marketplace-login-footer text-center">
   <div class="container">
     <p class="mb-1 fw-semibold">Roque Garages &copy; 2024</p>
     <p class="mb-3 small opacity-75">O marketplace de carros mais confiável do Brasil</p>
     <div class="d-flex justify-content-center gap-3">
-      <i class="bi bi-instagram" aria-hidden="true"></i>
-      <i class="bi bi-facebook" aria-hidden="true"></i>
-      <i class="bi bi-whatsapp" aria-hidden="true"></i>
+      <a href="#" class="text-white" aria-label="Instagram">
+        <i class="bi bi-instagram" aria-hidden="true"></i>
+      </a>
+
+      <a href="#" class="text-white" aria-label="Facebook">
+        <i class="bi bi-facebook" aria-hidden="true"></i>
+      </a>
+
+      <a href="#" class="text-white" aria-label="WhatsApp">
+        <i class="bi bi-whatsapp" aria-hidden="true"></i>
+      </a>
     </div>
   </div>
 </footer>
 
 <script src="dist/js/bootstrap.bundle.min.js"></script>
-<script src="login.js"></script>
-<script src="acessibilidade.js"></script>
+<script src="./javascript/login.js"></script>
+<script src="./javascript/acessibilidade.js"></script>
 </body>
 </html>

@@ -520,12 +520,13 @@ p{
     justify-content: center;
     gap: 2rem;
     flex-wrap: wrap;
-    font-size: .10rem;
+    font-size: 0.8rem;
     color: #4b5563;        /* texto cinza escuro */
 }
 
 .hero-benefits i {
     color: #4b5563;        /* ícones cinza escuro */
+    font-size: 1rem;
 }
 
 .marketplace-filter {
@@ -1717,6 +1718,126 @@ footer {
       .login-form-col { padding: 2rem 1.5rem; }
     }
 
+    /* MODO CONTRASTE */
+/* =========================
+   MODO CONTRASTE GLOBAL
+========================= */
+
+
+body.contraste-ativo {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+/* Links e textos gerais */
+body.contraste-ativo a,
+body.contraste-ativo span,
+body.contraste-ativo p,
+body.contraste-ativo h1,
+body.contraste-ativo h2,
+body.contraste-ativo h3,
+body.contraste-ativo h4,
+body.contraste-ativo h5 {
+  color: #fff !important;
+}
+
+/* =========================
+   NAVBAR / HEADER
+========================= */
+body.contraste-ativo .navbar {
+  background-color: #000 !important;
+  border-bottom: 1px solid #fff !important;
+}
+
+/* =========================
+   FOOTER
+========================= */
+body.contraste-ativo footer {
+  background-color: #000 !important;
+  border-top: 1px solid #fff !important;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+body.contraste-ativo .sidebar-admin {
+  background-color: #000 !important;
+  border-right: 1px solid #fff !important;
+}
+
+/* itens do menu */
+body.contraste-ativo .menu-item {
+  color: #fff !important;
+}
+
+/* =========================
+   USER BOX (Alan Turing)
+========================= */
+body.contraste-ativo .user-box {
+  background-color: #000 !important;
+  border-top: 1px solid #fff !important;
+}
+
+body.contraste-ativo .user-avatar {
+  border: 1px solid #fff !important;
+}
+
+/* =========================
+   CARDS
+========================= */
+body.contraste-ativo .card,
+body.contraste-ativo .dashboard-card {
+  background-color: #000 !important;
+  border: 1px solid #fff !important;
+  color: #fff !important;
+}
+
+/* =========================
+   TABELAS
+========================= */
+body.contraste-ativo .table {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+body.contraste-ativo .table thead {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+body.contraste-ativo .table td,
+body.contraste-ativo .table th {
+  border-color: #fff !important;
+}
+
+body.contraste-ativo * {
+  background-color: transparent !important;
+}
+
+body.contraste-ativo {
+  background-color: #000 !important;
+}
+
+.contraste {
+    background:#000 !important;
+    color:#fff !important;
+}
+
+.contraste .dashboard-card,
+.contraste .card,
+.contraste .activity-card,
+.contraste .chart-card,
+.contraste .sidebar-admin,
+.contraste .navbar,
+.contraste .marketplace-footer,
+.contraste .user-box,
+.contraste .fig-grafico{
+    background:#000 !important;
+    color:#fff !important;
+    border:1px solid #fff !important;
+}
+
+
     /* Alto contraste */
     body.contraste-ativo .login-card,
     body.contraste-ativo .login-social-col,
@@ -1748,3 +1869,105 @@ footer {
       background: #ff0 !important;
       color: #000 !important;
     }
+
+    /* =========================
+   MARKETPLACE / BUSCA
+========================= */
+
+body.contraste-ativo .hero-box {
+  background: #000 !important;
+  color: #fff !important;
+  border: 1px solid #fff !important;
+}
+
+body.contraste-ativo .hero-benefits,
+body.contraste-ativo .hero-benefits span,
+body.contraste-ativo .hero-benefits i {
+  color: #fff !important;
+}
+
+/* =========================
+   FILTROS
+========================= */
+
+body.contraste-ativo aside .card {
+  background: #000 !important;
+  color: #fff !important;
+  border: 1px solid #fff !important;
+}
+
+body.contraste-ativo .form-select,
+body.contraste-ativo .form-control {
+  background: #000 !important;
+  color: #fff !important;
+  border-color: #fff !important;
+}
+
+body.contraste-ativo .form-select option {
+  background: #000 !important;
+  color: #fff !important;
+}
+
+body.contraste-ativo .form-label,
+body.contraste-ativo .text-muted {
+  color: #fff !important;
+}
+
+/* =========================
+   CARDS DE VEÍCULOS
+========================= */
+
+body.contraste-ativo .car-card {
+  background: #000 !important;
+  color: #fff !important;
+  border: 1px solid #fff !important;
+}
+
+body.contraste-ativo .car-card .card-body,
+body.contraste-ativo .car-card .card-footer {
+  background: #000 !important;
+  color: #fff !important;
+}
+
+body.contraste-ativo .car-card h3,
+body.contraste-ativo .car-card h4,
+body.contraste-ativo .car-card small {
+  color: #fff !important;
+}
+
+body.contraste-ativo .card-footer.bg-white {
+  background: #000 !important;
+}
+
+/* =========================
+   BOTÕES
+========================= */
+
+body.contraste-ativo .btn-success,
+body.contraste-ativo .btn-outline-success {
+  background: #000 !important;
+  color: #fff !important;
+  border: 1px solid #fff !important;
+}
+
+body.contraste-ativo .btn-success:hover,
+body.contraste-ativo .btn-outline-success:hover {
+  background: #fff !important;
+  color: #000 !important;
+}
+
+/* =========================
+   ÁREA LOJISTA
+========================= */
+
+body.contraste-ativo a[href="./cliente.html"] {
+  color: #fff !important;
+}
+
+/* =========================
+   ÍCONES
+========================= */
+
+body.contraste-ativo .bi {
+  color: #fff !important;
+}
