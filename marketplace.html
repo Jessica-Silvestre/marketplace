@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Comprar Veículos – Roque Garage</title>
+</head>
+<body class="marketplace-page">
+
+
+
+<!--  HEADER -->
+<header>
+  <nav class="navbar navbar-expand-lg py-3" aria-label="Menu principal">
+    <div class="container-fluid px-4 align-items-center">
+
+      <!-- LOGO -->
+      <a class="navbar-brand me-0" href="login.html">
+        <img src="./img/logo.png" alt="Logo Roque Garages" class="img-fluid logo-navbar">
+      </a>
+
+      <!-- BOTÃO MOBILE -->
+      <button class="navbar-toggler border-0 shadow-none d-lg-none" type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#menuMobile"
+              aria-controls="menuMobile">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+<!-- MENU DESKTOP -->
+<div class="d-none d-lg-flex flex-grow-1 justify-content-center">
+  <ul class="navbar-nav gap-5">
+    <li class="nav-item">
+      <a class="nav-link fw-semibold text-white" href="index.html">Comprar</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link fw-semibold text-white" href="cadastro.html">Vender</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link fw-semibold text-white" href="cliente.html">Lojas</a>
+    </li>
+  </ul>
+
+<!-- ACESSIBILIDADE -->
+<div class="d-none d-lg-flex align-items-center gap-2 ms-5 ps-5" role="group" aria-label="Controles de acessibilidade">
+  <!-- ===== PULAR PARA CONTEÚDO PRINCIPAL (acessibilidade) ===== -->
+    <a
+        href="#conteudo-principal"
+        class="btn btn-outline-light btn-sm"
+        aria-label="Ir para o conteúdo principal"
+    >
+        Ir conteúdo principal
+    </a>
+  <button id="aumentarFonte" class="btn btn-outline-light btn-sm fw-semibold"
+          type="button" aria-label="Aumentar tamanho da fonte">A+</button>
+  <button id="diminuirFonte" class="btn btn-outline-light btn-sm fw-semibold"
+          type="button" aria-label="Diminuir tamanho da fonte">A-</button>
+  <button id="contrasteNavbar" class="btn btn-outline-light btn-sm d-flex align-items-center gap-1"
+          type="button" aria-pressed="false" aria-label="Ativar alto contraste">
+    <i class="bi bi-circle-half" aria-hidden="true"></i> Contraste
+  </button>
+</div>
+
+      <a href="./cliente.html" class="d-flex align-items-center text-white gap-2 text-decoration-none fw-semibold ms-4">
+         <span>Área lojista</span>
+      </a>
+    </div>
+  </div>
+</div>
+</header>
+
+
+<main id="#conteudo">
+<!-- ========== HERO / BUSCA ========== -->
+<section class="container my-4" id="conteudo-principal" aria-label="Busca de veículos">
+  <div class="hero-box text-center">
+    <h1 class="fw-bold mb-2">Encontre Seu Carro Ideal</h1>
+    <p class="text-muted mb-4 text-center">Compare as ofertas de lojas de todo o Brasil e faça o melhor negócio</p>
+
+    <div class="row g-3 justify-content-center">
+      <div class="col-lg-3">
+        <label for="marca" class="visually-hidden">Marca ou modelo</label>
+        <input type="text" id="marca" class="form-control" placeholder="Ex: Toyota Corolla" aria-label="Marca ou modelo">
+      </div>
+      <div class="col-lg-2">
+        <select class="form-select" aria-label="Faixa de preço">
+          <option selected>Faixa de preço</option>
+          <option>Até R$50.000</option>
+          <option>Até R$100.000</option>
+          <option>Até R$150.000</option>
+        </select>
+      </div>
+      <div class="col-lg-2">
+        <select class="form-select" aria-label="Região">
+          <option selected>Região</option>
+          <option>São Paulo</option>
+          <option>Rio de Janeiro</option>
+          <option>Minas Gerais</option>
+        </select>
+      </div>
+      <div class="col-lg-2">
+        <select class="form-select" aria-label="Ano inicial">
+          <option>Ano de</option>
+          <option>2018</option>
+          <option>2019</option>
+          <option>2020</option>
+          <option>2021</option>
+          <option>2022</option>
+          <option>2023</option>
+          <option>2024</option>
+        </select>
+      </div>
+      <div class="col-lg-2">
+        <select class="form-select" aria-label="Ano final">
+          <option>Até</option>
+          <option>2019</option>
+          <option>2020</option>
+          <option>2021</option>
+          <option>2022</option>
+          <option>2023</option>
+          <option>2024</option>
+          <option>2025</option>
+        </select>
+      </div>
+      <div class="col-lg-2">
+        <button class="btn btn-success w-100" type="button" aria-label="Buscar veículos">BUSCAR</button>
+      </div>
+    </div>
+
+    <div class="hero-benefits mt-4">
+      <span><i class="bi bi-shield-check" aria-hidden="true"></i> Veículos de Lojas Confiáveis</span>
+      <span><i class="bi bi-tag" aria-hidden="true"></i> Compare Preços</span>
+      <span><i class="bi bi-globe" aria-hidden="true"></i> Ofertas de todo Brasil</span>
+      <span><i class="bi bi-lock" aria-hidden="true"></i> Negociação Segura</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- ========== FILTROS + CARDS ========== -->
+<section class="container my-4" id="conteudo" >
+  <div class="d-flex gap-4 align-items-start">
+
+    <!-- SIDEBAR DE FILTROS (sticky) -->
+    <aside style="width: 220px; flex-shrink: 0; position: sticky; top: 16px; align-self: flex-start;" aria-label="Filtros de busca">
+      <div class="card p-3">
+        <h5 class="fw-semibold mb-3">Filtros</h5>
+
+        <label class="form-label small text-muted mb-1" for="filtro-marca">Marca</label>
+        <select id="filtro-marca" class="form-select form-select-sm mb-3">
+          <option>Selecione a Marca</option>
+          <option>BMW</option>
+          <option>BYD</option>
+          <option>Caoa Chery</option>
+          <option>Chevrolet</option>
+          <option>Citroën</option>
+          <option>Fiat</option>
+          <option>Honda</option>
+          <option>Hyundai</option>
+          <option>Jeep</option>
+          <option>Kia</option>
+          <option>Mercedes-Benz</option>
+          <option>Mitsubishi</option>
+          <option>Nissan</option>
+          <option>Peugeot</option>
+          <option>Renault</option>
+          <option>Toyota</option>
+          <option>Volkswagen</option>
+        </select>
+
+        <label class="form-label small text-muted mb-1" for="filtro-ano">Ano</label>
+        <select id="filtro-ano" class="form-select form-select-sm mb-3">
+          <option>Selecione</option>
+          <option>2010</option>
+          <option>2011</option>
+          <option>2012</option>
+          <option>2013</option>
+          <option>2014</option>
+          <option>2015</option>
+          <option>2016</option>
+          <option>2017</option>
+          <option>2018</option>
+          <option>2019</option>
+          <option>2020</option>
+          <option>2021</option>
+          <option>2022</option>
+          <option>2023</option>
+          <option>2024</option>
+          <option>2025</option>
+          <option>2026</option>
+        </select>
+
+        <label class="form-label small text-muted mb-1" for="filtro-cambio">Câmbio</label>
+        <select id="filtro-cambio" class="form-select form-select-sm mb-3">
+          <option>Selecione</option>
+          <option>Manual</option>
+          <option>Automático</option>
+        </select>
+
+        <label class="form-label small text-muted mb-1" for="filtro-combustivel">Combustível</label>
+        <select id="filtro-combustivel" class="form-select form-select-sm mb-3">
+          <option>Selecione</option>
+          <option>Diesel</option>
+          <option>Elétrico</option>
+          <option>Flex</option>
+          <option>Gasolina</option>
+        </select>
+
+        <label class="form-label small text-muted mb-1" for="estado">Estado</label>
+        <select id="estado" class="form-select form-select-sm mb-3">
+          <option value="">Selecione um estado</option>
+        </select>
+
+        <label class="form-label small text-muted mb-1" for="cidade">Cidade</label>
+        <select id="cidade" class="form-select form-select-sm mb-3">
+          <option value="">Selecione uma cidade</option>
+        </select>
+
+        <button class="btn btn-success btn-sm w-100 mt-1" aria-label="Aplicar filtros de busca">Aplicar Filtros</button>
+      </div>
+    </aside>
+
+    <!-- Anúncio de resultados para leitores de tela -->
+    <div id="resultado-filtros" aria-live="polite" class="visually-hidden"></div>
+    <!-- GRID DE CARDS (3 por linha) -->
+    <div class="flex-grow-1">
+      <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4">
+
+        <div class="col" >
+          <article class="card car-card h-100">
+            <img src="./img/fiat-mobi-500.jpg" class="card-img-top" alt="Carro fiat mobi 1.6">
+            <div class="card-body">
+              <h3 class="fs-6 fw-bold">Fiat Mobi 1.6</h3>
+              <small class="text-muted">2020/2020</small>
+              <h4 class="mt-2 text-success fw-bold">R$ 89.900,00</h4>
+              <small> Soma - São Roque/SP</small>
+            </div>
+            <div class="card-footer bg-white border-0">
+              <a href="detalhe.html" class="btn btn-outline-success w-100"
+             aria-label="Ver anúncio: Fiat Mobi 1.6, 2020/2020, R$ 89.900,00, São Paulo - SP">Ver anúncio</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="col">
+          <article class="card car-card h-100">
+            <img src="./img/citroen.png" class="card-img-top" alt="ciroen 1.8">
+            <div class="card-body">
+              <h3 class="fs-6 fw-bold">Citroen 1.8</h3>
+              <small class="text-muted">2024/2024</small>
+              <h4 class="mt-2 text-success fw-bold">R$ 105.500,00</h4>
+              <small>Chevrolet Rocque - São Roque/SP</small>
+            </div>
+            <div class="card-footer bg-white border-0">
+             <a href="detalhe.html" class="btn btn-outline-success w-100"
+             aria-label="Ver anúncio: Citroen 1.8, 2024/2024, R$ 105.500,00, alfenas - MG">Ver anúncio</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="col">
+          <article class="card car-card h-100">
+            <img src="./img/caoa.jpg" class="card-img-top" alt="carro caoa cherry ">
+            <div class="card-body">
+              <h3 class="fs-6 fw-bold">Caoa 1.6</h3>
+              <small class="text-muted">2025/2025</small>
+              <h4 class="mt-2 text-success fw-bold">R$ 126.900,00</h4>
+              <small>São Roque Veículos - São Roque/SP</small>
+            </div>
+            <div class="card-footer bg-white border-0">
+              <a href="detalhe.html" class="btn btn-outline-success w-100"
+             aria-label="Ver anúncio: Caoa 1.6, 2025/2025, R$ 126.900,00, São Paulo - SP">Ver anúncio</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="col">
+          <article class="card car-card h-100">
+            <img src="./img/bmw.png" class="card-img-top" alt="Carro BMW 2.0 Turbo">
+            <div class="card-body">
+              <h3 class="fs-6 fw-bold">BMW 2.0 Turbo</h3>
+              <small class="text-muted">2026/2026</small>
+              <h4 class="mt-2 text-success fw-bold">R$ 280.000,00</h4>
+              <small>Shark motos - São Roque/SP</small>
+            </div>
+            <div class="card-footer bg-white border-0">
+              <a href="detalhe.html" class="btn btn-outline-success w-100"
+             aria-label="Ver anúncio: BMW 2.0 Turbo, 2026/2026, R$ 280.000,00, São Roque - SP">Ver anúncio</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="col">
+          <article class="card car-card h-100">
+            <img src="./img/honda.jpg" class="card-img-top" alt="Carro honda">
+            <div class="card-body">
+              <h3 class="fs-6 fw-bold">Honda 1.8</h3>
+              <small class="text-muted">2024/2024</small>
+              <h4 class="mt-2 text-success fw-bold">R$ 118.500,00</h4>
+              <small>Rodcar 7 Veículos - São Roque/SP</small>
+            </div>
+            <div class="card-footer bg-white border-0">
+              <a href="detalhe.html" class="btn btn-outline-success w-100"
+             aria-label="Ver anúncio: Honda 1.8, 2024/2024, R$ 118.500,00, Belo Horizonte - MG">Ver anúncio</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="col">
+          <article class="card car-card h-100">
+            <img src="./img/renault.png" class="card-img-top" alt="Carro renault ">
+            <div class="card-body">
+              <h3 class="fs-6 fw-bold">Renault 1.6</h3>
+              <small class="text-muted">2023/2023</small>
+              <h4 class="mt-2 text-success fw-bold">R$ 121.800,00</h4>
+              <small>Soma - São Roque/SP</small>
+            </div>
+            <div class="card-footer bg-white border-0">
+              <a href="detalhe.html" class="btn btn-outline-success w-100"
+             aria-label="Ver anúncio: Renault 1.6, 2023/2023, R$ 121.800,00, São Paulo - SP">Ver anúncio</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="col">
+          <article class="card car-card h-100">
+            <img src="./img/hyundai.png" class="card-img-top" alt="Hyundai">
+            <div class="card-body">
+              <h3 class="fs-6 fw-bold">Hyundai 2.0</h3>
+              <small class="text-muted">2025/2026</small>
+              <h4 class="mt-2 text-success fw-bold">R$ 163.900,00</h4>
+              <small>Soma - São Roque/SP</small>
+            </div>
+            <div class="card-footer bg-white border-0">
+              <a href="detalhe.html" class="btn btn-outline-success w-100"
+             aria-label="Ver anúncio: Hyundai 2.0, 2025/2026, R$ 163.900,00, São Roque - SP">Ver anúncio</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="col">
+          <article class="card car-card h-100">
+            <img src="./img/renegade.png" class="card-img-top" alt="Renegade 1.8 Turbo">
+            <div class="card-body">
+              <h3 class="fs-6 fw-bold">Renegade 1.8 Turbo</h3>
+              <small class="text-muted">2021/2021</small>
+              <h4 class="mt-2 text-success fw-bold">R$ 149.900,00</h4>
+              <small>Chevrolet Rocque - São Roque/SP</small>
+            </div>
+            <div class="card-footer bg-white border-0">
+             <a href="detalhe.html" class="btn btn-outline-success w-100"
+             aria-label="Ver anúncio: Renegade 1.8 Turbo, 2021/2021, R$ 149.900,00, São Paulo - SP">Ver anúncio</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="col">
+          <article class="card car-card h-100">
+            <img src="./img/volkswagen.jpg" class="card-img-top" alt="carro Volkswagem 1.6">
+            <div class="card-body">
+              <h3 class="fs-6 fw-bold">Volkswagem 1.6</h3>
+              <small class="text-muted">2021/2021</small>
+              <h4 class="mt-2 text-success fw-bold">R$ 99.900,00</h4>
+              <small>Rodcar 7 Veículos - São Roque/SP</small>
+            </div>
+            <div class="card-footer bg-white border-0">
+            <a href="detalhe.html" class="btn btn-outline-success w-100"
+             aria-label="Ver anúncio: Volkswagem 1.6, 2021/2021, R$ 99.900,00, São Roque - SP">Ver anúncio</a>
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+</main>
+<!--  FOOTER  -->
+<footer class="marketplace-footer text-center">
+  <div class="container">
+    <p class="mb-1 fw-semibold">Roque Garages &copy; 2024</p>
+    <p class="mb-3 small opacity-75">O marketplace de carros mais confiável do Brasil</p>
+    <div class="d-flex justify-content-center gap-3">
+         <a href="#" class="text-white" aria-label="Instagram">
+        <i class="bi bi-instagram" aria-hidden="true"></i>
+      </a>
+
+      <a href="#" class="text-white" aria-label="Facebook">
+        <i class="bi bi-facebook" aria-hidden="true"></i>
+      </a>
+
+      <a href="#" class="text-white" aria-label="WhatsApp">
+        <i class="bi bi-whatsapp" aria-hidden="true"></i>
+      </a>
+
+    </div>
+  </div>
+</footer>
+
+<script src="dist/js/bootstrap.bundle.min.js"></script>
+<script src="./javascript/index.js"></script>
+<script src="./javascript/acessibilidade.js"></script>
+</body>
+</html>
