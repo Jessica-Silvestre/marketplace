@@ -1,41 +1,54 @@
-'use strict' 
-const btnAumentar = document.getElementById("aumentarFonte");
-const btnDiminuir = document.getElementById("diminuirFonte");
+'use strict';
 
-let tamanhoBase = 16; // base em px
+// ── Tamanho de fonte ──────────────────────────────────────────
+const btnAumentar = document.getElementById('aumentarFonte');
+const btnDiminuir = document.getElementById('diminuirFonte');
+
+// Lê tamanho salvo (persistência entre páginas) ou usa 16
+let tamanhoBase = parseInt(localStorage.getItem('fontSize'), 10) || 16;
 
 function aplicarFonte() {
-  document.documentElement.style.fontSize = tamanhoBase + "px";
+  document.documentElement.style.fontSize = tamanhoBase + 'px';
 }
 
-// A+
-btnAumentar.addEventListener("click", () => {
-  if (tamanhoBase < 22) {
-    tamanhoBase += 1;
-    aplicarFonte();
-  }
-});
+if (btnAumentar) {
+  btnAumentar.addEventListener('click', () => {
+    if (tamanhoBase < 22) {
+      tamanhoBase += 1;
+      localStorage.setItem('fontSize', tamanhoBase);
+      aplicarFonte();
+    }
+  });
+}
 
-// A-
-btnDiminuir.addEventListener("click", () => {
-  if (tamanhoBase > 12) {
-    tamanhoBase -= 1;
-    aplicarFonte();
-  }
-});
+if (btnDiminuir) {
+  btnDiminuir.addEventListener('click', () => {
+    if (tamanhoBase > 12) {
+      tamanhoBase -= 1;
+      localStorage.setItem('fontSize', tamanhoBase);
+      aplicarFonte();
+    }
+  });
+}
 
-// inicia padrão
+// Aplica ao carregar a página
 aplicarFonte();
 
-const btnContraste = document.getElementById("contrasteNavbar");
 
-btnContraste.addEventListener("click", () => {
-  document.body.classList.toggle("contraste-ativo");
+// ── Alto contraste ────────────────────────────────────────────
+const btnContraste = document.getElementById('contrasteNavbar');
 
-  // acessibilidade (estado do botão)
-  const ativo = document.body.classList.contains("contraste-ativo");
-  btnContraste.setAttribute("aria-pressed", ativo);
-});
+// Restaura preferência salva
+if (localStorage.getItem('contraste') === 'ativo') {
+  document.body.classList.add('contraste-ativo');
+  if (btnContraste) btnContraste.setAttribute('aria-pressed', 'true');
+}
 
-usuario.removeAttribute("aria-invalid");
-senha.removeAttribute("aria-invalid");
+if (btnContraste) {
+  btnContraste.addEventListener('click', () => {
+    document.body.classList.toggle('contraste-ativo');
+    const ativo = document.body.classList.contains('contraste-ativo');
+    btnContraste.setAttribute('aria-pressed', String(ativo));
+    localStorage.setItem('contraste', ativo ? 'ativo' : 'inativo');
+  });
+}

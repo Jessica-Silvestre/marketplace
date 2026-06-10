@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -6,13 +7,15 @@
   <link rel="stylesheet" href="dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="style.css">
-  <title>Marketplace</title>
+  <title>Comprar Veículos – Roque Garage</title>
 </head>
 <body class="marketplace-page">
 
-<!-- ========== HEADER ========== -->
+
+
+<!--  HEADER -->
 <header>
-  <nav class="navbar navbar-expand-lg py-3">
+  <nav class="navbar navbar-expand-lg py-3" aria-label="Menu principal">
     <div class="container-fluid px-4 align-items-center">
 
       <!-- LOGO -->
@@ -43,30 +46,45 @@
   </ul>
 </div>
 
-      <!-- ÁREA DO LOJISTA -->
-      <div class="d-none d-lg-flex">
-        <a href="#" class="d-flex align-items-center gap-2 text-decoration-none text-white fw-semibold">
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M6 3a2 2 0 0 0-2 2v1h1V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-1H4v1a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H6z"/>
-            <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"/>
-          </svg>
-          <span><a href="cliente.html" class="d-flex ...">Entrar</a></span>
-        </a>
-      </div>
+<!-- ACESSIBILIDADE -->
+<div class="d-none d-lg-flex align-items-center gap-2 mx-3" role="group" aria-label="Controles de acessibilidade">
+  <!-- ===== PULAR PARA CONTEÚDO PRINCIPAL (acessibilidade) ===== -->
+<a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
+  <button id="aumentarFonte" class="btn btn-outline-light btn-sm fw-semibold"
+          type="button" aria-label="Aumentar tamanho da fonte">A+</button>
+  <button id="diminuirFonte" class="btn btn-outline-light btn-sm fw-semibold"
+          type="button" aria-label="Diminuir tamanho da fonte">A-</button>
+  <button id="contrasteNavbar" class="btn btn-outline-light btn-sm d-flex align-items-center gap-1"
+          type="button" aria-pressed="false" aria-label="Ativar alto contraste">
+    <i class="bi bi-circle-half" aria-hidden="true"></i> Contraste
+  </button>
+</div>
 
-    </div>
-  </nav>
+<!-- ÁREA DO LOJISTA -->
+  <div class="d-none d-lg-flex">
+    <a href="#" class="d-flex align-items-center gap-2 text-decoration-none text-white fw-semibold">
+     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M6 3a2 2 0 0 0-2 2v1h1V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-1H4v1a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H6z"/>
+      <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"/>
+     </svg>
+      <span><a href="cliente.html" class="d-flex ...">Entrar</a></span>
+    </a>
+  </div>
+ </div>
+</nav>
 </header>
 
 
+<main>
 <!-- ========== HERO / BUSCA ========== -->
-<section class="container my-4">
+<section class="container my-4" id="conteudo-principal" aria-label="Busca de veículos">
   <div class="hero-box text-center">
     <h1 class="fw-bold mb-2">Encontre Seu Carro Ideal</h1>
     <p class="text-muted mb-4 text-center">Compare as ofertas de lojas de todo o Brasil e faça o melhor negócio</p>
 
     <div class="row g-3 justify-content-center">
       <div class="col-lg-3">
+        <label for="marca" class="visually-hidden">Marca ou modelo</label>
         <input type="text" id="marca" class="form-control" placeholder="Ex: Toyota Corolla" aria-label="Marca ou modelo">
       </div>
       <div class="col-lg-2">
@@ -86,7 +104,7 @@
         </select>
       </div>
       <div class="col-lg-2">
-        <select class="form-select">
+        <select class="form-select" aria-label="Ano inicial">
           <option>Ano de</option>
           <option>2018</option>
           <option>2019</option>
@@ -98,7 +116,7 @@
         </select>
       </div>
       <div class="col-lg-2">
-        <select class="form-select">
+        <select class="form-select" aria-label="Ano final">
           <option>Até</option>
           <option>2019</option>
           <option>2020</option>
@@ -129,7 +147,7 @@
   <div class="d-flex gap-4 align-items-start">
 
     <!-- SIDEBAR DE FILTROS (sticky) -->
-    <aside style="width: 220px; flex-shrink: 0; position: sticky; top: 16px; align-self: flex-start;">
+    <aside style="width: 220px; flex-shrink: 0; position: sticky; top: 16px; align-self: flex-start;" aria-label="Filtros de busca">
       <div class="card p-3">
         <h5 class="fw-semibold mb-3">Filtros</h5>
 
@@ -207,6 +225,8 @@
       </div>
     </aside>
 
+    <!-- Anúncio de resultados para leitores de tela -->
+    <div id="resultado-filtros" aria-live="polite" class="visually-hidden"></div>
     <!-- GRID DE CARDS (3 por linha) -->
     <div class="flex-grow-1">
       <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4">
@@ -217,11 +237,12 @@
             <div class="card-body">
               <h3 class="fs-6 fw-bold">Fiat Mobi 1.6</h3>
               <small class="text-muted">2020/2020</small>
-              <h4 class="mt-2 text-success fw-bold">R$ 80.000</h4>
+              <h4 class="mt-2 text-success fw-bold">R$ 89.900,00</h4>
               <small>São Paulo - SP</small>
             </div>
             <div class="card-footer bg-white border-0">
-              <a href="detalhe.html" class="btn btn-outline-success w-100">Ver anúncio</a>
+              <a href="detalhe.html" class="btn btn-outline-success w-100"
+             aria-label="Ver anúncio: Fiat Mobi 1.6, 2020/2020, R$ 89.900,00, São Paulo - SP">Ver anúncio</a>
             </div>
           </article>
         </div>
@@ -236,7 +257,8 @@
               <small>alfenas - MG</small>
             </div>
             <div class="card-footer bg-white border-0">
-             <a href="detalhe.html" class="btn btn-outline-success w-100">Ver anúncio</a>
+             <a href="detalhe.html" class="btn btn-outline-success w-100"
+             aria-label="Ver anúncio: Citroen 1.8, 2024/2024, R$ 105.500,00, alfenas - MG">Ver anúncio</a>
             </div>
           </article>
         </div>
@@ -251,7 +273,8 @@
               <small>São Paulo - SP</small>
             </div>
             <div class="card-footer bg-white border-0">
-              <a href="detalhe.html" class="btn btn-outline-success w-100">Ver anúncio</a>
+              <a href="detalhe.html" class="btn btn-outline-success w-100"
+             aria-label="Ver anúncio: Caoa 1.6, 2025/2025, R$ 126.900,00, São Paulo - SP">Ver anúncio</a>
             </div>
           </article>
         </div>
@@ -266,7 +289,8 @@
               <small>São Roque - SP</small>
             </div>
             <div class="card-footer bg-white border-0">
-              <a href="detalhe.html" class="btn btn-outline-success w-100">Ver anúncio</a>
+              <a href="detalhe.html" class="btn btn-outline-success w-100"
+             aria-label="Ver anúncio: BMW 2.0 Turbo, 2026/2026, R$ 280.000,00, São Roque - SP">Ver anúncio</a>
             </div>
           </article>
         </div>
@@ -281,7 +305,8 @@
               <small>Belo Horizonte - MG</small>
             </div>
             <div class="card-footer bg-white border-0">
-              <a href="detalhe.html" class="btn btn-outline-success w-100">Ver anúncio</a>
+              <a href="detalhe.html" class="btn btn-outline-success w-100"
+             aria-label="Ver anúncio: Honda 1.8, 2024/2024, R$ 118.500,00, Belo Horizonte - MG">Ver anúncio</a>
             </div>
           </article>
         </div>
@@ -296,7 +321,8 @@
               <small>São Paulo - SP</small>
             </div>
             <div class="card-footer bg-white border-0">
-              <a href="detalhe.html" class="btn btn-outline-success w-100">Ver anúncio</a>
+              <a href="detalhe.html" class="btn btn-outline-success w-100"
+             aria-label="Ver anúncio: Renault 1.6, 2023/2023, R$ 121.800,00, São Paulo - SP">Ver anúncio</a>
             </div>
           </article>
         </div>
@@ -311,7 +337,8 @@
               <small>São Roque - SP</small>
             </div>
             <div class="card-footer bg-white border-0">
-              <a href="detalhe.html" class="btn btn-outline-success w-100">Ver anúncio</a>
+              <a href="detalhe.html" class="btn btn-outline-success w-100"
+             aria-label="Ver anúncio: Hyundai 2.0, 2025/2026, R$ 163.900,00, São Roque - SP">Ver anúncio</a>
             </div>
           </article>
         </div>
@@ -326,7 +353,8 @@
               <small>São Paulo - SP</small>
             </div>
             <div class="card-footer bg-white border-0">
-             <a href="detalhe.html" class="btn btn-outline-success w-100">Ver anúncio</a>
+             <a href="detalhe.html" class="btn btn-outline-success w-100"
+             aria-label="Ver anúncio: Renegade 1.8 Turbo, 2021/2021, R$ 149.900,00, São Paulo - SP">Ver anúncio</a>
             </div>
           </article>
         </div>
@@ -341,7 +369,8 @@
               <small>São Roque - SP</small>
             </div>
             <div class="card-footer bg-white border-0">
-            <a href="detalhe.html" class="btn btn-outline-success w-100">Ver anúncio</a>
+            <a href="detalhe.html" class="btn btn-outline-success w-100"
+             aria-label="Ver anúncio: Volkswagem 1.6, 2021/2021, R$ 99.900,00, São Roque - SP">Ver anúncio</a>
             </div>
           </article>
         </div>
@@ -353,20 +382,22 @@
 </section>
 
 
+</main>
 <!--  FOOTER  -->
 <footer class="marketplace-footer text-center">
   <div class="container">
     <p class="mb-1 fw-semibold">Roque Garages &copy; 2024</p>
     <p class="mb-3 small opacity-75">O marketplace de carros mais confiável do Brasil</p>
     <div class="d-flex justify-content-center gap-3">
-      <i class="bi bi-instagram"></i>
-      <i class="bi bi-facebook"></i>
-      <i class="bi bi-whatsapp"></i>
+      <i class="bi bi-instagram" aria-hidden="true"></i>
+      <i class="bi bi-facebook" aria-hidden="true"></i>
+      <i class="bi bi-whatsapp" aria-hidden="true"></i>
     </div>
   </div>
 </footer>
 
 <script src="dist/js/bootstrap.bundle.min.js"></script>
 <script src="index.js"></script>
+<script src="acessibilidade.js"></script>
 </body>
 </html>
