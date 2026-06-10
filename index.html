@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -19,7 +18,7 @@
     <div class="container-fluid px-4 align-items-center">
 
       <!-- LOGO -->
-      <a class="navbar-brand me-0" href="index.html">
+      <a class="navbar-brand me-0" href="login.html">
         <img src="./img/logo.png" alt="Logo Roque Garages" class="img-fluid logo-navbar">
       </a>
 
@@ -35,7 +34,7 @@
 <div class="d-none d-lg-flex flex-grow-1 justify-content-center">
   <ul class="navbar-nav gap-5">
     <li class="nav-item">
-      <a class="nav-link fw-semibold text-white" href=".index.html">Comprar</a>
+      <a class="nav-link fw-semibold text-white" href="index.html">Comprar</a>
     </li>
     <li class="nav-item">
       <a class="nav-link fw-semibold text-white" href="cadastro.html">Vender</a>
@@ -49,7 +48,7 @@
 <div class="d-none d-lg-flex align-items-center gap-2 ms-5 ps-5" role="group" aria-label="Controles de acessibilidade">
   <!-- ===== PULAR PARA CONTEÚDO PRINCIPAL (acessibilidade) ===== -->
     <a
-        href="#conteudo"
+        href="#conteudo-principal"
         class="btn btn-outline-light btn-sm"
         aria-label="Ir para o conteúdo principal"
     >
@@ -65,31 +64,17 @@
   </button>
 </div>
 
-   <hr>
-
-                    <a
-                        href="./cliente.html"
-                        class="d-flex align-items-center text-white gap-2 text-decoration-none fw-semibold ms-4"
-                    >
-
-                  
-                        <span>Área lojista</span>
-
-                    </a>
-
-                </li>
-
-            </ul>
-
-        </div>
-
+      <a href="./cliente.html" class="d-flex align-items-center text-white gap-2 text-decoration-none fw-semibold ms-4">
+         <span>Área lojista</span>
+      </a>
     </div>
-
+  </div>
+</div>
 </header>
 
 
 <main>
-<!-- ========== HERO / BUSCA ========== -->
+<!--  / BUSCA -->
 <section class="container my-4" id="conteudo-principal" aria-label="Busca de veículos">
   <div class="hero-box text-center">
     <h1 class="fw-bold mb-2">Encontre Seu Carro Ideal</h1>
@@ -141,22 +126,22 @@
         </select>
       </div>
       <div class="col-lg-2">
-        <button class="btn btn-success w-100" type="button">BUSCAR</button>
+        <button class="btn btn-success w-100" type="button" aria-label="Buscar veículos">BUSCAR</button>
       </div>
     </div>
 
     <div class="hero-benefits mt-4">
-      <span><i class="bi bi-shield-check"></i> Veículos de Lojas Confiáveis</span>
-      <span><i class="bi bi-tag"></i> Compare Preços</span>
-      <span><i class="bi bi-globe"></i> Ofertas de todo Brasil</span>
-      <span><i class="bi bi-lock"></i> Negociação Segura</span>
+      <span><i class="bi bi-shield-check" aria-hidden="true"></i> Veículos de Lojas Confiáveis</span>
+      <span><i class="bi bi-tag" aria-hidden="true"></i> Compare Preços</span>
+      <span><i class="bi bi-globe" aria-hidden="true"></i> Ofertas de todo Brasil</span>
+      <span><i class="bi bi-lock" aria-hidden="true"></i> Negociação Segura</span>
     </div>
   </div>
 </section>
 
 
 <!-- ========== FILTROS + CARDS ========== -->
-<section class="container my-4">
+<section class="container my-4" id="conteudo" >
   <div class="d-flex gap-4 align-items-start">
 
     <!-- SIDEBAR DE FILTROS (sticky) -->
@@ -164,8 +149,8 @@
       <div class="card p-3">
         <h5 class="fw-semibold mb-3">Filtros</h5>
 
-        <label class="form-label small text-muted mb-1">Marca</label>
-        <select class="form-select form-select-sm mb-3">
+        <label class="form-label small text-muted mb-1" for="filtro-marca">Marca</label>
+        <select id="filtro-marca" class="form-select form-select-sm mb-3">
           <option>Selecione a Marca</option>
           <option>BMW</option>
           <option>BYD</option>
@@ -186,8 +171,8 @@
           <option>Volkswagen</option>
         </select>
 
-        <label class="form-label small text-muted mb-1">Ano</label>
-        <select class="form-select form-select-sm mb-3">
+        <label class="form-label small text-muted mb-1" for="filtro-ano">Ano</label>
+        <select id="filtro-ano" class="form-select form-select-sm mb-3">
           <option>Selecione</option>
           <option>2010</option>
           <option>2011</option>
@@ -208,15 +193,15 @@
           <option>2026</option>
         </select>
 
-        <label class="form-label small text-muted mb-1">Câmbio</label>
-        <select class="form-select form-select-sm mb-3">
+        <label class="form-label small text-muted mb-1" for="filtro-cambio">Câmbio</label>
+        <select id="filtro-cambio" class="form-select form-select-sm mb-3">
           <option>Selecione</option>
           <option>Manual</option>
           <option>Automático</option>
         </select>
 
-        <label class="form-label small text-muted mb-1">Combustível</label>
-        <select class="form-select form-select-sm mb-3">
+        <label class="form-label small text-muted mb-1" for="filtro-combustivel">Combustível</label>
+        <select id="filtro-combustivel" class="form-select form-select-sm mb-3">
           <option>Selecione</option>
           <option>Diesel</option>
           <option>Elétrico</option>
@@ -224,17 +209,17 @@
           <option>Gasolina</option>
         </select>
 
-        <label class="form-label small text-muted mb-1">Estado</label>
+        <label class="form-label small text-muted mb-1" for="estado">Estado</label>
         <select id="estado" class="form-select form-select-sm mb-3">
           <option value="">Selecione um estado</option>
         </select>
 
-        <label class="form-label small text-muted mb-1">Cidade</label>
+        <label class="form-label small text-muted mb-1" for="cidade">Cidade</label>
         <select id="cidade" class="form-select form-select-sm mb-3">
           <option value="">Selecione uma cidade</option>
         </select>
 
-        <button class="btn btn-success btn-sm w-100 mt-1">Aplicar Filtros</button>
+        <button class="btn btn-success btn-sm w-100 mt-1" aria-label="Aplicar filtros de busca">Aplicar Filtros</button>
       </div>
     </aside>
 
@@ -244,14 +229,14 @@
     <div class="flex-grow-1">
       <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4">
 
-        <div class="col">
+        <div class="col" >
           <article class="card car-card h-100">
             <img src="./img/fiat-mobi-500.jpg" class="card-img-top" alt="Carro fiat mobi 1.6">
             <div class="card-body">
               <h3 class="fs-6 fw-bold">Fiat Mobi 1.6</h3>
               <small class="text-muted">2020/2020</small>
               <h4 class="mt-2 text-success fw-bold">R$ 89.900,00</h4>
-              <small>São Paulo - SP</small>
+              <small> Soma - São Roque/SP</small>
             </div>
             <div class="card-footer bg-white border-0">
               <a href="detalhe.html" class="btn btn-outline-success w-100"
@@ -267,7 +252,7 @@
               <h3 class="fs-6 fw-bold">Citroen 1.8</h3>
               <small class="text-muted">2024/2024</small>
               <h4 class="mt-2 text-success fw-bold">R$ 105.500,00</h4>
-              <small>alfenas - MG</small>
+              <small>Chevrolet Rocque - São Roque/SP</small>
             </div>
             <div class="card-footer bg-white border-0">
              <a href="detalhe.html" class="btn btn-outline-success w-100"
@@ -283,7 +268,7 @@
               <h3 class="fs-6 fw-bold">Caoa 1.6</h3>
               <small class="text-muted">2025/2025</small>
               <h4 class="mt-2 text-success fw-bold">R$ 126.900,00</h4>
-              <small>São Paulo - SP</small>
+              <small>São Roque Veículos - São Roque/SP</small>
             </div>
             <div class="card-footer bg-white border-0">
               <a href="detalhe.html" class="btn btn-outline-success w-100"
@@ -299,7 +284,7 @@
               <h3 class="fs-6 fw-bold">BMW 2.0 Turbo</h3>
               <small class="text-muted">2026/2026</small>
               <h4 class="mt-2 text-success fw-bold">R$ 280.000,00</h4>
-              <small>São Roque - SP</small>
+              <small>Shark motos - São Roque/SP</small>
             </div>
             <div class="card-footer bg-white border-0">
               <a href="detalhe.html" class="btn btn-outline-success w-100"
@@ -315,7 +300,7 @@
               <h3 class="fs-6 fw-bold">Honda 1.8</h3>
               <small class="text-muted">2024/2024</small>
               <h4 class="mt-2 text-success fw-bold">R$ 118.500,00</h4>
-              <small>Belo Horizonte - MG</small>
+              <small>Rodcar 7 Veículos - São Roque/SP</small>
             </div>
             <div class="card-footer bg-white border-0">
               <a href="detalhe.html" class="btn btn-outline-success w-100"
@@ -331,7 +316,7 @@
               <h3 class="fs-6 fw-bold">Renault 1.6</h3>
               <small class="text-muted">2023/2023</small>
               <h4 class="mt-2 text-success fw-bold">R$ 121.800,00</h4>
-              <small>São Paulo - SP</small>
+              <small>Soma - São Roque/SP</small>
             </div>
             <div class="card-footer bg-white border-0">
               <a href="detalhe.html" class="btn btn-outline-success w-100"
@@ -347,7 +332,7 @@
               <h3 class="fs-6 fw-bold">Hyundai 2.0</h3>
               <small class="text-muted">2025/2026</small>
               <h4 class="mt-2 text-success fw-bold">R$ 163.900,00</h4>
-              <small>São Roque - SP</small>
+              <small>Soma - São Roque/SP</small>
             </div>
             <div class="card-footer bg-white border-0">
               <a href="detalhe.html" class="btn btn-outline-success w-100"
@@ -363,7 +348,7 @@
               <h3 class="fs-6 fw-bold">Renegade 1.8 Turbo</h3>
               <small class="text-muted">2021/2021</small>
               <h4 class="mt-2 text-success fw-bold">R$ 149.900,00</h4>
-              <small>São Paulo - SP</small>
+              <small>Chevrolet Rocque - São Roque/SP</small>
             </div>
             <div class="card-footer bg-white border-0">
              <a href="detalhe.html" class="btn btn-outline-success w-100"
@@ -379,7 +364,7 @@
               <h3 class="fs-6 fw-bold">Volkswagem 1.6</h3>
               <small class="text-muted">2021/2021</small>
               <h4 class="mt-2 text-success fw-bold">R$ 99.900,00</h4>
-              <small>São Roque - SP</small>
+              <small>Rodcar 7 Veículos - São Roque/SP</small>
             </div>
             <div class="card-footer bg-white border-0">
             <a href="detalhe.html" class="btn btn-outline-success w-100"

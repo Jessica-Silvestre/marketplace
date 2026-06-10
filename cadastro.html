@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -21,7 +20,7 @@
     <div class="container-fluid px-4 align-items-center">
 
       <!-- LOGO -->
-      <a class="navbar-brand me-0" href="index.html">
+      <a class="navbar-brand me-0" href="login.html">
         <img src="./img/logo.png" alt="Logo Roque Garages" class="img-fluid logo-navbar">
       </a>
 
@@ -37,22 +36,22 @@
       <div class="d-none d-lg-flex flex-grow-1 justify-content-center">
         <ul class="navbar-nav gap-5">
           <li class="nav-item">
-            <a class="nav-link fw-semibold text-white" href="#">Dashboard</a>
+            <a class="nav-link fw-semibold text-white" href="cliente.html">Dashboard</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link fw-semibold text-white" href="#">Veículos</a>
+            <a class="nav-link fw-semibold text-white" href="index.html">Veículos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link fw-semibold text-white" href="#">Leads</a>
+            <a class="nav-link fw-semibold text-white" href="login.html">Leads</a>
           </li>
            <li class="nav-item">
-            <a class="nav-link fw-semibold text-white" href="#">Vendas</a>
+            <a class="nav-link fw-semibold text-white" href="cadastro.html">Vendas</a>
           </li>
            <li class="nav-item">
-            <a class="nav-link fw-semibold text-white" href="#">Relatórios</a>
+            <a class="nav-link fw-semibold text-white" href="admin.html">Relatórios</a>
           </li>
            <li class="nav-item">
-            <a class="nav-link fw-semibold text-white" href="#">Configurações</a>
+            <a class="nav-link fw-semibold text-white" href="sobre.html">Sobre Nós</a>
           </li>
         </ul>
       </div>
@@ -65,7 +64,7 @@
         class="btn btn-outline-light btn-sm"
         aria-label="Ir para o conteúdo principal"
     >
-        Ir conteúdo
+       Ir conteúdo principal
     </a>
 
     <button
@@ -106,6 +105,9 @@
         role="button"
         tabindex="0"
         aria-label="Menu do usuário Soma São Roque"
+        onclick="window.location.href='cliente.html'"
+        onkeydown="if(event.key==='Enter'||event.key===' '){window.location.href='cliente.html';}"
+        style="cursor:pointer"
     >
 
         <i class="bi bi-person-fill" aria-hidden="true"></i>
@@ -125,7 +127,7 @@
 
   <!-- breadcrumb -->
   <nav class="page-breadcrumb" aria-label="Localização atual">
-    <a href="#">Veículos</a>
+    <a href="index.html">Veículos</a>
     <i class="bi bi-chevron-right" aria-hidden="true"></i>
     <span aria-current="page">Cadastrar / Editar Veículos</span>
   </nav>
@@ -136,7 +138,7 @@
       <h1 style="font-size:1.4rem; font-weight:700; margin:0 0 4px">Cadastrar Veículos</h1>
       <p style="font-size:13px; color:var(--text-muted); margin:0">Preencha as informações do veículo para criar seu anúncio</p>
     </div>
-    <a href="#" class="btn-voltar" aria-label="Voltar para a lista de veículos">
+    <a href="cliente.html" class="btn-voltar" aria-label="Voltar para a lista de veículos">
       <i class="bi bi-arrow-left" aria-hidden="true"></i> Voltar para a Lista
     </a>
   </div>
@@ -148,7 +150,7 @@
     <div class="flex-grow-1 min-w-0">
 
       <!-- 1. Informações do veículo -->
-      <section class="form-section" aria-labelledby="sec-info">
+      <section class="form-section" aria-labelledby="sec-info" >
         <h2 class="form-section-title" id="sec-info">1. Informações do veículo</h2>
 
         <div class="row g-3">
@@ -410,12 +412,12 @@
 
  <div class="preview-header">
   <span>Pré Visualização do anúncio</span>
-   <span class="badge-rascunho" aria-label="Status: Rascunho">Rascunho</span>
+   <span class="badge-rascunho" aria-label="Status: Rascunho" id="conteudo">Rascunho</span>
   </div>
 
   <div class="preview-img-wrap">
    <img src="./img/fiat-mobi-500.jpg" class="preview-img" alt="Pré-visualização do veículo" id="preview-main-img">
-     <button class="btn-fav" id="btnFavorito" type="button">
+     <button class="btn-fav" id="btnFavorito" type="button" aria-label="Adicionar aos favoritos" aria-pressed="false">
       <i class="bi bi-heart" aria-hidden="true"></i>
    </button>
    </div>
