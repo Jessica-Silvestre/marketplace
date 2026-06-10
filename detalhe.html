@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,20 +10,43 @@
     <link rel="stylesheet" href="style.css">
     <script src="detalhe.js" defer></script>
 </head>
-<div id="modalImagem" class="modal-imagem">
 
-    <span class="fechar-modal">&times;</span>
+<body>
 
-    <button class="seta seta-esquerda">&#10094;</button>
+    <div
+    id="modalImagem"
+    class="modal-imagem"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Visualização ampliada da imagem">
 
-    <img id="imagemModal" class="imagem-modal">
+<button
+    class="fechar-modal"
+    aria-label="Fechar visualização">
+    &times;
+</button>
 
-    <button class="seta seta-direita">&#10095;</button>
+<button
+    class="seta seta-esquerda"
+    aria-label="Imagem anterior">
+    &#10094;
+</button>
+
+    <img
+    id="imagemModal"
+    class="imagem-modal"
+    alt="Imagem ampliada do veículo">
+
+<button
+    class="seta seta-direita"
+    aria-label="Próxima imagem">
+    &#10095;
+</button>
 
 </div>
-<body>
+
    <header>
-    <nav class="navbar navbar-expand-lg py-3">
+    <nav class="navbar navbar-expand-lg py-3"  aria-label="Menu principal">
 
         <div class="container-fluid px-4 align-items-center">
 
@@ -50,13 +73,13 @@
 <div class="d-none d-lg-flex flex-grow-1 justify-content-center">
   <ul class="navbar-nav gap-5">
     <li class="nav-item">
-      <a class="nav-link fw-semibold text-white" href="index.html">Comprar</a>
+      <a class="nav-link fw-semibold text-white" href="./marketplace.html">Comprar</a>
     </li>
     <li class="nav-item">
       <a class="nav-link fw-semibold text-white" href="cadastro.html">Vender</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link fw-semibold text-white" href="sobre.html">Lojas</a>
+      <a class="nav-link fw-semibold text-white" href="./sobre.html">Lojas</a>
     </li>
   </ul>
 
@@ -92,27 +115,27 @@
 
                     </a>
 
-                </li>
-
-            </ul>
-
         </div>
 
     </div>
+    </nav>  
 </header>
 
-<div class="container my-5">
-
-    <h4 class="subtitulo">
+<main id="conteudo" class="container my-5">
+    <h2 class="subtitulo">
         Conheça o seu novo veículo
-    </h4>
+    </h2>
 
     <section class="card-veiculo">
 
         <div class="row">
 
             <!-- GALERIA -->
-            <div class="col-lg-7">
+             <h2 id="galeria-veiculo" class="visually-hidden">
+             Galeria de imagens do veículo
+                </h2>
+           <section class="col-lg-7" aria-labelledby="galeria-veiculo">
+            
                 <div class="zoom-container">
                 <img
                     src="img/mobi1.jpg"
@@ -123,35 +146,35 @@
                 <div class="row g-2 mt-2">
 
                     <div class="col">
-                        <img src="img/mobi2.jpg" class="miniatura">
+                        <img src="img/mobi2.jpg" class="miniatura" alt="Fiat Mobi - lateral">
                     </div>
 
                     <div class="col">
-                        <img src="img/mobi3.jpg" class="miniatura">
+                        <img src="img/mobi3.jpg" class="miniatura" alt="Fiat Mobi - interior">
                     </div>
 
                     <div class="col">
-                        <img src="img/mobi4.jpg" class="miniatura">
+                        <img src="img/mobi4.jpg" class="miniatura" alt="Fiat Mobi - traseira">
                     </div>
 
                     <div class="col">
-                        <img src="img/interna.jpg" class="miniatura">
+                        <img src="img/interna.jpg" class="miniatura" alt="Fiat Mobi - interno">
                     </div>
 
                     <div class="col">
-                        <img src="img/interna2.jpg" class="miniatura">
+                        <img src="img/interna2.jpg" class="miniatura" alt="Fiat Mobi - interno 2">
                     </div>
 
                 </div>
 
-            </div>
+            </section>
 
             <!-- INFORMAÇÕES -->
-            <div class="col-lg-5">
+            <article class="col-lg-5">
 
-                <strong class="nome-veiculo">
-                    FIAT MOBI
-                </strong>
+                <h1 class="nome-veiculo">
+                FIAT MOBI
+                </h1>
 
                 <p class="versao">
                     1.0 Evo Flex Like Manual
@@ -165,9 +188,9 @@
 
                 </div>
 
-                <h1 class="preco">
-                    R$89.900,00
-                </h1>
+                <p class="preco">
+                R$89.900,00
+                </p>
 
                 <p class="avista">
                     À vista
@@ -187,18 +210,25 @@
                 <div class="texto-seguro">
                     <strong>Compra 100% segura</strong>
                     <span>Seus dados protegidos</span>
-    </div>
+                </div>
 </div>
 
-            </div>
+            </article>
+        </div> 
+        </section>
 
-        </div>
-
-    </section>
 
     <!-- CARACTERÍSTICAS -->
 
-    <div class="row mt-4 g-3">
+    <section
+    class="row mt-4 g-3"
+    aria-labelledby="caracteristicas-veiculo">
+
+    <h2
+    id="caracteristicas-veiculo"
+    class="visually-hidden">
+    Características do veículo
+    </h2>
 
         <div class="col-md">
             <div class="info-box">
@@ -240,7 +270,7 @@
             </div>
         </div>
 
-    </div>
+    </section>
 
     <!-- DETALHES -->
 
@@ -287,7 +317,7 @@
 
     <!-- DESCRIÇÃO -->
     <div class="col-lg-6">
-        <div class="card-descricao">
+        <section class="card-descricao">
 
             <h2>Descrição do Veículo</h2>
 
@@ -306,11 +336,11 @@
                 <li>Documentação em dia</li>
             </ul>
 
-        </div>
+        </section>
     </div>
 
 </div>
-</div>
+</main>
 
 <!-- ========== FOOTER ========== -->
 <footer class="marketplace-footer text-center">
